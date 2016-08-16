@@ -1,7 +1,9 @@
-class Character {
-
-  // Four primitive variables which each instance of a character will have.
+class Actor {
+  // Member fields.
   String name;
+  // Notice that primitive data types int, float and boolean have Object
+  // equivalents Integer, Float, Boolean. The same is true for char and
+  // Character.
   Integer age;
   Float money;
   Boolean isPlayable;
@@ -13,13 +15,13 @@ class Character {
   // Variables which govern how the character is displayed.
   color circleFill;
   color textFill;
-  int diameter;
+  Integer diameter;
 
   // A default constructor for a character. Its signature - between the
   // parentheses does not specify any parameters - information that it
   // needs to do its job. It sets the primitive variables above to a
   // standard value.
-  Character() {
+  Actor() {
     name = "Anonymous";
     age = 18;
     money = 0.00f;
@@ -27,14 +29,14 @@ class Character {
     position = new PVector(width/2, height/2, 0);
 
     circleFill = color(255, 100, 100);
-    textFill = color(0, 0, 0);
+    textFill = color(255);
     diameter = 25;
   }
 
   // A constructor with a signature that has four parameters. The
   // constructor assigns the arguments fed into it to the instance
   // variables each time an instance of a Character is created.
-  Character(String name, Integer age, Float money, Boolean isPlayable, PVector position) {
+  Actor(String name, Integer age, Float money, Boolean isPlayable, PVector position) {
 
     // The variables name, age, money and isPlayable have local scope
     // only. That means that 'name' exists only in the space-time of
@@ -44,7 +46,6 @@ class Character {
     // 'this.name' specifies that the variable belonging to this
     // instance of a Character is being assigned the value of the 
     // local 'name' passed into the constructor.
-
     this.name = name;
     this.age = age;
     this.money = money;
@@ -52,7 +53,7 @@ class Character {
     this.position = position;
 
     circleFill = color(255, 0, 0);
-    textFill = color(0, 0, 0);
+    textFill = color(255);
     diameter = 30;
   }
 
@@ -61,7 +62,7 @@ class Character {
   // new Character()); in void setup() without doing this, you'll
   // see console output like "oopExample$Character@2884d0d2".
   public String toString() {
-    return this.name + ", aged " + this.age + ", $" + this.money;
+    return this.name + ", aged " + this.age + ", $" + nf(this.money, 0, 2);
   }
 
   // This is the definition of a behavior, or method, which each

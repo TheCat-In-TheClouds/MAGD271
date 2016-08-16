@@ -1,9 +1,9 @@
 // When you think of a shape, you may intuitively believe it to be an object,
-// that is a stable entity which has qualities, about which calculations can
-// be made, and perhaps even behaviors can be assigned to. However, Processing
-// does not think of objects that way. As often as not, objects are methods
+// that is, a stable entity which has qualities, about which calculations can
+// be made, and to which behaviors can be assigned. However, Processing
+// does not think of objects that way. As often as not, shapes are methods
 // or behaviors which are repeatedly called in the update loop. Perhaps this
-// is an advantage in that a triangle can become a circle can become a square.
+// is an advantage in that a triangle can morph into a circle can become a square.
 // However, Processing's way is not common to other creative coding environments.
 // It's up to us to think about how to wrap Processing's methods in OOP classes
 // so as to behave like Adobe Flash ActionScript objects or Unity GameObjects.

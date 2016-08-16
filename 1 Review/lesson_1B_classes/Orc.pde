@@ -2,7 +2,7 @@
 // it can inherit from and have access to the behaviors and attributes
 // that the Character class provides. A class which extends - inherits from -
 // another class is called a 'derived class', 'child class' or 'sub-class'.
-class Orc extends Character {
+class Orc extends Actor {
 
   // A special attribute which orcs have but characters do not.
   Integer attackPower;

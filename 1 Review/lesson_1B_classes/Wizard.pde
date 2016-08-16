@@ -1,4 +1,4 @@
-class Wizard extends Character {
+class Wizard extends Actor {
 
   // A special attribute which wizards have but characters do not.
   Integer magicPower;
@@ -19,7 +19,7 @@ class Wizard extends Character {
   // in Processing, but it might be a useful note to make
   // to yourself so you remember what you're overriding.
   @Override
-    void display() {
+  void display() {
     fill(circleFill);
     rect(this.position.x, this.position.y, diameter, diameter);
     fill(textFill);
