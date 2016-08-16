@@ -9,7 +9,7 @@ class Wizard extends Actor {
     this.magicPower = 500;
 
     this.position = new PVector(random(0, width), random(0, height), 0);
-    this.circleFill = color(#C96CBD);
+    this.circleFill = color(0xFFC96CBD);
   }
 
   // Wizards look different than other characters, so their
@@ -36,7 +36,7 @@ class Wizard extends Actor {
   // with overriding, this is called function overloading.
   void display(boolean isGlowing) {
     if (isGlowing) {
-      fill(color(255, 255, 0));
+      fill(color(255, 255, 0, 127));
       ellipse(this.position.x, this.position.y, diameter*2f, diameter*2f);
     }
     fill(circleFill);

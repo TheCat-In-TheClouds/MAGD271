@@ -23,7 +23,7 @@ class Ball {
     this.dampingIncr = dampingIncr;
     this.r = radius;
     this.c = this.original = c;
-    this.highlight = color(255, 255, 168);
+    this.highlight = color(255, random(235,255), random(168, 204));
     this.originX = this.destinX = width/2;
     this.originY = this.destinY = height/2;
   }
