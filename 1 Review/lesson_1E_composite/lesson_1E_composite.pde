@@ -1,34 +1,37 @@
-Ellipse[] e = new Ellipse[5];
-Rect[] r = new Rect[5];
+Ellipse[] e = new Ellipse[14];
+//Rect[] r = new Rect[7];
 
 void setup() {
   size(420, 420);
   background(32);
   colorMode(HSB, 360, 100, 100, 100);
 
-  for (int i = 0; i < 5; ++i) {
-    e[i] = new Ellipse(CENTER, width*2/3, height*2/3, 100, 140);
-    r[i] = new Rect(CENTER, width/3, height/3, 90, 180);
-    e[i].shearX = 0.15 * i;
-    r[i].shearY = -0.15 * i;
+  for (int i = 0; i < 14; ++i) {
+    e[i] = new Ellipse(CENTER, width/2.0, height/2.0, (14-i)*14.25, (16-i)*14.25);
+    e[i].shearX = 2 * i;
     e[i].noStroke = true;
-    r[i].noStroke = true;
-    e[i].pivot = new PVector(width*3/4, height*3/4);
-    e[i].fillColor = color(map(i, 0, 4, 180, 360), random(80, 100), 
-      random(80, 100), random(40, 80));
-    r[i].fillColor = color(map(i, 4, 0, 0, 180), random(80, 100), 
-      random(80, 100), random(40, 80));
+    e[i].pivot = new PVector(width/3.0, height/2.0);
+    e[i].fillColor = color(map(i, 0, 14, 0, 360), random(80, 100), 
+      random(80, 100), random(20, 50));
+    //r[i] = new Rect(CENTER, width/4, height/4, 100, 140);
+    //r[i].shearY = -10 * i;
+    //r[i].noStroke = true;
+    //r[i].pivot = new PVector(width/3.0, height/3.0);
+    //r[i].fillColor = color(map(i, 7, 0, 0, 180), random(80, 100), 
+      //random(80, 100), random(40, 80));
   }
 }
 
 void draw() {
   background(32);
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 14; ++i) {
     e[i].update();
-    r[i].update();
-    e[i].rotation -= i+0.8;
-    r[i].rotation += i+0.8;
+    e[i].rotation += i + 0.25;
+    //r[i].update();
+    //r[i].rotation += i+0.8;
   }
+  
+  save(frameCount + ".png");
 }
 
 void point(PVector position) {

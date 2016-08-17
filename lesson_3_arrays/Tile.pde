@@ -40,8 +40,8 @@ class Tile {
     // determine if n is even or odd. n % 2 == 0 means that n is even, n % 2 == 1 means that
     // n is odd.
     if ((this.x % 2 == 1 && this.y % 2 == 1) || (this.x % 2 == 0 && this.y % 2 == 0)) {
-      squareColor = 255;
-      labelColor = 0;
+      squareColor = 48;
+      labelColor = 255;
     } else {
       squareColor = 0;
       labelColor = 255;

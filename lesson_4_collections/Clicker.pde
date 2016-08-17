@@ -42,7 +42,7 @@ class Clicker {
   }
   
   void showInstructions() {
-    fill(0);
+    fill(255);
     text("Number of active widgets: " + widgets.size()
     + "\r\nNumber of retired widgets: " + retired.size()
     + "\r\n\r\nLeft click to add a widget."

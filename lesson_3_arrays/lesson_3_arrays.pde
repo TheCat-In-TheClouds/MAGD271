@@ -7,17 +7,15 @@ String[] stringArray = {"Mno", "Pqr", "Stu", "Abc", "Def", "Ghi", "Jkl", "Vwx", 
 
 // Two-Dimensional Arrays
 // These are often used to represent tabular data or a 2D grid with x and y
-// coordinates. However, because 2D Arrays can be cumbersome to work with,
-// you might want to use Processing's Table object instead.
+// coordinates.
 Tile[][] chessBoard = new Tile[CHESSBOARD_SIZE][CHESSBOARD_SIZE];
 
 void setup() {
-  size(500, 500);
-  background(255);
+  size(420, 420);
+  background(32);
   noStroke();
   smooth();
 
-  // Set the values in a flow array to a random amount.
   println("FLOAT ARRAY SET TO RANDOM VALUES");
   // syntax of for(
   // initialize iterator; when used with arrays this is usually int i = 0;
@@ -27,92 +25,50 @@ void setup() {
   int size = floatPrimitiveArray.length;
   for (int i = 0; i < size; ++i) {
     floatPrimitiveArray[i] = random(-20f, 50f);
-    print(floatPrimitiveArray[i] + " ");
   }
+  println(floatPrimitiveArray);
 
 
-
-  // This is Processing's utility for adding a new value to the end
-  // of an array. Since arrays are generally static containers in Java,
-  // the foundational language of Processing, and hence cannot be expanded
-  // from 7 to 8 on the fly, this is probably not ideal. Related: note
-  // that typing append(myArray, valueToAdd); will not work, since the array
-  // is not changed in place. You have to assign the value returned from
-  // the function append to an array on the left side of the = sign.
-  println("\r\n\r\nAPPENDING FLOAT VALUES TO AN ARRAY");
+  println("\r\nAPPENDING FLOAT VALUES TO AN ARRAY");
   floatPrimitiveArray = append(floatPrimitiveArray, 0.005f);
   floatPrimitiveArray = append(floatPrimitiveArray, 0.075f);
-  size = floatPrimitiveArray.length;
-  for (int i = 0; i < size; ++i) {
-    print(floatPrimitiveArray[i] + " ");
-  }
+  println(floatPrimitiveArray);
 
-
-
-  // Combining two arrays
-  println("\r\n\r\nCOMBINING TWO FLOAT ARRAYS");
+  println("\r\nCOMBINING TWO FLOAT ARRAYS");
   float[] coinage = { 0.01f, 0.05f, 0.1f, 0.25f };
   float[] combinedFloatArray = concat(floatPrimitiveArray, coinage);
-  size = combinedFloatArray.length;
-  for (int i = 0; i < size; ++i) {
-    print(combinedFloatArray[i] + " ");
-  }
+  println(combinedFloatArray);
 
-
-
-  // Reversing an array
   // Notice that this isn't necessary if you need to access the array
   // in reverse order, since you can just change your for loop.
-  println("\r\n\r\nREVERSING A STRING ARRAY");
+  println("\r\nREVERSING A STRING ARRAY");
   String[] reversed = reverse(stringArray);
   size = reversed.length;
   for (int i = 0; i < size; ++i) {
     print(reversed[i] + " ");
   }
-  print("\r\nOriginal String array accessed in reverse order: ");
-  for (int i = size -1; i >= 0; --i) {
+  print("\r\n");
+  for (int i = size - 1; i >= 0; --i) {
     print(stringArray[i] + " ");
   }
 
-
-
-  // Sorting an array
-  println("\r\n\r\nSORTING AN ARRAY");
-  // Processing's way of doing it.
-  print("float[] sorted with Processing: ");
+  println("\r\n\r\nSORTING AN ARRAY\r\nfloat[] sorted with Processing: ");
   floatPrimitiveArray = sort(floatPrimitiveArray);
-  size = floatPrimitiveArray.length;
-  for (int i = 0; i < size; ++i) {
-    print(floatPrimitiveArray[i] + " ");
-  }
+  println(floatPrimitiveArray);
 
   // Java's way of doing it.
   print("\r\nString[] sorted with util library: ");
   Arrays.sort(stringArray);
-  size = stringArray.length;
-  for (int i = 0; i < size; ++i) {
-    print(stringArray[i] + " ");
-  }
-
-
+  println(stringArray);
 
   // Shuffling an array
-  println("\r\n\r\nSHUFFLING AN ARRAY");
-  print("float[] shuffled with primitive shuffle: ");
+  println("\r\nSHUFFLING AN ARRAY\r\nfloat[] shuffled with primitive shuffle: ");
   shuffle(floatPrimitiveArray);
-  size = floatPrimitiveArray.length;
-  for (int i = 0; i < size; ++i) {
-    print(floatPrimitiveArray[i] + " ");
-  }
+  println(floatPrimitiveArray);
 
   print("\r\nString[] shuffled with generic shuffle: ");
   shuffle(stringArray);
-  // shuffle(new Float[] { 5f, 2f, 3f }); // An array of Float objects can be done with generic shuffle.
-  for (int i = 0; i < size; ++i) {
-    print(stringArray[i] + " ");
-  }
-
-
+  println(stringArray);
 
   // Working with a 2D array of custom objects
   println("\r\n\r\nINITIALIZING A 2D ARRAY OF CUSTOM OBJECTS");
@@ -127,10 +83,7 @@ void setup() {
     print("\r\n");
   }
 
-
-
   // Suppose we want to connect some tiles with lines.
-
   // Calling the line() function looks really long and ugly.
   strokeWeight(5);
   stroke(255, 0, 0);
@@ -142,13 +95,6 @@ void setup() {
   stroke(0, 255, 0);
   traceVector(chessBoard[1][7].center, chessBoard[2][3].center); 
 
-  // Can we improve the convenience of doing this even further? Sure, we could even
-  // make a drawLineTo that's in the Tile class rather than in the main class. And
-  // let's have it return the calculation of the distance for us, too, while we're
-  // at it. BUT TAKE CAUTION: This is where creating convenience turns into
-  // over-engineering. Do we really need to calculate distance? Are we wrong in
-  // assuming that we'll always want to draw a line from the center of a tile rather
-  // than from one of its corners?
   strokeWeight(5);
   stroke(0, 0, 255);
   println("\r\nDIST BETWEEN TWO TILES: " + chessBoard[5][4].drawLineTo(chessBoard[1][1]));
@@ -215,11 +161,6 @@ void shuffle(float[] array) {
     array[size] = array[i];
     array[i] = temp;
   }
-}
-
-// To consider: How would we shuffle a 2-dimensional array?
-<T> void shuffle(T[][] array) {
-  return;
 }
 
 void traceVector(PVector origin, PVector destination) {

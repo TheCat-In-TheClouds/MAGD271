@@ -77,8 +77,7 @@ class Ellipse {
     this.pivot = this.center;
   }
 
-  @Override
-    public String toString() {
+  public String toString() {
     return toString(this.mode);
   }
 
@@ -126,8 +125,8 @@ class Ellipse {
     if (this.rotation != 0 || this.shearX != 0 || this.shearY != 0) {
       pushMatrix();
       translate(this.pivot);
-      shearX(this.shearX);
-      shearY(this.shearY);
+      shearX(radians(this.shearX));
+      shearY(radians(this.shearY));
       rotate(radians(this.rotation));
       if (this.mode == CENTER) {
         ellipse(PVector.sub(this.center, this.pivot), this.scale);

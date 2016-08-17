@@ -124,7 +124,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(32);
   c.drawWidgets(pmouseX, pmouseY, 25);
   c.showInstructions();
 }

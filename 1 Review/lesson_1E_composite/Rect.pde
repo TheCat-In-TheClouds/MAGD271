@@ -127,8 +127,8 @@ class Rect {
     if (this.rotation != 0 || this.shearX != 0 || this.shearY != 0) {
       pushMatrix();
       translate(this.pivot);
-      shearX(this.shearX);
-      shearY(this.shearY);
+      shearX(radians(this.shearX));
+      shearY(radians(this.shearY));
       rotate(radians(this.rotation));
       if (this.mode == CENTER) {
         rect(PVector.sub(this.center, this.pivot), this.scale);
