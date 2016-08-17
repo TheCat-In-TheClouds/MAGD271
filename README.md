@@ -3,16 +3,16 @@
 ## Intermediate Creative Coding
 ## Spring 2016
 
-Instructor: Jeremy Behreandt
-Office: TBD
-Office Hours: TBD
-Office Phone: TBD
-Email: TBD
-Course Website
+* Instructor: Jeremy Behreandt
+* Office: TBD
+* Office Hours: TBD
+* Office Phone: TBD
+* Email: TBD
+* Course Website
     * Primary: Desire 2 Learn
     * Secondary: [GitHub](https://github.com/behreajj/MAGD271)
 
-Meetings
+* Meetings
     * Location: TBD
     * Time: TBD
     
@@ -60,13 +60,35 @@ Reference resources:
 
 ### Etiquette
 
+I presume that, as a student of a university rather than a vocational institute, your intention is to develop not only as a worker in an industry but also as an individual, as an artist, and as a citizen of the world.
+
+As such, you are encouraged and expected to take ownership of this course, serving as an active co-producer of knowledge rather than as a passive receptacle for knowledge.
+
+#### Attendance
+
+I presume that all class members have decided to learn in a conventional classroom with face-to-face meetings, and that those meetings are crucial to their learning. By not attending class, you hinder the education of other students by depriving them of your knowledge, imagination and values.  Thus, mastery of course material alone is not sufficient; __class attendance is expected__.
+
+You are allowed 2 unexcused absences before your grade will be adversely impacted. For each additional unexecused absence, your letter grade will drop by one-third, e.g., from A to A-, A- to B+, and so on. Medical and family emergencies will be considered excused. For other circumstances, such as academic field trips, please consult with myself and with the coordinator of the event __prior to your absence__.
+
+Consider what it means to 'attend'. If you plan to attend class, arrive at the agreed upon meeting time; if you must leave before the conclusion, do so dicreetly. If another class member has been acknowledged by the room, then to interrupt, ignore or otherwise undermine their address is disrespectful. Even though digital devices such as smart phones and laptops are integral to coursework, they also provide numerous distractions; using them inappropriately will be considered disrespectful.
+
+#### Email
+
+Electronic communications between you, as student, and myself, as instructor, are to be considered semi-formal, and as contributing to this course's records in the event of any dispute. As such, please use only your institutionally provided (UWW) email account and direct correspondence to my UWW email. Furthermore, please include a greeting and sign off, and adhere to conventional English grammar and syntax.
+
+Since topics covered in the lab component of this course are of a technical nature, observe common practices when asking others to assist with problematic code via email:
+    * Either include the complete code or provide a link to it so that the recipient can run your program.
+    * Detail the results you expected and the difference between expected and actual results. If necessary, include screen captures, copy Exceptions and/or stack traces from logs or consoles.
+    * List any solutions you've attempted, including documentation you may have referenced.
+    * Separate large problems or questions into smaller, more specific ones which can be addressed one at a time.
+
 ### Academic Misconduct
 
-New media - whether viewed as a culture, technology or philosophy - has challenged traditional notions of authorial responsibility toward, ownership over and attribution for intellectual property. It is easier to both copy, intentionally or otherwise, and to detect copies of others' work. Work turned in for evaluation is assumed to be your own by default; it is your responsibility to properly attribute the work of others, included in whole or in part, whether modified or not. Consult with a reference librarian, myself or a manual on academic citations if you have any questions regarding proper attribution. Neglecting to do this will result in a failing grade on the assignment. Willful plagiarism will result in a failing grade for the course.
+New media - whether viewed as a culture, technology or philosophy - has challenged traditional notions of authorial responsibility toward, ownership over and attribution for intellectual property. It is easier to both copy, intentionally or otherwise, and to detect copying in submitted work. Work turned in for evaluation is assumed to be your own by default; it is your responsibility to properly attribute the work of others, included in whole or in part, whether modified or not. Consult with a reference librarian, myself or a manual on academic citations if you have any questions regarding proper attribution. Neglecting to do this will result in a failing grade on the assignment. Willful plagiarism will result in a failing grade for the course.
 
 ### UWW Statement
 
-The University of Wisconsin-Whitewater is dedicated to a safe, supportive and non-discriminatory learning environment.  It is the responsibility of all undergraduate and graduate students to familiarize themselves with University policies regarding Special Accommodations, Academic Misconduct, Religious Beliefs Accommodation, Discrimination and Absence for University Sponsored Events (for details please refer to the Schedule of Classes; the 'Rights and Responsibilities' section of the Undergraduate Catalog; the Academic Requirements and Policies and the Facilities and Services sections of the Graduate Catalog; and the 'Student Academic Disciplinary Procedures (UWS Chapter 14); and the 'Student Nonacademic Disciplinary Procedures' (UWS Chapter 17).
+The University of Wisconsin-Whitewater is dedicated to a safe, supportive and non-discriminatory learning environment. It is the responsibility of all undergraduate and graduate students to familiarize themselves with University policies regarding Special Accommodations, Academic Misconduct, Religious Beliefs Accommodation, Discrimination and Absence for University Sponsored Events (for details please refer to the Schedule of Classes; the 'Rights and Responsibilities' section of the Undergraduate Catalog; the Academic Requirements and Policies and the Facilities and Services sections of the Graduate Catalog; and the 'Student Academic Disciplinary Procedures (UWS Chapter 14); and the 'Student Nonacademic Disciplinary Procedures' (UWS Chapter 17).
 
 ### Grading Policy
 
