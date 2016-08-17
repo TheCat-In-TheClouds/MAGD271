@@ -1,6 +1,5 @@
 # MAGD271
-## ~~Flash Development~~
-## Intermediate Creative Coding
+## ~~Flash Development~~ Intermediate Creative Coding
 ## Spring 2016
 
 * Instructor: Jeremy Behreandt
@@ -11,10 +10,7 @@
 * Course Website
     * Primary: Desire 2 Learn
     * Secondary: [GitHub](https://github.com/behreajj/MAGD271)
-
-* Meetings
-    * Location: TBD
-    * Time: TBD
+* Meetings: Location TBD, Time TBD
     
 ### Course Description
 
@@ -28,15 +24,23 @@ In this course students will use Processing as a launching pad for data visualiz
 
 ### Course Objectives
 
+By the end of this course, students will be able to
+* interpret and visualize complex data with programming software;
+* adapt new media projects from one platform to another;
+* apply principles of animation to interactive media experiences;
+* explore the relationship between hardware, software and user interaction.
+
 ### Course Materials
 
-It is crucial for MAGD students to transition between traditional media literacy - the ability to read a book considered to be the 'authoritative text' in the field - and new media literacy - the ability to navigate search engines, repositories, forums, software menus, tutorial videos, professional portfolios and reference documentation for inspiration and information. This literacy includes:
-    * Generalizing a specific example to solve a broader problem;
-    * Extracting a solution from general approaches to solve a more specific problem;
-    * Translating an implementation from one programming language to another (from Java to JavaScript, from Java to C#, etc.);
-    * Sourcing free and/or open source alternatives in the event that proprietary software is not available (GIMP for Photoshop, Blender for Maya, Open Office for MS Office);
-    * Sourcing hardware to produce material for a project;
-    * Understanding the implications of version and cross-browser compatibility for the creation and display of new media projects (different versions of Processing will have different features, browser-based projects should be tested on multiple browsers).
+It is crucial for MAGD students to shift between traditional media literacy - the ability to read a book considered to be an 'authoritative text' in the field - and new media literacy - the ability to navigate search engines, repositories, forums, software menus, tutorial videos, professional portfolios and reference documentation.
+
+New media literacy includes:
+* Generalizing a specific example to solve a broader problem;
+* Extracting a solution from general approaches to solve a more specific problem;
+* Translating an implementation from one programming language to another (from Java to JavaScript, from Java to C#, etc.);
+* Sourcing free and/or open source alternatives in the event that proprietary software is not available (GIMP for Photoshop, Blender for Maya, Open Office for MS Office);
+* Sourcing hardware to produce material for a project;
+* Understanding the implications of version and cross-browser compatibility for the creation and display of new media projects (different versions of Processing will have different features, browser-based projects should be tested on multiple browsers).
 
 As such, the primary tools below will be emphasized in the course, but students are reminded that alternatives are almost always available and that the following is by no means comprehensive.
 
@@ -49,7 +53,7 @@ The primary tools for this course will be:
 * [Arduino](https://www.arduino.cc/)
 * a GitHub account
     * [GitHub's Student Developer Pack](https://education.github.com/pack)
-    * GitHub's [desktop app](https://desktop.github.com/) is recommended
+    * GitHub's [desktop app](https://desktop.github.com/) is recommended.
     
 Reference resources:
 * Daniel Shiffman, [_The Nature of Code_](http://natureofcode.com/)
@@ -60,9 +64,7 @@ Reference resources:
 
 ### Etiquette
 
-I presume that, as a student of a university rather than a vocational institute, your intention is to develop not only as a worker in an industry but also as an individual, as an artist, and as a citizen of the world.
-
-As such, you are encouraged and expected to take ownership of this course, serving as an active co-producer of knowledge rather than as a passive receptacle for knowledge.
+I presume that, as a student of a university rather than a vocational institute, your intention is to develop not only as a worker in an industry but also as an individual, as an artist, and as a citizen of the world. As such, you are encouraged and expected to take ownership of this course, serving as an active co-producer of knowledge rather than as a passive receptacle for knowledge.
 
 #### Attendance
 
@@ -77,10 +79,10 @@ Consider what it means to 'attend'. If you plan to attend class, arrive at the a
 Electronic communications between you, as student, and myself, as instructor, are to be considered semi-formal, and as contributing to this course's records in the event of any dispute. As such, please use only your institutionally provided (UWW) email account and direct correspondence to my UWW email. Furthermore, please include a greeting and sign off, and adhere to conventional English grammar and syntax.
 
 Since topics covered in the lab component of this course are of a technical nature, observe common practices when asking others to assist with problematic code via email:
-    * Either include the complete code or provide a link to it so that the recipient can run your program.
-    * Detail the results you expected and the difference between expected and actual results. If necessary, include screen captures, copy Exceptions and/or stack traces from logs or consoles.
-    * List any solutions you've attempted, including documentation you may have referenced.
-    * Separate large problems or questions into smaller, more specific ones which can be addressed one at a time.
+* Either include the complete code or provide a link to it so that the recipient can run your program.
+* Detail the results you expected and the difference between expected and actual results. If necessary, include screen captures, copy Exceptions and/or stack traces from logs or consoles.
+* List any solutions you've attempted, including documentation you may have referenced.
+* Separate large problems or questions into smaller, more specific ones which can be addressed one at a time.
 
 ### Academic Misconduct
 
@@ -92,7 +94,7 @@ The University of Wisconsin-Whitewater is dedicated to a safe, supportive and no
 
 ### Grading Policy
 
-It is your responsibility to track of your performance over the course of the semester. Grades will be posted on D2L for your review. Requirements for the successful completion of an assignment will be enumerated and assigned point values. As this course engages with the aesthetic dimension of human experience, wherein the imagination plays a strong role, some requirements will be less specific than others, and taste may play a role in their evaluation. Please ask for clarification of requirements __in advance of the assignment deadline__.
+It is your responsibility to track your performance over the course of the semester. Grades will be posted on D2L for your review. Requirements for the successful completion of an assignment will be enumerated and assigned point values. As this course engages with the aesthetic dimension of human experience, wherein the imagination plays a strong role, some requirements will be less specific than others, and taste may play a role in their evaluation. Please ask for clarification of requirements __in advance of the assignment deadline__.
 
 Like many other operations in new media, grades are a matter of entering records into a database; mistakes happen. If you feel that I have made an error recording your grade, please email me to politely request either an explanation or correction. Please consult with me in advance of the semester's completion if you would like to discuss your grades or propose additional projects for extra credit.
 
@@ -115,18 +117,18 @@ F | 0 | 59 | Poor/Fail
 
 __Subject to change per discretion of the instructor based on response of class members to the material.__
 
-Unit | Description | Points
----- | ----------- | ------
-01 | 150 Review | 100
-02 | Data Visualization | 100
-03 | p5.js 1 | 100
-04 | p5.js 2 | 100
-05 | Animation 1 | 100
-06 | Animation 2 | 100
-07 | Git | 100
-08 | Makey Makey | 100
-09 | Arduino 1 | 100
-10 | Arduino 2 | 100
-11 | GitHub Portfolio | 100
-12 | Project Design Document | 100
-13 | Project Presentation | 300
+Unit | Due Date | Description | Points
+---- | -------- | ----------- | ------
+01 | TBD | MAGD 150 Review | 100
+02 | TBD | Data Visualization | 100
+03 | TBD | p5.js 1 | 100
+04 | TBD | p5.js 2 | 100
+05 | TBD | Animation 1 | 100
+06 | TBD | Animation 2 | 100
+07 | TBD | Git | 100
+08 | TBD | Makey Makey | 100
+09 | TBD | Arduino 1 | 100
+10 | TBD | Arduino 2 | 100
+11 | TBD | GitHub Portfolio | 100
+12 | TBD | Project Design Document | 100
+13 | TBD | Project Presentation | 300
