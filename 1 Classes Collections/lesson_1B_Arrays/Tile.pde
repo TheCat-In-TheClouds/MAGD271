@@ -1,5 +1,5 @@
 // The dimensions of a chessboard are standardized but ultimately arbitrary.
-// Good coding practice dictates that we don't use magic numbers in the middle
+// Good coding practice dictates that we not use magic numbers in the middle
 // of our code, so we create a static final variable, which is Java/Processing's
 // version of a constant. The final keyword means that the variable's value cannot
 // be changed after initialization. The static keyword means that the variable
@@ -24,6 +24,8 @@ class Tile {
   int x, y;
   float w, h;
   PVector center;
+  float padding = 1;
+  float cornerRounding = 5;
 
   Tile(int x, int y, float w, float h) {
     this.x = x;
@@ -35,10 +37,7 @@ class Tile {
 
   void display(boolean showLabel) {
     color squareColor, labelColor;
-    // Recall that the modulo operator % returns the remainder after division, so 9 % 3 == 0
-    // while 8 % 3 == 2 because 8 / 3 == 2 + (2/3). That means that n % 2 is often used to
-    // determine if n is even or odd. n % 2 == 0 means that n is even, n % 2 == 1 means that
-    // n is odd.
+
     if ((this.x % 2 == 1 && this.y % 2 == 1) || (this.x % 2 == 0 && this.y % 2 == 0)) {
       squareColor = 48;
       labelColor = 255;
@@ -50,7 +49,7 @@ class Tile {
     int xPos = (int)(this.x * this.w);
     int yPos = (int)(this.y * this.h); 
     fill(squareColor);
-    rect(xPos, yPos, this.w, this.h);
+    rect(xPos + this.padding, yPos + this.padding, this.w - this.padding, this.h - this.padding, this.cornerRounding);
     if (showLabel) {
       fill(labelColor);
       text(chessNotation(), xPos + (this.w/2), yPos + (this.h/2));
@@ -65,15 +64,9 @@ class Tile {
     // return Columns.values()[this.x].toString() + (CHESSBOARD_SIZE - this.y);
     return CHESS_COLUMNS[this.x] + (CHESSBOARD_SIZE - this.y);
   }
-  
-  // To consider: Suppose you wanted to return the appropriate tile if
-  // this function were given the string 'c3'. How would you implement this function?
-  public Tile get(String notation) {
-    return null;
-  }
-  
+
   float drawLineTo(Tile destination) {
-  line(this.center.x, this.center.y, destination.center.x, destination.center.y);
-  return this.center.dist(destination.center);
-}
+    line(this.center.x, this.center.y, destination.center.x, destination.center.y);
+    return this.center.dist(destination.center);
+  }
 }

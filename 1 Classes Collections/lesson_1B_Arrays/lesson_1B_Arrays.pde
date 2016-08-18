@@ -6,22 +6,18 @@ float[] floatPrimitiveArray = new float[7];
 String[] stringArray = {"Mno", "Pqr", "Stu", "Abc", "Def", "Ghi", "Jkl", "Vwx", "Yz "};
 
 // Two-Dimensional Arrays
-// These are often used to represent tabular data or a 2D grid with x and y
+// These are often used to represent a 2D grid with x and y
 // coordinates.
 Tile[][] chessBoard = new Tile[CHESSBOARD_SIZE][CHESSBOARD_SIZE];
 
 void setup() {
   size(420, 420);
-  background(32);
+  background(24);
   noStroke();
   smooth();
 
   println("FLOAT ARRAY SET TO RANDOM VALUES");
-  // syntax of for(
-  // initialize iterator; when used with arrays this is usually int i = 0;
-  // check boolean condition; when used with arrays this is usually i < array.length;
-  // perform unary operation on iterator
-  // ) { } for loops have a signature and curly braces containing instructions
+  
   int size = floatPrimitiveArray.length;
   for (int i = 0; i < size; ++i) {
     floatPrimitiveArray[i] = random(-20f, 50f);
@@ -56,12 +52,10 @@ void setup() {
   floatPrimitiveArray = sort(floatPrimitiveArray);
   println(floatPrimitiveArray);
 
-  // Java's way of doing it.
   print("\r\nString[] sorted with util library: ");
   Arrays.sort(stringArray);
   println(stringArray);
 
-  // Shuffling an array
   println("\r\nSHUFFLING AN ARRAY\r\nfloat[] shuffled with primitive shuffle: ");
   shuffle(floatPrimitiveArray);
   println(floatPrimitiveArray);
@@ -70,7 +64,6 @@ void setup() {
   shuffle(stringArray);
   println(stringArray);
 
-  // Working with a 2D array of custom objects
   println("\r\n\r\nINITIALIZING A 2D ARRAY OF CUSTOM OBJECTS");
   int majorSize = chessBoard.length;
   for (int y = 0; y < majorSize; ++y) {
@@ -95,6 +88,7 @@ void setup() {
   stroke(0, 255, 0);
   traceVector(chessBoard[1][7].center, chessBoard[2][3].center); 
 
+  // We could also make an object method.
   strokeWeight(5);
   stroke(0, 0, 255);
   println("\r\nDIST BETWEEN TWO TILES: " + chessBoard[5][4].drawLineTo(chessBoard[1][1]));
@@ -120,7 +114,7 @@ void setup() {
 
   while (size > 0) {
     i = (int)random(0, size--);
-    // These next three steps are a class 'swap' move,
+    // These next three steps are a classic 'swap' move,
     // and could be separated out into their own function.
     temp = array[size];
     array[size] = array[i];

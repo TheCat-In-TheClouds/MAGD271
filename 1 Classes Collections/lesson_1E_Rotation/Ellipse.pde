@@ -1,4 +1,4 @@
-class Rect {
+class Ellipse {
   PVector center;
   PVector scale;
   PVector tlCorner;
@@ -14,9 +14,10 @@ class Rect {
   color fillColor = color(255);
   color strokeColor = color(0);
   float strokeWeight = 1;
-  int strokeJoin = ROUND; // SQUARE, PROJECT, ROUND
 
-  Rect(int mode, PVector a, PVector b) {
+  // This constructor shows how the corners, center, radii and diameter
+  // of an ellipse might be calculated using Vector math functions.
+  Ellipse(int mode, PVector a, PVector b) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = b;
@@ -47,7 +48,9 @@ class Rect {
     this.pivot = this.center;
   }
 
-  Rect(int mode, float a, float b, float c, float d) {
+  // This conventional constructor shows how basic information
+  // about an ellipse is calculated without PVector functions.
+  Ellipse(int mode, float a, float b, float c, float d) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = new PVector(c, d);
@@ -78,8 +81,7 @@ class Rect {
     this.pivot = this.center;
   }
 
-  @Override
-    public String toString() {
+  public String toString() {
     return toString(this.mode);
   }
 
@@ -108,8 +110,10 @@ class Rect {
   }
 
   void update() {
-    rectMode(this.mode);
+    ellipseMode(this.mode);
 
+    // pushStyle() and popStyle() enclose style settings
+    // that govern stroke and fill.
     pushStyle();
     if (this.noStroke == true || this.strokeWeight == 0) {
       noStroke();
@@ -124,31 +128,42 @@ class Rect {
       fill(this.fillColor);
     }
 
+    // Since 0 is the default rotation and shear of an object, there's
+    // little need to perform all these calculations if no rotation
+    // is performed.
     if (this.rotation != 0 || this.shearX != 0 || this.shearY != 0) {
+      // pushMatrix() and popMatrix() enclose translation, which
+      // changes the origin of the Processing sketch to a new point
+      // from the top-left corner.
       pushMatrix();
       translate(this.pivot);
+      // Shearing and rotation occur relative to the origin,
+      // so you must push and pop a matrix, and translate before
+      // you rotate.
       shearX(radians(this.shearX));
       shearY(radians(this.shearY));
       rotate(radians(this.rotation));
       if (this.mode == CENTER) {
-        rect(PVector.sub(this.center, this.pivot), this.scale);
+        // Since the origin is no longer (0,0), the location of the
+        // ellipse must be recalculated.
+        ellipse(PVector.sub(this.center, this.pivot), this.scale);
       } else if (this.mode == CORNER) {
-        rect(PVector.sub(this.tlCorner, this.pivot), this.scale);
+        ellipse(PVector.sub(this.tlCorner, this.pivot), this.scale);
       } else if (this.mode == CORNERS) {
-        rect(PVector.sub(this.tlCorner, this.pivot), this.brCorner);
+        ellipse(PVector.sub(this.tlCorner, this.pivot), this.brCorner);
       } else if (this.mode == RADIUS) {
-        rect(PVector.sub(this.center, this.pivot), this.radii);
+        ellipse(PVector.sub(this.center, this.pivot), this.radii);
       }
       popMatrix();
     } else {
       if (this.mode == CENTER) {
-        rect(this.center, this.scale);
+        ellipse(this.center, this.scale);
       } else if (this.mode == CORNER) {
-        rect(this.tlCorner, this.scale);
+        ellipse(this.tlCorner, this.scale);
       } else if (this.mode == CORNERS) {
-        rect(this.tlCorner, this.brCorner);
+        ellipse(this.tlCorner, this.brCorner);
       } else if (this.mode == RADIUS) {
-        rect(this.center, this.radii);
+        ellipse(this.center, this.radii);
       }
     }
     popStyle();

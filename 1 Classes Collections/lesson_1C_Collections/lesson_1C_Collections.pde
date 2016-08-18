@@ -1,6 +1,5 @@
-// Lesson 3 introduced some limitations and problems with arrays.
-// For example, if we want to check the min or max of an array, or
-// shuffle it, we'll probably have to create our own method.
+// Arrays have many limitations, including the fact that they don't
+// come with premade min, max, sort and shuffle functions.
 // Furthermore, while Processing may mask it with some special
 // functionality, the array is usually of a static size. Between
 // this and always having to access an element of an array through
@@ -33,11 +32,10 @@ List<String> javaStringList = new ArrayList<String>();
 
 // DICTIONARIES (AKA MAPS)
 // What if you wanted to look up someone's telephone number
-// by their last and first name, or wanted to look up the
-// definition of a word? Sometimes very complex clumps of
-// information need to be able to picked up and found with
-// a simple handle. Dictionaries do this by establishing
-// key-value pairs (KVPs)
+// by their last and first name, or want to look up the
+// definition of a word? Sometimes we need to locate complex
+// bundles of info with a simple handle. Dictionaries do
+// this by establishing key-value pairs (KVPs).
 
 // The Processing way
 IntDict pIntegerDictionary = new IntDict();
@@ -84,7 +82,8 @@ void setup() {
   println("\r\nJava ArrayList basic functionality");
   // Java's add() is the same as Processing's append()
   javaIntList.add(5);
-  javaIntList.add(0, 3); // Adds 3 to the 0th spot in the array.
+  javaIntList.add(0, 3);
+  // Adds 3 to the 0th spot in the array.
   javaIntList.add(8);
   javaIntList.add(-7);
   println("After adding values: " + javaIntList);
@@ -105,7 +104,7 @@ void setup() {
   pFloatDictionary.sortValues();
   println("The cheapskate's menu: " + pFloatDictionary);
   println("Is it true the coffee shop sells kombucha? " + pFloatDictionary.hasKey("Kombucha"));
-  println("How much does a Mocha cost? " + pFloatDictionary.get("Mocha"));
+  println("How much does a Mocha cost? $" + nfc(pFloatDictionary.get("Mocha"), 2));
 
   println("\r\nJava Dictionary basic functionality");
   javaStringFloatDictionary.put("Kombucha", 5.00f);
@@ -113,7 +112,7 @@ void setup() {
   javaStringFloatDictionary.put("Iced Tea", 2.00f);
   javaStringFloatDictionary.put("Lemonade", 2.50f);
   println("The menu: " + javaStringFloatDictionary);
-  println("How much does Kombucha cost? " + javaStringFloatDictionary.get("Kombucha"));
+  println("How much does Kombucha cost? $" + nfc(javaStringFloatDictionary.get("Kombucha"), 2));
 
   c = new Clicker();
   size(500, 500);

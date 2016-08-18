@@ -1,4 +1,8 @@
-class Ellipse {
+// This class contains much of the same information
+// as ellipse, so it could be reorganized to inherit
+// from a RotatableShape class.
+
+class Rect {
   PVector center;
   PVector scale;
   PVector tlCorner;
@@ -14,8 +18,9 @@ class Ellipse {
   color fillColor = color(255);
   color strokeColor = color(0);
   float strokeWeight = 1;
+  int strokeJoin = ROUND; // SQUARE, PROJECT, ROUND
 
-  Ellipse(int mode, PVector a, PVector b) {
+  Rect(int mode, PVector a, PVector b) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = b;
@@ -46,7 +51,7 @@ class Ellipse {
     this.pivot = this.center;
   }
 
-  Ellipse(int mode, float a, float b, float c, float d) {
+  Rect(int mode, float a, float b, float c, float d) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = new PVector(c, d);
@@ -77,7 +82,8 @@ class Ellipse {
     this.pivot = this.center;
   }
 
-  public String toString() {
+  @Override
+    public String toString() {
     return toString(this.mode);
   }
 
@@ -106,7 +112,7 @@ class Ellipse {
   }
 
   void update() {
-    ellipseMode(this.mode);
+    rectMode(this.mode);
 
     pushStyle();
     if (this.noStroke == true || this.strokeWeight == 0) {
@@ -129,24 +135,24 @@ class Ellipse {
       shearY(radians(this.shearY));
       rotate(radians(this.rotation));
       if (this.mode == CENTER) {
-        ellipse(PVector.sub(this.center, this.pivot), this.scale);
+        rect(PVector.sub(this.center, this.pivot), this.scale);
       } else if (this.mode == CORNER) {
-        ellipse(PVector.sub(this.tlCorner, this.pivot), this.scale);
+        rect(PVector.sub(this.tlCorner, this.pivot), this.scale);
       } else if (this.mode == CORNERS) {
-        ellipse(PVector.sub(this.tlCorner, this.pivot), this.brCorner);
+        rect(PVector.sub(this.tlCorner, this.pivot), this.brCorner);
       } else if (this.mode == RADIUS) {
-        ellipse(PVector.sub(this.center, this.pivot), this.radii);
+        rect(PVector.sub(this.center, this.pivot), this.radii);
       }
       popMatrix();
     } else {
       if (this.mode == CENTER) {
-        ellipse(this.center, this.scale);
+        rect(this.center, this.scale);
       } else if (this.mode == CORNER) {
-        ellipse(this.tlCorner, this.scale);
+        rect(this.tlCorner, this.scale);
       } else if (this.mode == CORNERS) {
-        ellipse(this.tlCorner, this.brCorner);
+        rect(this.tlCorner, this.brCorner);
       } else if (this.mode == RADIUS) {
-        ellipse(this.center, this.radii);
+        rect(this.center, this.radii);
       }
     }
     popStyle();

@@ -1,5 +1,11 @@
+// By default, Processing treats the drawing of an ellipse as a function, but for
+// some projects you want to treat the drawing of a shape or group of shapes as a
+// stable, persistent object. For that reason, in this example, the ellipse function
+// has been wrapped in an Ellipse class. Both ellipses and rectangles easily lend
+// themselves to rotation and skewing where other shapes do not, but the four different
+// modes of drawing them add a further complication.
+
 Ellipse[] e = new Ellipse[14];
-//Rect[] r = new Rect[7];
 
 void setup() {
   size(420, 420);
@@ -13,12 +19,6 @@ void setup() {
     e[i].pivot = new PVector(width/3.0, height/2.0);
     e[i].fillColor = color(map(i, 0, 14, 0, 360), random(80, 100), 
       random(80, 100), random(20, 50));
-    //r[i] = new Rect(CENTER, width/4, height/4, 100, 140);
-    //r[i].shearY = -10 * i;
-    //r[i].noStroke = true;
-    //r[i].pivot = new PVector(width/3.0, height/3.0);
-    //r[i].fillColor = color(map(i, 7, 0, 0, 180), random(80, 100), 
-      //random(80, 100), random(40, 80));
   }
 }
 
@@ -27,13 +27,13 @@ void draw() {
   for (int i = 0; i < 14; ++i) {
     e[i].update();
     e[i].rotation += i + 0.25;
-    //r[i].update();
-    //r[i].rotation += i+0.8;
   }
-  
-  save(frameCount + ".png");
 }
 
+// Processing provides a PVector class to assist with Vector
+// math, but many functions still require x and y coordinates
+// to be submitted separately as floats. These functions below
+// wrap around conventional Processing functions for convenience.
 void point(PVector position) {
   point(position.x, position.y);
 }

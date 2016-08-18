@@ -21,11 +21,11 @@ class Widget {
     fill(fillColor);
     if(isRetired) {
       ellipse(this.retiredX + random(-3,3), this.retiredY + random(-3,3), this.diameter, this.diameter);
-      fill(32);
+      fill(0);
       ellipse(this.retiredX, this.retiredY, this.diameter - 5, this.diameter - 5);
     } else {
       ellipse(x + random(-10,10), y + random(-10,10), this.diameter, this.diameter);
-      fill(32);
+      fill(16);
       ellipse(x, y, this.diameter - 15, this.diameter - 15);
     }
   }
