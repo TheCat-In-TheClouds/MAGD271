@@ -70,7 +70,7 @@ void draw() {
 }
 
 void mousePressed() {
-  if (mouseButton == LEFT && hand.size() < 5) {
+  if (mouseButton == LEFT && deck.size() > 0 && hand.size() < 5) {
     // Pops the object that is on the top of
     // the deck and adds it to the hand.
     hand.add(deck.pop());

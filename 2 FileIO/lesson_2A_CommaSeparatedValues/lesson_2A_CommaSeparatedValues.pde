@@ -11,6 +11,10 @@ float uwwUGsMapped, uwmUGsMapped, uwUGsMapped;
 color uww = #502D7F, uwm = #FFBD00, uw = #B70101;
 int uwwDebtLoad, uwmDebtLoad, uwDebtLoad;
 float uwwDLMapped, uwmDLMapped, uwDLMapped;
+
+// This is more of a Java-centric solution to formatting numbers
+// as a currency. For Processing's simpler functions, see nfs(), nfc()
+// and nf().
 NumberFormat currency = NumberFormat.getCurrencyInstance();
 
 void setup() {
@@ -61,9 +65,9 @@ void draw() {
   ellipse(600, 90, uwUGsMapped, uwUGsMapped);
 
   fill(255);
-  text("Undergraduates: " + uwwUGs, 40, 160);
-  text("Undergraduates: " + uwmUGs, 280, 160);
-  text("Undergraduates: " + uwUGs, 520, 160);
+  text("Undergraduates: " + nfc(uwwUGs), 40, 160);
+  text("Undergraduates: " + nfc(uwmUGs), 280, 160);
+  text("Undergraduates: " + nfc(uwUGs), 520, 160);
 
   fill(uww);
   ellipse(120, 240, uwwDLMapped, uwwDLMapped);
