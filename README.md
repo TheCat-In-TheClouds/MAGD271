@@ -122,7 +122,7 @@ Unit | Due Date | Description | Points
 ---- | -------- | ----------- | ------
 01 | TBD | MAGD 150 Review | 100
 02 | TBD | Data Visualization | 100
-03 | TBD | p5.js 1 | 100
+03 | TBD | p5 Migration, Juiciness | 100
 04 | TBD | p5.js 2 | 100
 05 | TBD | Animation 1 | 100
 06 | TBD | Animation 2 | 100
