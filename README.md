@@ -6,7 +6,7 @@
 * Office: TBD
 * Office Hours: TBD
 * Office Phone: TBD
-* Email: TBD
+* Email: behreandjj28@uww.edu
 * Course Website
     * Primary: Desire 2 Learn
     * Secondary: [GitHub](https://github.com/behreajj/MAGD271)
@@ -58,7 +58,8 @@ The primary tools for this course will be:
 Reference resources:
 * Daniel Shiffman, [_The Nature of Code_](http://natureofcode.com/)
 * Daniel Shiffman, [Coding Rainbow](http://codingrainbow.com/)
-* Casey Reas and Ben Fry, _Processing_, 2nd ed. (2014)
+* Casey Reas and Ben Fry, [_Processing_](https://mitpress.mit.edu/books/processing-0), 2nd ed. (2014)
+    * __Available for rent at the UWW Bookstore.__
 * [Lynda Tutorials](http://lynda.com/)
 * [OpenProcessing](http://openprocessing.org/)
 
@@ -76,9 +77,9 @@ Consider what it means to 'attend'. If you plan to attend class, arrive at the a
 
 #### Email
 
-Electronic communications between you, as student, and myself, as instructor, are to be considered semi-formal, and as contributing to this course's records in the event of any dispute. As such, please use only your institutionally provided (UWW) email account and direct correspondence to my UWW email. Furthermore, please include a greeting and sign off, and adhere to conventional English grammar and syntax.
+Electronic communications between you, as student, and myself, as instructor, are to be considered semi-formal, and as contributing to this course's records in the event of any dispute. As such, please use only your institutionally provided (UWW) email account and direct correspondence to my UWW email. In the subject, __include the class name and topic__ (e.g., "MAGD271: Assignment clarification"); in the body, adhere to conventional English grammar and syntax, beginning with a salutation and concluding with a valediction.
 
-Since topics covered in the lab component of this course are of a technical nature, observe common practices when asking others to assist with problematic code via email:
+Since topics covered in this course are of a technical nature, observe common practices when asking others to assist with problematic code via email:
 * Either include the complete code or provide a link to it so that the recipient can run your program.
 * Detail the results you expected and the difference between expected and actual results. If necessary, include screen captures, copy Exceptions and/or stack traces from logs or consoles.
 * List any solutions you've attempted, including documentation you may have referenced.
