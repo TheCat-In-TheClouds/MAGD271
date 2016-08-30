@@ -7,7 +7,7 @@ function Paddle() {
   this.speed = createVector(6, 0);
   this.inactive = color(0, 127, 205);
   this.active = color(0, 127, 255);
-  this.c = color(124, 124, 124);
+  this.c = color(0, 127, 205);
   this.cornerRadius = 2;
   this.sluggishness = 0.05;
   this.eyeSpread = 20;

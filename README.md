@@ -1,6 +1,6 @@
-# MAGD271
+# MAGD 271
 ## ~~Flash Development~~ Intermediate Creative Coding
-## Spring 2016
+## Fall 2016
 
 * Instructor: Jeremy Behreandt
 * Office: TBD
