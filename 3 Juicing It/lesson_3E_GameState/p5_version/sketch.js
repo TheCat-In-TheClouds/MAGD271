@@ -15,9 +15,7 @@ var previousState;
 
 function setup() {
     createCanvas(420, 420);
-    canvas.oncontextmenu = function (e) {
-    e.preventDefault();
-};
+    canvas.oncontextmenu = function (e) { e.preventDefault(); };
     background(32);
     noStroke();
     noCursor();

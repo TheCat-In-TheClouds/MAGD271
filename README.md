@@ -2,15 +2,16 @@
 ## ~~Flash Development~~ Intermediate Creative Coding
 ## Fall 2016
 
+* Classroom: McGraw 127
+* Meeting time: Tuesday, Thursday 12:30 - 1:45 pm
 * Instructor: Jeremy Behreandt
-* Office: TBD
+* Office: Andersen Library - Orig Bldg 1217J
 * Office Hours: TBD
 * Office Phone: TBD
 * Email: behreandjj28@uww.edu
 * Course Website
     * Primary: Desire 2 Learn
     * Secondary: [GitHub](https://github.com/behreajj/MAGD271)
-* Meetings: Location TBD, Time TBD
     
 ### Course Description
 
@@ -118,18 +119,18 @@ F | 0 | 59 | Poor/Fail
 
 __Subject to change per discretion of the instructor based on response of class members to the material.__
 
-Unit | Due Date | Description | Points
+Unit | Date | Description | Points
 ---- | -------- | ----------- | ------
-01 | TBD | MAGD 150 Review | 100
-02 | TBD | Data Visualization | 100
-03 | TBD | p5 Migration, Juiciness | 100
-04 | TBD | p5.js 2 | 100
-05 | TBD | Animation 1 | 100
-06 | TBD | Animation 2 | 100
-07 | TBD | Git | 100
-08 | TBD | Makey Makey | 100
-09 | TBD | Arduino 1 | 100
-10 | TBD | Arduino 2 | 100
-11 | TBD | GitHub Portfolio | 100
-12 | TBD | Project Design Document | 100
-13 | TBD | Project Presentation | 300
+01 | 09/08/2016 | MAGD 150 Review | 100
+02 | 09/15/2016 | Data Visualization | 100
+03 | 09/22/2016 | p5 Migration, Juiciness | 100
+04 | 09/29/2016 | p5.js 2 | 100
+05 | 10/06/2016 | Animation 1 | 100
+06 | 10/13/2016 | Animation 2 | 100
+07 | 10/20/2016 | Git | 100
+08 | 10/27/2016 | Makey Makey | 100
+09 | 11/03/2016 | Arduino 1 | 100
+10 | 11/10/2016 | Arduino 2 | 100
+11 | 11/17/2016 | GitHub Portfolio | 100
+12 | 12/01/2016 | Project Design Document | 100
+13 | TBA | Project Presentation | 300

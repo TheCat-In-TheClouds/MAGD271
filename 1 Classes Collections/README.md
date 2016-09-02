@@ -5,7 +5,7 @@
 
 1. Declare and assign crucial variables in setup() and draw(). (10 pts.)
 
-2. Create a minimum of two classes. (10 pts.)
+2. Create and use a minimum of two classes. (10 pts.)
 
 3. Extend one super- or parent class to a sub- or child class and override a function. (10 pts.)
 

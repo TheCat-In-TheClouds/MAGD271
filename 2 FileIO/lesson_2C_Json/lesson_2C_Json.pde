@@ -16,7 +16,7 @@ void setup() {
   size(640, 420);
   background(32);
   font = loadFont("HarlowSolid-48.vlw");
-  textFont(font, 24);
+  textFont(font, 20);
 }
 
 void draw() {
@@ -73,10 +73,13 @@ void submitQuery(char[] query) {
 
 void displayResult() {
   int size = response.length;
-  fill(255, 255, 0);
+  fill(255, 255, 0, 127);
   for(int i = 0; i < size; ++i) {
-    text(response[i], 10, height / 5.0 + 20 * i);
+    text(response[i], 10, 20 * (i+1));
   }
+  noStroke();
+  fill(0);
+  rect(0, height-30, width, 30);
   fill(255);
   text("Press Enter to search for a new word.", 10, height - 10);
 }
