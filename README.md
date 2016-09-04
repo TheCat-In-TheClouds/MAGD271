@@ -4,10 +4,12 @@
 
 * Classroom: McGraw 127
 * Meeting time: Tuesday, Thursday 12:30 - 1:45 pm
+
 * Instructor: Jeremy Behreandt
 * Office: Andersen Library - Orig Bldg 1217J
-* Office Hours: TBD
-* Office Phone: TBD
+* Office Hours: Tuesday, Thursday 9:00 - 11:30 am
+    * Also available by appointment
+* Office Phone: (262) 472-5075
 * Email: behreandjj28@uww.edu
 * Course Website
     * Primary: Desire 2 Learn

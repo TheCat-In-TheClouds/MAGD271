@@ -37,7 +37,7 @@ function setup() {
         textFont(scoreFont);
     }
 
-    setState(GameState.Playing);
+    setState(GameState.Title);
 }
 
 function draw() {
