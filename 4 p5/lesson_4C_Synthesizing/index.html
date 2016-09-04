@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Node Sockets</title>
-
+    <meta property="og:image" content="http://jeremy.clampomatic.com/MAGD271/Synthesis/synthesizer.png">
+    <title>Sound Synthesis</title>
+      
     <link href="style.css" rel="stylesheet" type="text/css">
-
+      
     <!-- Major script libraries I'm depending on. -->
-    <script src="libraries/socketio.js"></script>
     <script src="libraries/p5.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
 
     <!-- Scripts specific to my sketch. -->
     <!-- Classes -->
-    <script src="Pin.js" type="text/javascript"></script>
+    <script src="Dictionary.js" type="text/javascript"></script>
+    <script src="Note.js" type="text/javascript"></script>
     <!-- Main sketch -->
     <script src="sketch.js" type="text/javascript"></script>
-    </style>
-</head>
-
-<body>
-</body>
-
+  </head>
+  <body>
+      <div class="instructions">
+        Click mouse to cycle wave type (sine, triangle, sawtooth, square).<br>Keys: B, A, G, F, E, D, C.
+      </div>
+  </body>
 </html>
