@@ -19,11 +19,11 @@
 
 Software development platforms, like any technology, exist in a highly competitive and volatile field. Recent news regarding Flash necessitates a rapid shift in this course's content toward other platforms for creating and sharing new media.
 
-Increasingly, creative coders are required to work not in one specific software package or programming language, but to master a variety of APIs and frameworks which link together persistent data, hardware, and model-view-controllers. All this must be done while retaining and applying universal design principles.
+Increasingly, creative coders are required to work not in one specific software package or programming language, but to master a variety of Application Program Interfaces (APIs) and frameworks which link together persistent data, hardware, and model-view-controllers. All this must be done while retaining and applying universal design principles.
 
 The _management_ of this instability inherent to creative coding practice will be the theme of this course. While in MAGD 150 students may have been encouraged to view Processing as a "beginner's" language, this course will encourage them to reconceive of it as a framework, maintained by a living community, which spans several underlying programming languages (Java, JavaScript) and which evolves in parallel with the hardware framework Arduino.
 
-Students will use Processing as a launch pad for data visualization and manipulation based on standard formats (XML, JSON and CSV); as an environment to review animation concepts from a programming standpoint; as a simulation of naturally occurring algorithms; as a transferrable philosophy of creating visuals which can be applied to browser-based canvases; and as a means to extend user interactivity beyond the mouse, keyboard and game controller.
+Students will use Processing as a launch pad for data visualization and manipulation based on standard formats (XML, JSON and CSV); as an environment to review animation concepts from a programming standpoint; as a simulation of naturally occurring algorithms; as a transferable philosophy of creating visuals which can be applied to browser-based canvases; and as a means to extend user interactivity beyond the mouse, keyboard and game controller.
 
 ### Course Objectives
 
@@ -74,9 +74,9 @@ I presume that, as a student of a university rather than a vocational institute,
 
 I presume that all class members have decided to learn in a conventional classroom with face-to-face meetings, and that those meetings are crucial to their learning. By not attending class, you hinder the education of other students by depriving them of your knowledge, imagination and values.  Thus, mastery of course material alone is not sufficient; __class attendance is expected__.
 
-You are allowed 2 unexcused absences before your grade will be adversely impacted. For each additional unexecused absence, your letter grade will drop by one-third, e.g., from A to A-, A- to B+, and so on. Medical and family emergencies will be considered excused. For other circumstances, such as academic field trips, please consult with myself and with the coordinator of the event __prior to your absence__.
+You are allowed 2 unexcused absences before your grade will be adversely impacted. For each additional unexcused absence, your letter grade will drop by one-third, e.g., from A to A-, A- to B+, and so on. Medical and family emergencies will be considered excused. For other circumstances, such as academic field trips, please consult with myself and with the coordinator of the event __prior to your absence__.
 
-Consider what it means to 'attend'. If you plan to attend class, arrive at the agreed upon meeting time; if you must leave before the conclusion, do so dicreetly. If another class member has been acknowledged by the room, then to interrupt, ignore or otherwise undermine their address is disrespectful. Even though digital devices such as smart phones and laptops are integral to coursework, they also provide numerous distractions; using them inappropriately will be considered disrespectful.
+Consider what it means to 'attend'. If you plan to attend class, arrive at the agreed upon meeting time; if you must leave before the conclusion, do so discreetly. If another class member has been acknowledged by the room, then to interrupt, ignore or otherwise undermine their address is disrespectful. Even though digital devices such as smart phones and laptops are integral to coursework, they also provide numerous distractions; using them inappropriately will be considered disrespectful.
 
 #### Email
 
@@ -90,7 +90,7 @@ Since topics covered in this course are of a technical nature, observe common pr
 
 ### Academic Misconduct
 
-New media - whether viewed as a culture, technology or philosophy - has challenged traditional notions of authorial responsibility toward, ownership over and attribution for intellectual property. It is easier to both copy, intentionally or otherwise, and to detect copying in submitted work. Work turned in for evaluation is assumed to be your own by default; it is your responsibility to properly attribute the work of others, included in whole or in part, whether modified or not. Consult with a reference librarian, myself or a manual on academic citations if you have any questions regarding proper attribution. Neglecting to do this will result in a failing grade on the assignment. Willful plagiarism will result in a failing grade for the course.
+New media - whether viewed as a culture, technology or philosophy - have challenged traditional notions of authorial responsibility toward, ownership over and attribution for intellectual property. It is easier to both copy, intentionally or otherwise, and to detect copying in submitted work. Work turned in for evaluation is assumed to be your own by default; it is your responsibility to properly attribute the work of others, included in whole or in part, whether modified or not. Consult with a reference librarian, myself or a manual on academic citations if you have any questions regarding proper attribution. Neglecting to do this will result in a failing grade on the assignment. Willful plagiarism will result in a failing grade for the course.
 
 ### UWW Statement
 
@@ -123,16 +123,15 @@ __Subject to change per discretion of the instructor based on response of class 
 
 Unit | Date | Description | Points
 ---- | -------- | ----------- | ------
-01 | 09/08/2016 | MAGD 150 Review | 100
-02 | 09/15/2016 | Data Visualization | 100
-03 | 09/22/2016 | p5 Migration, Juiciness | 100
-04 | 09/29/2016 | p5.js 2 | 100
-05 | 10/06/2016 | Animation 1 | 100
-06 | 10/13/2016 | Animation 2 | 100
-07 | 10/20/2016 | Git | 100
-08 | 10/27/2016 | Makey Makey | 100
-09 | 11/03/2016 | Arduino 1 | 100
-10 | 11/10/2016 | Arduino 2 | 100
-11 | 11/17/2016 | GitHub Portfolio | 100
-12 | 12/01/2016 | Project Design Document | 100
-13 | TBA | Project Presentation | 300
+01 | 09/15/2016 | MAGD 150 Review | 100
+02 | 09/22/2016 | Data Visualization | 100
+03 | 09/29/2016 | p5.js 1 | 100
+04 | 10/06/2016 | p5.js 2 | 100
+05 | 10/13/2016 | Animation 1 | 100
+06 | 10/20/2016 | Animation 2 | 100
+07 | 10/27/2016 | Git | 100
+08 | 11/03/2016 | Makey Makey | 100
+09 | 11/10/2016 | Arduino 1 | 100
+10 | 11/17/2016 | Arduino 2 | 100
+11 | 12/01/2016 | GitHub Portfolio | 200
+12 | TBA | Final Project | 300
