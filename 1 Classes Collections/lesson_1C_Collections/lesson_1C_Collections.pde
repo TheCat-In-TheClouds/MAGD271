@@ -71,7 +71,7 @@ void setup() {
   pIntList.sub(2, 4);
   pIntList.mult(3, 2);
   pIntList.div(0, 5);
-  println("After performing mathemtical operations: " + pIntList);
+  println("After performing mathematical operations: " + pIntList);
   pIntList.sort();
   println("After sorting: " + pIntList);
   pIntList.shuffle();
@@ -118,12 +118,14 @@ void setup() {
   size(500, 500);
   background(127);
   colorMode(HSB, 255);
+  noCursor();
   noStroke();
   smooth();
 }
 
 void draw() {
-  background(32);
+  fill(32, 32, 32, 32);
+  rect(0, 0, width, height);
   c.drawWidgets(pmouseX, pmouseY, 25);
   c.showInstructions();
 }

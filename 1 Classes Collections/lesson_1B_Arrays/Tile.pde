@@ -52,7 +52,7 @@ class Tile {
     rect(xPos + this.padding, yPos + this.padding, this.w - this.padding, this.h - this.padding, this.cornerRounding);
     if (showLabel) {
       fill(labelColor);
-      text(chessNotation(), xPos + (this.w/2), yPos + (this.h/2));
+      text(chessNotation(), xPos + (this.w / 2.0), yPos + (this.h / 2.0));
     }
   }
 

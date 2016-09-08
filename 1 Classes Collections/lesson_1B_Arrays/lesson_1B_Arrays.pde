@@ -10,14 +10,20 @@ String[] stringArray = {"Mno", "Pqr", "Stu", "Abc", "Def", "Ghi", "Jkl", "Vwx", 
 // coordinates.
 Tile[][] chessBoard = new Tile[CHESSBOARD_SIZE][CHESSBOARD_SIZE];
 
+PFont times;
+
 void setup() {
   size(420, 420);
   background(24);
   noStroke();
   smooth();
 
+  times = createFont(PFont.list()[411], 16);
+  textFont(times, 14);
+  textAlign(CENTER, CENTER);
+
   println("FLOAT ARRAY SET TO RANDOM VALUES");
-  
+
   int size = floatPrimitiveArray.length;
   for (int i = 0; i < size; ++i) {
     floatPrimitiveArray[i] = random(-20f, 50f);
@@ -52,17 +58,17 @@ void setup() {
   floatPrimitiveArray = sort(floatPrimitiveArray);
   println(floatPrimitiveArray);
 
-  print("\r\nString[] sorted with util library: ");
+  print("\r\nString[] sorted with util library:\r\n");
   Arrays.sort(stringArray);
-  println(stringArray);
+  printArray(stringArray);
 
   println("\r\nSHUFFLING AN ARRAY\r\nfloat[] shuffled with primitive shuffle: ");
   shuffle(floatPrimitiveArray);
   println(floatPrimitiveArray);
 
-  print("\r\nString[] shuffled with generic shuffle: ");
+  print("\r\nString[] shuffled with generic shuffle:\r\n");
   shuffle(stringArray);
-  println(stringArray);
+  printArray(stringArray);
 
   println("\r\n\r\nINITIALIZING A 2D ARRAY OF CUSTOM OBJECTS");
   int majorSize = chessBoard.length;
@@ -79,18 +85,18 @@ void setup() {
   // Suppose we want to connect some tiles with lines.
   // Calling the line() function looks really long and ugly.
   strokeWeight(5);
-  stroke(255, 0, 0);
+  stroke(242, 204, 47, 204);
   line(chessBoard[3][4].center.x, chessBoard[3][4].center.y, chessBoard[6][5].center.x, chessBoard[6][5].center.y);
 
   // We can improve the convenience of performing this action by creating traceVector,
   // which accepts PVectors as parameters and secretly converts them to a line.
   strokeWeight(5);
-  stroke(0, 255, 0);
+  stroke(174, 221, 60, 204);
   traceVector(chessBoard[1][7].center, chessBoard[2][3].center); 
 
   // We could also make an object method.
   strokeWeight(5);
-  stroke(0, 0, 255);
+  stroke(116, 193, 206, 204);
   println("\r\nDIST BETWEEN TWO TILES: " + chessBoard[5][4].drawLineTo(chessBoard[1][1]));
 }
 

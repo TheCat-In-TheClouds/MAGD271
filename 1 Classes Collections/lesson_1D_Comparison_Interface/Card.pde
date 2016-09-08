@@ -87,7 +87,7 @@ class Card implements Comparable<Card>, ICard {
     float y = height / 2.0;
     float w = 40;
     float h = 60;
-    rect(x, y, w, h);
+    rect(x, y, w, h, 4.0);
     fill(this.clr);
     if (this.suit == Suit.Clubs) {
       ellipse(x + 5, y + 5, 12, 12);

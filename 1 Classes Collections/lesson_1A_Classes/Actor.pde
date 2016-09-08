@@ -20,10 +20,10 @@ class Actor {
     this.name = "Anonymous";
     this.hpMax = 100;
     this.hpCurrent = this.hpMax;
-    this.x = width/2;
-    this.y = height/2;
-    this.r = 20;
-    this.c = color(0);
+    this.x = width / 2.0;
+    this.y = height / 2.0;
+    this.r = height / 14.0;
+    this.c = color(174, 221, 60);
     this.xSpeed = random(-4, 4);
     this.ySpeed = random(-4, 4);
   }
@@ -32,10 +32,10 @@ class Actor {
     this.name = name;
     this.hpMax = 100;
     this.hpCurrent = this.hpMax;
-    this.x = width/2;
-    this.y = height/2;
-    this.r = 20;
-    this.c = color(0);
+    this.x = width / 2.0;
+    this.y = height / 2.0;
+    this.r = height / 14.0;
+    this.c = color(174, 221, 60);
     this.xSpeed = random(-4, 4);
     this.ySpeed = random(-4, 4);
   }
@@ -44,10 +44,10 @@ class Actor {
     this.name = name;
     this.hpMax = hpMax;
     this.hpCurrent = this.hpMax;
-    this.x = width/2;
-    this.y = height/2;
-    this.r = 20;
-    this.c = color(0);
+    this.x = width / 2.0;
+    this.y = height / 2.0;
+    this.r = height / 14.0;
+    this.c = color(174, 221, 60);
     this.xSpeed = random(-4, 4);
     this.ySpeed = random(-4, 4);
   }
@@ -61,10 +61,15 @@ class Actor {
   }
 
   void show() {
-    fill(c);
+    fill(color(242, 60, 47));
     ellipse(this.x, this.y, this.r, this.r);
-    fill(255, 255, 0);
-    text(nf(this.hp() * 100, 3, 0), this.x-10, this.y+5);
+    fill(c);
+    ellipse(this.x, this.y, this.r - 10, this.r - 10);
+    
+    fill(0, 0, 0);
+    text(nf(this.hp() * 100, 3, 0), this.x - 1, this.y + 1);
+    fill(255, 255, 255);
+    text(nf(this.hp() * 100, 3, 0), this.x, this.y);
   }
 
   void move() {
@@ -81,11 +86,11 @@ class Actor {
     this.x += xSpeed * xDirection;
     this.y += ySpeed * yDirection;
 
-    if (this.x > width - this.r || this.x < this.r) {
+    if (this.x >= width - this.r || this.x < this.r) {
       this.xDirection = -this.xDirection;
     }
 
-    if (this.y > height- this.r || this.y < this.r) {
+    if (this.y >= height - this.r || this.y < this.r) {
       this.yDirection = -this.yDirection;
     }
   }

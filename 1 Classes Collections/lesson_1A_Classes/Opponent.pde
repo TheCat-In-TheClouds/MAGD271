@@ -6,22 +6,22 @@ class Opponent extends Actor {
   // the constructor of the parent or super class.
   Opponent() {
     super();
-    this.r = 15;
-    this.c = color(255, 0, 0);
+    this.r = height / 10.0;
+    this.c = color(116, 193, 206);
     this.ySpeed = this.xSpeed = 2;
   }
 
   Opponent(String name) {
     super(name);
-    this.r = 15;
-    this.c = color(255, 0, 0);
+    this.r = height / 10.0;
+    this.c = color(116, 193, 206);
     this.ySpeed = this.xSpeed = 2;
   }
 
   Opponent(String name, int hpMax) {
     super(name, hpMax);
-    this.r = 15;
-    this.c = color(255, 0, 0);
+    this.r = height / 10.0;
+    this.c = color(116, 193, 206);
     this.ySpeed = this.xSpeed = 2;
   }
 

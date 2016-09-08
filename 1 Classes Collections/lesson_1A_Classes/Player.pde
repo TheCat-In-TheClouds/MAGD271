@@ -4,20 +4,20 @@ class Player extends Actor {
 
   Player() {
     super();
-    this.r = 17.5;
-    this.c = color(0, 174, 127);
+    this.r = height / 12.0;
+    this.c = color(242, 204, 47);
   }
 
   Player(String name) {
     super(name);
-    this.r = 17.5;
-    this.c = color(0, 174, 127);
+    this.r  = height / 12.0;
+    this.c = color(242, 204, 47);
   }
 
   Player(String name, int hpMax) {
     super(name, hpMax);
-    this.r = 17.5;
-    this.c = color(0, 174, 127);
+    this.r  = height / 12.0;
+    this.c = color(242, 204, 47);
   }
 
   public String toString() {
@@ -53,12 +53,6 @@ class Player extends Actor {
           }
         }
       }
-    }
-
-    // If the Player's HP is 0, then game over.
-    if (this.hpCurrent == 0) {
-      println("Game over!");
-      exit();
     }
   }
 }
