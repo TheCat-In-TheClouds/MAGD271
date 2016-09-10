@@ -20,8 +20,8 @@ class Actor {
     this.name = "Anonymous";
     this.hpMax = 100;
     this.hpCurrent = this.hpMax;
-    this.x = width / 2.0;
-    this.y = height / 2.0;
+    this.x = random(width / 2.0);
+    this.y = random(height / 2.0);
     this.r = height / 14.0;
     this.c = color(174, 221, 60);
     this.xSpeed = random(-4, 4);
@@ -32,8 +32,8 @@ class Actor {
     this.name = name;
     this.hpMax = 100;
     this.hpCurrent = this.hpMax;
-    this.x = width / 2.0;
-    this.y = height / 2.0;
+    this.x = random(width / 2.0);
+    this.y = random(height / 2.0);
     this.r = height / 14.0;
     this.c = color(174, 221, 60);
     this.xSpeed = random(-4, 4);
@@ -44,12 +44,12 @@ class Actor {
     this.name = name;
     this.hpMax = hpMax;
     this.hpCurrent = this.hpMax;
-    this.x = width / 2.0;
-    this.y = height / 2.0;
+    this.x = random(width / 2.0);
+    this.y = random(height / 2.0);
     this.r = height / 14.0;
     this.c = color(174, 221, 60);
-    this.xSpeed = random(-4, 4);
-    this.ySpeed = random(-4, 4);
+    this.xSpeed = random(-8, 8);
+    this.ySpeed = random(-8, 8);
   }
 
   public String toString() {
@@ -86,11 +86,11 @@ class Actor {
     this.x += xSpeed * xDirection;
     this.y += ySpeed * yDirection;
 
-    if (this.x >= width - this.r || this.x < this.r) {
+    if (this.x >= width - this.r || this.x <= this.r) {
       this.xDirection = -this.xDirection;
     }
 
-    if (this.y >= height - this.r || this.y < this.r) {
+    if (this.y >= height - this.r || this.y <= this.r) {
       this.yDirection = -this.yDirection;
     }
   }

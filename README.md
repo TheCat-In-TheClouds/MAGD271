@@ -50,21 +50,23 @@ As such, the primary tools below will be emphasized in the course, but students 
 The primary tools for this course will be:
 * [Processing](https://processing.org/)
     * Available in McGraw 127
-* [p5.js](https://p5js.org/)
-    * An editor is available for this library, however any editor capable of parsing Javascript will be sufficient ([Atom](https://atom.io/), [Brackets](http://brackets.io/), Dreamweaver, [Notepad++](https://notepad-plus-plus.org/)).
-* [Hype](http://www.hypeframework.org/)
 * [Arduino](https://www.arduino.cc/)
-* a GitHub account
-    * [GitHub's Student Developer Pack](https://education.github.com/pack)
-    * GitHub's [desktop app](https://desktop.github.com/) is recommended.
+* Casey Reas and Ben Fry, [_Processing_](https://mitpress.mit.edu/books/processing-0), 2nd ed. (2014)
+    * __Available for rent at the UWW Bookstore.__
     
 Reference resources:
 * Daniel Shiffman, [_The Nature of Code_](http://natureofcode.com/)
 * Daniel Shiffman, [Coding Rainbow](http://codingrainbow.com/)
-* Casey Reas and Ben Fry, [_Processing_](https://mitpress.mit.edu/books/processing-0), 2nd ed. (2014)
-    * __Available for rent at the UWW Bookstore.__
-* [Lynda Tutorials](http://lynda.com/)
+* Casey Reas et al., [_Form + Code_](http://formandcode.com/code-examples/) code examples
+* Hartmut Bohnacker et al., [_Generative Design_](http://www.generative-gestaltung.de/code) code examples
 * [OpenProcessing](http://openprocessing.org/)
+* [Lynda Tutorials](http://lynda.com/)
+* [GitHub's desktop app](https://desktop.github.com/)
+
+Inspiration:
+* The portfolio of [Casey Reas](http://reas.com/), co-inventor of Processing
+* The portfolio of [Ben Fry](http://www.benfry.com/), co-inventor of Processing
+* [For Your Processing](http://fyprocessing.tumblr.com/)
 
 ### Etiquette
 
