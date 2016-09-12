@@ -22,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  // blendMode(ADD);
+  blendMode(ADD);
 
   // 4. Operations such as changing the origin, rotating
   //    and skewing need to be enclosed in pushMatrix();
@@ -52,7 +52,7 @@ void draw() {
   // 10. Notice that because we want the center of the image to
   //     be the axis around which it rotates, we can use 0, 0 for
   //     its position. Try offsetting this to see the difference.
-  // tint(255, 0, 0, 27);
+  tint(255, 0, 0, 27);
   image(r, 0, 0, r.width / 3, r.height / 3);
   popMatrix();
 
@@ -64,14 +64,14 @@ void draw() {
   pivotY = (pivotY + 1) % height;
   translate(pivotX, pivotY);
   shearX(theta % TWO_PI);
-  // tint(0, 255, 0, 27);
+  tint(0, 255, 0, 27);
   image(r, 0, 0, r.width / 3, r.height / 3);
   popMatrix();
 
-  // pushMatrix();
-  // translate(mouseX, mouseY);
-  // shearY(theta % TWO_PI);
-  // tint(0, 0, 255, 27);
-  // image(r, 0, 0, r.width / 3, r.height / 3);
-  // popMatrix();
+   pushMatrix();
+   translate(pivotY / 2.0, pivotX / 2.0);
+   shearY(theta % TWO_PI);
+   tint(0, 0, 255, 27);
+   image(r, 0, 0, r.width / 3, r.height / 3);
+   popMatrix();
 }

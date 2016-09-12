@@ -34,6 +34,13 @@ void draw() {
           100, 
           (bri + map(mouseX, 0, width, 0, 75)) % 360);
         vertex(x * scale, (y + 1) * scale);
+      } else if(mousePressed && mouseButton == RIGHT) {
+        fill((hue + x) % 360, 100, ((bri + y) % 360) + 15);
+        vertex((x * scale) + random(-40, 40), (y * scale) + random(-40, 40));
+        fill((hue + map(mouseY, 0, height, 0, 75)) % 180, 
+          100, 
+          (bri + map(mouseX, 0, width, 0, 75)) % 360);
+        vertex((x * scale) - random(-40, 40), ((y + 1) * scale) - random(-40, 40));
       } else {
         fill(sample);
         vertex(x * scale, y * scale);

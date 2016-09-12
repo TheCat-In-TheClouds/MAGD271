@@ -125,15 +125,9 @@ __Subject to change per discretion of the instructor based on response of class 
 
 Unit | Date | Description | Points
 ---- | -------- | ----------- | ------
-01 | 09/15/2016 | MAGD 150 Review | 100
-02 | 09/22/2016 | Data Visualization | 100
-03 | 09/29/2016 | p5.js 1 | 100
-04 | 10/06/2016 | p5.js 2 | 100
-05 | 10/13/2016 | Animation 1 | 100
-06 | 10/20/2016 | Animation 2 | 100
-07 | 10/27/2016 | Git | 100
-08 | 11/03/2016 | Makey Makey | 100
-09 | 11/10/2016 | Arduino 1 | 100
-10 | 11/17/2016 | Arduino 2 | 100
-11 | 12/01/2016 | GitHub Portfolio | 200
-12 | TBA | Final Project | 300
+01 | 09/15/2016 | Starting Point | 50
+... | ... | ... | ...
+TBD | TBD | Arduino, Makey Makey, etc. | TBD
+TBD | TBD | Final Project Design Document | TBD
+TBD | TBD | Final Project | TBD
+TBD | TBD | GitHub Portfolio | TBD

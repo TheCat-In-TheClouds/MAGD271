@@ -75,7 +75,7 @@ void setup() {
 
   // Grass
   image(atlas.get(15 * sourceTileX, 5 * sourceTileY, sourceTileX, sourceTileY), 
-    224, height - 64, 32, 32);
+    192, height - 64, 32, 32);
 
   // Cloud
   image(atlas.get(13 * sourceTileX, 0, sourceTileX, sourceTileY), 

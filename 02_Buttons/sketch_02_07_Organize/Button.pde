@@ -13,14 +13,41 @@ class Button extends Rect {
     this.fillColor = color(120);
   }
 
+  Button(PVector a, PVector b, float cornerRounding) {
+    super(CORNERS, a, b);
+    this.cornerRounding = cornerRounding;
+    this.label = new RichString("Button", this.center, "Verdana Bold", 14);
+    this.fillColor = color(120);
+  }
+
+  Button(PVector a, PVector b) {
+    super(CORNERS, a, b);
+    this.cornerRounding = 5;
+    this.label = new RichString("Button", this.center, "Verdana Bold", 14);
+    this.fillColor = color(120);
+  }
+
   Button(float a, float b, float c, float d, float cornerRounding, String label) {
     super(CORNERS, a, b, c, d);
     this.cornerRounding = cornerRounding;
     this.label = new RichString(label, this.center, "Verdana Bold", 14);
     this.fillColor = color(120);
   }
-  
-  @Override
+
+  Button(float a, float b, float c, float d, float cornerRounding) {
+    super(CORNERS, a, b, c, d);
+    this.cornerRounding = cornerRounding;
+    this.label = new RichString("Button", this.center, "Verdana Bold", 14);
+    this.fillColor = color(120);
+  }
+
+  Button(float a, float b, float c, float d) {
+    super(CORNERS, a, b, c, d);
+    this.cornerRounding = 5;
+    this.label = new RichString("Button", this.center, "Verdana Bold", 14);
+    this.fillColor = color(120);
+  }
+
   public String toString() {
     return this.label.string;
   }
@@ -48,20 +75,20 @@ class Button extends Rect {
     return x > this.tlCorner.x && x < this.brCorner.x
       && y > this.tlCorner.y && y < this.brCorner.y;
   }
-  
+
   void toggle() {
     this.toggle = !this.toggle;
   }
 
   /* void onMouseHeld() {
-    println("Mouse held.");
-  }
-
-  void onMousePressed() {
-    println("Mouse pressed.");
-  }
-
-  void onMouseReleased() {
-    println("Mouse released.");
-  } */
+   println("Mouse held.");
+   }
+   
+   void onMousePressed() {
+   println("Mouse pressed.");
+   }
+   
+   void onMouseReleased() {
+   println("Mouse released.");
+   } */
 }
