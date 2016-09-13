@@ -10,42 +10,48 @@ class Button extends Rect {
     super(CORNERS, a, b);
     this.cornerRounding = cornerRounding;
     this.label = new RichString(label, this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   Button(PVector a, PVector b, float cornerRounding) {
     super(CORNERS, a, b);
     this.cornerRounding = cornerRounding;
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   Button(PVector a, PVector b) {
     super(CORNERS, a, b);
     this.cornerRounding = 5;
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   Button(float a, float b, float c, float d, float cornerRounding, String label) {
     super(CORNERS, a, b, c, d);
     this.cornerRounding = cornerRounding;
     this.label = new RichString(label, this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   Button(float a, float b, float c, float d, float cornerRounding) {
     super(CORNERS, a, b, c, d);
     this.cornerRounding = cornerRounding;
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   Button(float a, float b, float c, float d) {
     super(CORNERS, a, b, c, d);
     this.cornerRounding = 5;
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
-    this.fillColor = color(120);
+    this.fillColor = this.inactiveColor;
+    this.strokeColor = this.label.fontColor;
   }
 
   public String toString() {

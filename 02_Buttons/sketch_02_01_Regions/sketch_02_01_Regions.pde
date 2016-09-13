@@ -1,3 +1,6 @@
+// An example of buttons is also available at
+// https://processing.org/examples/button.html
+
 // 1. An int is short for integer. It is a primitive data type
 //    in Java designed to hold whole numbers that have no
 //    decimal point. You can name your integer variable whatever

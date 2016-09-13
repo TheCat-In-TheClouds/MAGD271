@@ -23,12 +23,11 @@ Increasingly, creative coders are required to work not in one specific software 
 
 The _management_ of this instability inherent to creative coding practice will be the theme of this course. While in MAGD 150 students may have been encouraged to view Processing as a "beginner's" language, this course will encourage them to reconceive of it as a framework, maintained by a living community, which spans several underlying programming languages (Java, JavaScript) and which evolves in parallel with the hardware framework Arduino.
 
-Students will use Processing as a launch pad for data visualization and manipulation based on standard formats (XML, JSON and CSV); as an environment to review animation concepts from a programming standpoint; as a simulation of naturally occurring algorithms; as a transferable philosophy of creating visuals which can be applied to browser-based canvases; and as a means to extend user interactivity beyond the mouse, keyboard and game controller.
+Students will use Processing as an environment to review animation concepts from a programming standpoint; as a transferable philosophy of creating visuals which can be applied to browser-based canvases; and as a means to extend user interactivity beyond the mouse, keyboard and game controller.
 
 ### Course Objectives
 
 By the end of this course, students will be able to
-* interpret and visualize complex data with programming software;
 * adapt new media projects from one platform to another;
 * apply principles of animation to interactive media experiences;
 * explore the relationship between hardware, software and user interaction.
