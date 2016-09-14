@@ -12,6 +12,7 @@ class Button extends Rect {
     this.label = new RichString(label, this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   Button(PVector a, PVector b, float cornerRounding) {
@@ -20,6 +21,7 @@ class Button extends Rect {
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   Button(PVector a, PVector b) {
@@ -28,6 +30,7 @@ class Button extends Rect {
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   Button(float a, float b, float c, float d, float cornerRounding, String label) {
@@ -36,6 +39,7 @@ class Button extends Rect {
     this.label = new RichString(label, this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   Button(float a, float b, float c, float d, float cornerRounding) {
@@ -44,6 +48,7 @@ class Button extends Rect {
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   Button(float a, float b, float c, float d) {
@@ -52,6 +57,7 @@ class Button extends Rect {
     this.label = new RichString("Button", this.center, "Verdana Bold", 14);
     this.fillColor = this.inactiveColor;
     this.strokeColor = this.label.fontColor;
+    this.strokeWeight = 1.5;
   }
 
   public String toString() {
@@ -85,16 +91,4 @@ class Button extends Rect {
   void toggle() {
     this.toggle = !this.toggle;
   }
-
-  /* void onMouseHeld() {
-   println("Mouse held.");
-   }
-   
-   void onMousePressed() {
-   println("Mouse pressed.");
-   }
-   
-   void onMouseReleased() {
-   println("Mouse released.");
-   } */
 }

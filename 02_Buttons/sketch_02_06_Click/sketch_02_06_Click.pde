@@ -18,7 +18,7 @@ void setup() {
   rectMode(CORNERS);
   noStroke();
   textAlign(CENTER, CENTER);
-  fontB = createFont("Source Code Pro", 16);
+  fontB = createFont("Source Code Pro Bold", 16);
   textFont(fontB);
 }
 
@@ -48,6 +48,7 @@ void draw() {
   fill(255);
   text(label, centerX, centerY);
 
+  // 3. If triggered is true, then a yellow dot appears.
   if (triggered) {
     fill(255, 255, 0);
     ellipse(width - 75, height - 300, 50, 50);
@@ -59,7 +60,7 @@ void mousePressed() {
     fill(0, 0, 255);
     ellipse(width - 75, height - 150, 50, 50);
 
-    // 3. The exclamation point is used for negation. If triggered is true,
+    // 4. The exclamation point is used for negation. If triggered is true,
     //    It is assigned its opposite, false. If triggered is false, it is
     //    assigned its opposite, true.
     triggered = !triggered;

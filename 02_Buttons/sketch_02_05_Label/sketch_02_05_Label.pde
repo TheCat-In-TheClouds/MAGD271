@@ -49,8 +49,8 @@ void setup() {
   // 7. After printing the PFont list to the console, I know that the font
   //    I want is 399, so I can request that font from the list using the
   //    [ ] to specify the index... or I could just type it in.
-  // fontB = createFont(PFont.list()[399], 16);
-  fontB = createFont("Source Code Pro", 16);
+  // fontB = createFont(PFont.list()[400], 16);
+  fontB = createFont("Source Code Pro Bold", 16);
 
   // 8. Once you load your font, to set that as the font to display,
   //    call textFont(yourFontVariable);
