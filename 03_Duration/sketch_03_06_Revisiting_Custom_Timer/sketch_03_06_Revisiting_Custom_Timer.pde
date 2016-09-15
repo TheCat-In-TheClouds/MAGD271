@@ -61,6 +61,7 @@ void draw() {
 void mousePressed() {
   if (!nt.started) {
     nt.timerStart();
+    explosionOnScreen = 0;
   } else {
     nt.stopTimer();
   }

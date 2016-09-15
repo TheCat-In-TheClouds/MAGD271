@@ -17,16 +17,12 @@ void draw() {
     ellipse(width / 4.0, height / 4.0, 100, 100);
   }
 
-  // 2. ceil(float) always rounds a floating point number up to an integer
-  //    no matter how small the first decimal number. ceil(4.3) == 5. So,
-  //    if the frame rate is 60 per second, then the frame count will be
-  //    cleanly divisible by 60 every one second.
-  if (frameCount % ceil(frameRate) == 0) {
-    fill(255, 0, 0);
+  if (frameCount % 60 == 0) {
+    fill(0, 0, 255);
     ellipse(width * 3 / 4.0, height / 4.0, 100, 100);
   }
-  
-  // 3. Why does millis() % 1000 not work then? You can see why
+
+  // 2. Why does millis() % 1000 not work then? You can see why
   //    if you println(millis()) in setup and in draw. Depending
   //    on how much work you're doing in setup and in each draw
   //    call, the duration of time will not be exact, and so
