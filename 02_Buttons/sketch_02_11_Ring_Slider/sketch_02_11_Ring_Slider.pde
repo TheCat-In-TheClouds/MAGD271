@@ -77,15 +77,11 @@ void draw() {
       // 8. We subtract the mouse's position from the center position.
       mouse.sub(center);
       // 9. Normalize converts the distance or magnitude of the vector to
-      // a value between 0 and 1, i.e., makes this a unit vector.
+      //    a value between 0 and 1, i.e., makes this a unit vector.
       mouse.normalize();
       // 10. We blow that distance back up to a scale of our choosing by
-      // multiplying by the radius.
+      //     multiplying by the radius.
       mouse.mult(radius);
-      
-      //println(degrees(PVector.angleBetween(center, mouse)));
-      //println(degrees(PVector.angleBetween(mouse, mPressed)));
-      
 
       pushStyle();
       noStroke();
@@ -102,11 +98,11 @@ void draw() {
   }
 }
 
-// 9. The difference between mousePressed the T/F keyword in draw and
-//    mousePressed() { } the function you define below draw() is that
-//    code inside if(mousePressed) {  } is like rapidfire, it executes
-//    repeatedly when the mouse button is down, while mousePressed
-//    is an event that happens only once upon the button being clicked.
+// 11. The difference between mousePressed the T/F keyword in draw and
+//     mousePressed() { } the function you define below draw() is that
+//     code inside if(mousePressed) {  } is like rapidfire, it executes
+//     repeatedly when the mouse button is down, while mousePressed
+//     is an event that happens only once upon the button being clicked.
 void mousePressed() {
   if (dist < radius + strokeWeight && dist > radius - strokeWeight) {
     mPressed = new PVector(mouseX, mouseY);

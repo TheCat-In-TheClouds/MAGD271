@@ -5,7 +5,7 @@ class Invocation extends TimerTask {
   }
   
   public void run() {
-    println("Time's up.");
-    t.cancel();
+    println("Invocation did its work and now it will stop.");
+    t2.cancel();
   }
 }

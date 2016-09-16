@@ -9,4 +9,8 @@ void draw() {
   //    The code executed in void draw() { } happens in one frame.
   println("frames: " + frameCount);
   println("milliseconds: " + millis());
+  
+  // 2. Millis can be hard to work with if you're used to thinking
+  //    in terms of seconds. Convert with multiplication/division.
+  println("seconds: " + (millis() / 1000));
 }

@@ -33,6 +33,7 @@ void mousePressed() {
 
     fill(54, 255, 54);
     rect(0, 0, width, height);
+    println("Timers started!");
   } else if (mouseButton == RIGHT) {
     // 4. And nothing to prevent the timer from being "stopped"
     //    when it wasn't started to begin with.

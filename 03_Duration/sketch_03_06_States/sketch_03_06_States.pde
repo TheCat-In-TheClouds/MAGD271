@@ -19,7 +19,7 @@ void setup() {
 }
 
 // 2. An enum is not enough. States may trigger one-off
-//    functions when they are ENTERED and EXITED. They
+//    functions when they are entered and exited. They
 //    may also regularly perform tasks while they are
 //    sustained.
 void draw() {
@@ -30,8 +30,9 @@ void draw() {
   stateOnSustain();
 }
 
-// 3. In a more nuanced implementation of this state engine,
-//    states would change based on key or button presses.
+// 3. In a more nuanced implementation of this state machine,
+//    states would change based on key press, button press,
+//    or timer functionality.
 void mousePressed() {
   if (currentState == GameState.TITLE) {
     setState(GameState.PLAYING);
@@ -57,9 +58,8 @@ void setState(GameState newState) {
 }
 
 // 5. stateOnExit, stateOnEnter and stateOnSustain
-//    work entirely as switchboards, redirecting to a
-//    particular state's exiting and entering function.
-//
+//    work as switchboards, redirecting to a particular
+//    state's exiting, entering, or sustaining function.
 void stateOnExit() {
   if (prevState != null) {
     if (prevState == GameState.TITLE) {
@@ -77,20 +77,20 @@ void stateOnExit() {
 }
 
 void titleOnExit() {
-  println("Leaving title. Have fun on your adventure.");
+  println("Exiting title. Have fun on your adventure!");
 }
 
 void playOnExit() {
   stop = elapsed;
-  println("You're leaving the mission area. " + stop);
+  println("Exiting play, play time was " + (elapsed / 1000.0) + " seconds.");
 }
 
 void victoryOnExit() {
-  println("Don't sit on your laurels.");
+  println("Exiting victory. Don't sit on your laurels.");
 }
 
 void gameOverOnExit() {
-  println("Rejoining the fight.");
+  println("Exiting Game Over. Fall down 7 times, stand up 8.");
 }
 
 void pausedOnExit() {
@@ -111,6 +111,11 @@ void stateOnEnter() {
   }
 }
 
+// 6. Since changing the GameState starts and stops
+//    the timer, we can use a fairly simple implementation
+//    of duration. However, if we want to do the opposite,
+//    have the timer change states based on its elapsed time,
+//    we need something more sophisticated.
 void titleOnEnter() {
   start = millis();
   println("Welcome! You've now entered the title screen.");
@@ -121,7 +126,7 @@ void playOnEnter() {
 }
 
 void victoryOnEnter() {
-  println("Victory.");
+  println("Welcome to Victory.");
 }
 
 void gameOverOnEnter() {

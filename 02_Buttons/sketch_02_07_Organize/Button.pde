@@ -68,7 +68,6 @@ class Button extends Rect {
     if (bounds()) {
       if (mousePressed && mouseButton == LEFT) {
         this.fillColor = this.activeColor;
-        // onMouseHeld();
       } else {
         this.fillColor = this.hoverColor;
       }

@@ -1,4 +1,4 @@
-class TimerA {
+class Timer {
 
   // Two variables to keep track of the time
   // that the timer starts and length of time
@@ -14,7 +14,7 @@ class TimerA {
   // below to true. an example use would be 
   // Timer myTimer = new Timer(2000);
   // sets the timer to 2 seconds.
-  TimerA(float _stopTime) {
+  Timer(float _stopTime) {
     stopTime = _stopTime;
   }
 
@@ -36,7 +36,7 @@ class TimerA {
   // place this in your draw() loop to ?
   // the time has lapsed. an example block
   // of code might be:
-  //   if (myTimer.isFinished(){
+  //   if (myTimer.isFinished()){
   //      text("EXPLOSION!", 100, 100);
   //    }
   boolean isFinished() {

@@ -1,4 +1,7 @@
-class Ellipse {
+// 1. An abstract class is one in which there is no expectation that
+//    it will be instantiated as object. Rather it is to provide
+//    a home for all the qualities shared by its children.
+abstract class Primitive2D {
   PVector center;
   PVector scale;
   PVector tlCorner;
@@ -12,9 +15,7 @@ class Ellipse {
   color strokeColor = color(0);
   float strokeWeight = 1;
 
-  // This constructor shows how the corners, center, radii and diameter
-  // of an ellipse might be calculated using Vector math functions.
-  Ellipse(int mode, PVector a, PVector b) {
+  protected Primitive2D(int mode, PVector a, PVector b) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = b;
@@ -43,9 +44,7 @@ class Ellipse {
     }
   }
 
-  // This conventional constructor shows how basic information
-  // about an ellipse is calculated without PVector functions.
-  Ellipse(int mode, float a, float b, float c, float d) {
+  protected Primitive2D(int mode, float a, float b, float c, float d) {
     this.mode = mode;
     if (this.mode == CENTER) {
       this.scale = new PVector(c, d);
@@ -73,7 +72,7 @@ class Ellipse {
       this.brCorner = new PVector(c, d);
     }
   }
-
+  
   public String toString() {
     return toString(this.mode);
   }
@@ -101,35 +100,9 @@ class Ellipse {
         + ", " + this.scale.y + "]";
     }
   }
-
-  void update() {
-    ellipseMode(this.mode);
-
-    // pushStyle() and popStyle() enclose style settings
-    // that govern stroke and fill.
-    pushStyle();
-    if (this.noStroke == true || this.strokeWeight == 0) {
-      noStroke();
-    } else {
-      strokeWeight(this.strokeWeight);
-      stroke(this.strokeColor);
-    }
-
-    if (this.noFill == true) {
-      noFill();
-    } else {
-      fill(this.fillColor);
-    }
-
-    if (this.mode == CENTER) {
-      ellipse(this.center, this.scale);
-    } else if (this.mode == CORNER) {
-      ellipse(this.tlCorner, this.scale);
-    } else if (this.mode == CORNERS) {
-      ellipse(this.tlCorner, this.brCorner);
-    } else if (this.mode == RADIUS) {
-      ellipse(this.center, this.radii);
-    }
-    popStyle();
-  }
+  
+  // 2. An abstract function doesn't have to be defined.
+  //    Rather, it forces the children of Primitive2D
+  //    to define it.
+  abstract void update();
 }

@@ -1,7 +1,7 @@
 void setup() {
   size(420, 420);
   noStroke();
-  println(millis());
+  println("millis() at end of setup: " + millis());
 }
 
 void draw() {
@@ -27,5 +27,13 @@ void draw() {
   //    on how much work you're doing in setup and in each draw
   //    call, the duration of time will not be exact, and so
   //    you can't depend on it being cleanly divisible.
-  // println(millis());
+  println(millis());
+  
+  // 3. millis() does not increase at a regular
+  //    rate. In my case:
+  //    368
+  //    383 = 368 + 15
+  //    399 = 383 + 16
+  //    416 = 399 + 17
+  //    432 = 416 + 16
 }

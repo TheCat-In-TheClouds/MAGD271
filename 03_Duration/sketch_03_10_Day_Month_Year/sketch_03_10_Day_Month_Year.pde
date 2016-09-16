@@ -2,15 +2,14 @@
 //    minute(), month(), second(), year().
 
 // 2. They're not very helpful. The problem is that
-//    there's no sweet spot between oversimplistic
+//    there's no sweet-spot between oversimplistic
 //    measures of time and overly complex measures.
 //    Between different traditional calendars in use,
 //    globalization necessitating the internationalization
 //    of time stamps, time zones, creating a good
 //    dateTime is much more complex than it first seems.
 
-// 3. There's JODA and Apache Commons DateUtils, but I'll
-//    just use java.time.* to keep it simple. Notice I
+// 3. I'll use Java's time library to keep it simple. I
 //    have to add an import statement to the top of the
 //    sketch. The Oracle tutorial is at
 //    https://docs.oracle.com/javase/tutorial/datetime/TOC.html
