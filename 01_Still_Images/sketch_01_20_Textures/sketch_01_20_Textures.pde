@@ -23,7 +23,7 @@ void draw() {
   pushMatrix();
   translate(mouseX, mouseY);
   beginShape();
-  tint(255, 0, 0, 54);
+  tint(255, map(mouseX, 0, width, 0, 255), 0, 54);
   // 2. Within beginShape(), you can feed the texture() function a PImage.
   texture(poseidon);
   for (float a = 0; a < TWO_PI; a+= angle) {

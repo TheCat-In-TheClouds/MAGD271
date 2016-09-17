@@ -125,6 +125,7 @@ __Subject to change per discretion of the instructor based on response of class 
 Unit | Date | Description | Points
 ---- | -------- | ----------- | ------
 01 | 09/15/2016 | Starting Point | 50
+02 | 09/22/2016 | Improvement | 75
 ... | ... | ... | ...
 TBD | TBD | Arduino, Makey Makey, etc. | TBD
 TBD | TBD | Final Project Design Document | TBD
