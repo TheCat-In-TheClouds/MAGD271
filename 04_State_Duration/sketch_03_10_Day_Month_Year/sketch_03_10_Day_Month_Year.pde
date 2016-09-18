@@ -9,9 +9,8 @@
 //    of time stamps, time zones, creating a good
 //    dateTime is much more complex than it first seems.
 
-// 3. I'll use Java's time library to keep it simple. I
-//    have to add an import statement to the top of the
-//    sketch. The Oracle tutorial is at
+// 3. I'll use Java's time library, although there are
+//    like debates about which library is best. See
 //    https://docs.oracle.com/javase/tutorial/datetime/TOC.html
 import java.time.*;
 import java.time.format.*;
@@ -31,6 +30,7 @@ DateTimeFormatter format = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy");
 void setup() {
   now = LocalDate.now();
   println(now);
+  println(t);
   println(now.format(format));
   
   birthday = LocalDate.of(1985, Month.FEBRUARY, 28);

@@ -9,6 +9,31 @@ class RichString {
   boolean textShadow = true;
   color shadowColor = color(0);
 
+  RichString(String s, float x, float y) {
+    this.string = s;
+    this.pos = new PVector(x, y);
+    this.font = createFont("Source Code Pro", this.size);
+  }
+
+  RichString(String s, float x, float y, String fontName) {
+    this.string = s;
+    this.pos = new PVector(x, y);
+    this.font = createFont(fontName, this.size);
+  }
+
+  RichString(String s, float x, float y, int size) {
+    this.string = s;
+    this.pos = new PVector(x, y);
+    this.font = createFont("Source Code Pro", size);
+  }
+
+  RichString(String s, float x, float y, String fontName, int size) {
+    this.string = s;
+    this.pos = new PVector(x, y);
+    this.size = size;
+    this.font = createFont(fontName, this.size);
+  }
+
   RichString(String s, PVector pos) {
     this.string = s;
     this.pos = pos;

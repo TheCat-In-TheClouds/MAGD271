@@ -1,6 +1,3 @@
-// 1. An abstract class is one in which there is no expectation that
-//    it will be instantiated as object. Rather it is to provide
-//    a home for all the qualities shared by its children.
 abstract class Primitive2D {
   PVector center;
   PVector scale;
@@ -101,8 +98,5 @@ abstract class Primitive2D {
     }
   }
   
-  // 2. An abstract function doesn't have to be defined.
-  //    Rather, it forces the children of Primitive2D
-  //    to define it.
   abstract void update();
 }

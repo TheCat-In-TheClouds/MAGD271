@@ -5,7 +5,7 @@ Timer t;
 
 void setup() {
   size(420, 420);
-  background(255, 0, 0);
+  background(64);
   sm = new StateMachine(State.TITLE);
   playButton = new ButtonRect(width / 2.0 - 60, height / 2.0 - 20, width / 2.0 + 60, height / 2.0 + 20, 5, "PLAY");
   forfeitButton = new ButtonCirc(width / 2.0, height * 3 / 4.0, 50, "FORFEIT", false);

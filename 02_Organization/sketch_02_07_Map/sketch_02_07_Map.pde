@@ -10,11 +10,7 @@ void setup() {
   background(64);
 }
 
-float deltaMouseX, deltaMouseY;
-
 void draw() {
-  deltaMouseX = mouseX - pmouseX;
-  deltaMouseY = mouseY - pmouseY;
 
   background(32);
   noStroke();
