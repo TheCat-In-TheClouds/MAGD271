@@ -1,3 +1,16 @@
+static final PVector VECTOR_W = new PVector(-1, 0);
+static final PVector VECTOR_E = new PVector(1, 0);
+static final PVector VECTOR_N = new PVector(0, -1);
+static final PVector VECTOR_S = new PVector(0, 1);
+static final PVector VECTOR_NW = new PVector(-1, -1);
+static final PVector VECTOR_NE = new PVector(1, -1);
+static final PVector VECTOR_SW = new PVector(-1, 1);
+static final PVector VECTOR_SE = new PVector(1, 1);
+
+void arc(PVector v1, PVector v2, float start, float stop) {
+  arc(v1.x, v1.y, v2.x, v2.y, start, stop);
+}
+
 void bezier(PVector anchor1, PVector control1, 
   PVector control2, PVector anchor2) {
   bezier(anchor1.x, anchor1.y, 

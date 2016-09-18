@@ -14,6 +14,8 @@ int seconds = 5;
 int delay = 15;
 
 void setup() {
+  size(300, 300);
+  background(32);
   t1 = new Timer();
   t2 = new Timer();
   // 2. The Timer instance has a schedule method which can be fed

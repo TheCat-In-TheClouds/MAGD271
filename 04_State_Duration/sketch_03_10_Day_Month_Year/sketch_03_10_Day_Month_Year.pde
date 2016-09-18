@@ -30,7 +30,6 @@ DateTimeFormatter format = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy");
 void setup() {
   now = LocalDate.now();
   println(now);
-  println(t);
   println(now.format(format));
   
   birthday = LocalDate.of(1985, Month.FEBRUARY, 28);
