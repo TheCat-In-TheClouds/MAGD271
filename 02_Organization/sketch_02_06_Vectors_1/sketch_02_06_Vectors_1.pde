@@ -16,8 +16,8 @@ void setup() {
 
   // 3. Each vector has a heading, or degrees of rotation from
   //    y = 0 at the origin.
-  println("v1 heading\t\t" + degrees(v1.heading()));
-  println("v2 heading\t\t" + degrees(v2.heading()));
+  println("v1 heading\t\t" + degrees(v1.heading()) + " or PI * " + v1.heading() / PI);
+  println("v2 heading\t\t" + degrees(v2.heading()) + " or PI * " + v2.heading() / PI);
 
   // 3. The angle between two vectors can be calculated like so.
   println("v1 & v2\t\t" + degrees(PVector.angleBetween(v2, v1)));
@@ -70,6 +70,9 @@ void draw() {
   point(v2.x, v2.y);
 
   // Diagnostic information.
+  fill(0, 127, 255);
+  text("v1", v1.x, v1.y);
+  text("v2", v2.x, v2.y);
   fill(255, 0, 0);
   text(v1.mag(), v1.x / 2.0, v1.y / 2.0);
   fill(0, 255, 0);
