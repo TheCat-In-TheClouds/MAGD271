@@ -14,7 +14,7 @@ void setup() {
   v1 = new PVector(100, 100);
   v2 = new PVector(400, 200);
 
-  // 3. Each vector has a heading, or degrees of rotation from
+  // 2. Each vector has a heading, or degrees of rotation from
   //    y = 0 at the origin.
   println("v1 heading\t\t" + degrees(v1.heading()) + " or PI * " + v1.heading() / PI);
   println("v2 heading\t\t" + degrees(v2.heading()) + " or PI * " + v2.heading() / PI);
@@ -48,14 +48,14 @@ void draw() {
   strokeWeight(1);
 
   // 5. Arcs demonstrate the heading of each individual
-  //    vector. The square of 100^2 + 100^2 is 141.42.
+  //    vector. The square root of 100^2 + 100^2 is 141.42.
   //    You'll notice that the vector's magnitude is the
   //    same as the hypotenuse of a triangle.
   stroke(255, 0, 0);
   fill(255, 0, 0, 27);
   arc(0, 0, v1.mag(), v1.mag(), 0, v1.heading(), PIE);
   
-  // The square of 400^2 + 200^2.
+  // The square root of 400^2 + 200^2.
   stroke(0, 255, 0);
   fill(0, 255, 0, 27);
   arc(0, 0, v2.mag(), v2.mag(), 0, v2.heading(), PIE);
@@ -71,17 +71,17 @@ void draw() {
 
   // Diagnostic information.
   fill(0, 127, 255);
-  text("v1", v1.x, v1.y);
-  text("v2", v2.x, v2.y);
+  text("(" + nfs(v1.x, 3, 1) + ", " + nfs(v1.y, 3, 1) + ")", v1.x, v1.y);
+  text("(" + v2.x + ", " + v2.y + ")", v2.x, v2.y);
   fill(255, 0, 0);
-  text(v1.mag(), v1.x / 2.0, v1.y / 2.0);
+  text(nfs(v1.mag(), 3, 1), v1.x / 2.0, v1.y / 2.0);
   fill(0, 255, 0);
-  text(v2.mag(), v2.x / 2.0, v2.y / 2.0);
+  text(nfs(v2.mag(), 3, 1), v2.x / 2.0, v2.y / 2.0);
   fill(255, 0, 0);
-  text(degrees(v1.heading()) + " deg", v1.mag(), 0);
+  text(nfs(degrees(v1.heading()), 3, 1) + " deg", v1.mag(), 0);
   fill(0, 255, 0);
-  text(degrees(v2.heading()) + " deg", v2.mag(), 0);
+  text(nfs(degrees(v2.heading()), 3, 1) + " deg", v2.mag(), 0);
   fill(255, 255, 0);
-  text(PVector.dist(v1, v2), v1.x + (v2.x - v1.x) / 2.0, v1.y + (v2.y - v1.y) / 2.0);
-  text(degrees(PVector.angleBetween(v1,v2)) + " deg", 3, 3);
+  text(nfs(PVector.dist(v1, v2), 3, 1), v1.x + (v2.x - v1.x) / 2.0, v1.y + (v2.y - v1.y) / 2.0);
+  text(nfs(degrees(PVector.angleBetween(v1,v2)), 3, 1) + " deg", 3, 3);
 }
