@@ -11,9 +11,10 @@ void setup() {
 }
 
 void draw() {
-
   background(32);
   noStroke();
+  
+  // Mapping the mouse's vertical position to the top, shorter bar.
   fill(map(mouseY, 0, height, 0, 255), 255, 0); 
   ellipse(map(mouseY, 0, height, width / 2.0 - 75, width / 2.0 + 75), height / 5.0, 30, 30);
   stroke(255);
@@ -22,7 +23,8 @@ void draw() {
   // Pips on the end points of the line above to better illustrate.
   line(width / 2.0 - 75, height / 5.0 + 17, width / 2.0 - 75, height / 5.0 + 20);
   line(width / 2.0 + 75, height / 5.0 + 17, width / 2.0 + 75, height / 5.0 + 20);
-
+  
+  // Mapping the mouse's horizontal position to the bottom, longer bar.
   noStroke();
   fill(255, 0, map(mouseX, 0, width, 0, 255));
   ellipse(map(mouseX, 0, width, width / 2.0 - 125, width / 2.0 + 125), height / 3.0, 30, 30);
@@ -33,6 +35,8 @@ void draw() {
   line(width / 2.0 - 125, height / 3.0 + 17, width / 2.0 - 125, height / 3.0 + 20);
   line(width / 2.0 + 125, height / 3.0 + 17, width / 2.0 + 125, height / 3.0 + 20);
 
+  // Mapping the current seconds from a range of 0-30 to the width of the
+  // screen, then displaying it as a rectangle.
   noStroke();
   fill(0, map(millis(), 0, 30000, 0, 255), 255);
   rect(0, height - 20, map(millis(), 0, 30000, 0, width), height - 20);

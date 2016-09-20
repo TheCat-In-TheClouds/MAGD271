@@ -10,7 +10,7 @@ int direction1 = 1;
 int direction2 = 1;
 
 void setup() {
-  size(420, 420);
+  size(420, 680);
   background(64);
   noStroke();
 }
@@ -18,8 +18,8 @@ void setup() {
 void draw() {
   background(32);
 
-  criterion1 = x > 420;
-  criterion2 = y < 0;
+  criterion1 = x > 420 || x < 80;
+  criterion2 = y > 680 || y < 130;
 
   // 1. If-else blocks tell the computer to do one
   //    thing if a boolean or comparison is true, and
