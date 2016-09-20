@@ -29,7 +29,7 @@ void setup() {
 
 void draw() {
   background(32);
-  
+
   current = lerpColor(current, target, fadeTime);
   println(hex(current));
   target = color(0, 
@@ -57,6 +57,6 @@ void draw() {
   ellipse(340, 210, 200, 200);
   fill(b, r, g, 210);
   ellipse(340, 210, 150, 150);
-    fill(g, b, r, 200);
+  fill(g, b, r, 200);
   ellipse(340, 210, 100, 100);
 }

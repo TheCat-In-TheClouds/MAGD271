@@ -2,10 +2,10 @@
 color topCurrentColor;
 color topTargetColor;
 
-PVector topCurrentPos;
 PVector topOriginPos;
-PVector topDestPos;
+PVector topCurrentPos;
 PVector topTargetPos;
+PVector topDestPos;
 PVector topScale;
 
 float topSpeed;
@@ -14,10 +14,10 @@ float topSpeed;
 color bottomCurrentColor;
 color bottomTargetColor;
 
-PVector bottomCurrentPos;
 PVector bottomOriginPos;
-PVector bottomDestPos;
+PVector bottomCurrentPos;
 PVector bottomTargetPos;
+PVector bottomDestPos;
 PVector bottomScale;
 
 float bottomSpeed;

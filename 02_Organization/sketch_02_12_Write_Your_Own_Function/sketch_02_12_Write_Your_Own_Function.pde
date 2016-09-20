@@ -5,7 +5,9 @@
 //    }
 
 // 2. That's the definition of a function. A function that is defined
-//    but not called is of no use, so don't forget to call it.
+//    but not called is of no use, so don't forget to call it. Think
+//    about whether you will be calling functions in draw or in setup
+//    when you write them.
 
 int i = 0;
 int fib;
@@ -14,11 +16,13 @@ void setup() {
   size(420, 420);
   background(64);
 
-  float avg = average3Numbers(14.5, 16.3, 19.4);
-  println(avg);
+  float avg = averageNumbers(14.5, 16.3, 19.4);
+  println("avg 1 " + avg);
+  avg = averageNumbers(14.5, 89.4, 54.3, 23.4, 20.3);
+  println("avg 2 " + avg);
 
   int fct = factorial(5);
-  println(fct);
+  println("fct " + fct);
 }
 
 void draw() {
@@ -29,19 +33,41 @@ void draw() {
     println(fib);
     i++;
   }
-  
+
   redDots();
-  
+
   dots(35, 64, 64, 0.75);
   dots(65, 128, 128, 1.25);
   dots(105, 300, 64, 1.5);
 }
 
-float average3Numbers(float a, float b, float c) {
-  return (a + b + c) / 3.0;
+// 3. Abstraction, or generalization is very important to programming.
+//    A function to average numbers is not much use if it can only average
+//    two numbers. As you can see in the improved averageNumbers function
+//    below, there is a trade-off between simplicity and versatility.
+float averageNumbers(float a, float b) {
+  return (a + b) / 2.0;
 }
 
-// 2. Functions can call themselves. These are called recursive
+// 4. Notice that different functions can have the same name if
+//    their signatures are different. Namely, they take different
+//    lists of information. Notice that you can use varargs, a
+//    variable number of arguments, which are indicated by the
+//    ellipsis, which will be treated 
+float averageNumbers(float... ns) {
+    int size = ns.length;
+  if (size == 0) {
+    return 0;
+  } else {
+    float sum = 0;
+    for(int i = 0; i < size; ++i) {
+      sum += ns[i];
+    }
+    return sum / size;
+  }
+}
+
+// 5. Functions can call themselves. These are called recursive
 //    functions. Be careful using them. A recursive function
 //    should always have a base condition: a very simple action
 //    which it performs and then quits out instead of calling
@@ -65,7 +91,7 @@ int fibonacci(int n) {
   }
 }
 
-// 3. void means that redDots doesn't return any information
+// 5. void means that redDots doesn't return any information
 //    once it is finished. Nor does it need any info.
 void redDots() {
   pushStyle();
@@ -84,10 +110,10 @@ void redDots() {
   popStyle();
 }
 
-// 4. Drafting a function is like drafting an essay in a
-//    writing class. Your first draft is infrequencly your
+// 6. Drafting a function is like drafting an essay in a
+//    writing class. Your first draft is rarely your
 //    best. The above function allows us to quickly and
-//    easily draw some circles, but we cannot repeat with
+//    easily draw some circles, but we cannot add
 //    any variation. If we add some parameters to our
 //    function's signature, we'll be able to get that variety.
 void dots(float hue, float x, float y, float scalar) {

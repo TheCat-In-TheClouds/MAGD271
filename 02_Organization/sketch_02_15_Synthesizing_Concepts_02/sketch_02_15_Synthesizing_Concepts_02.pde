@@ -10,6 +10,7 @@ PVector topScale;
 
 float topSpeed;
 
+
 // Variables to track bottom ellipse.
 color bottomCurrentColor;
 color bottomTargetColor;

@@ -34,10 +34,4 @@ void draw() {
   // Pips on the end points of the line above to better illustrate.
   line(width / 2.0 - 125, height / 3.0 + 17, width / 2.0 - 125, height / 3.0 + 20);
   line(width / 2.0 + 125, height / 3.0 + 17, width / 2.0 + 125, height / 3.0 + 20);
-
-  // Mapping the current seconds from a range of 0-30 to the width of the
-  // screen, then displaying it as a rectangle.
-  noStroke();
-  fill(0, map(millis(), 0, 30000, 0, 255), 255);
-  rect(0, height - 20, map(millis(), 0, 30000, 0, width), height - 20);
 }

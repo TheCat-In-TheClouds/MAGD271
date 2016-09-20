@@ -7,6 +7,7 @@
 // 2. Like any other variable, we create a variable
 //    of the data type of the class.
 Car prolechariot;
+Car mercedes;
 
 void setup() {
   size(680, 420);
@@ -15,6 +16,12 @@ void setup() {
   // 3. We assign the result of constructing a car
   //    object to the variable.
   prolechariot = new Car();
+  
+  // 4. Multiple constructors give us options when
+  //    customizing the default values of the car.
+  mercedes = new Car(new PVector(100, 200),
+  new PVector(240, 60),
+  color(255, 127, 255));
 }
 
 void draw() {
@@ -23,4 +30,5 @@ void draw() {
   // 4. The car has its own draw() function, which
   //    we will call here by using a dot method.
   prolechariot.draw();
+  // mercedes.draw();
 }

@@ -18,8 +18,8 @@ void setup() {
 void draw() {
   background(32);
 
-  criterion1 = x > 420 || x < 80;
-  criterion2 = y > 680 || y < 130;
+  criterion1 = x > 300 || x < 80;
+  criterion2 = y > 600 || y < 130;
 
   // 1. If-else blocks tell the computer to do one
   //    thing if a boolean or comparison is true, and
@@ -41,7 +41,4 @@ void draw() {
     direction2 = direction2 * -1;
   }
   y = y - (1.5 * direction2);
-  
-  // 2. So how do we make the balls bounce back and
-  //    forth within the screen?
 }
