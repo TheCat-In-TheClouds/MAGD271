@@ -32,7 +32,7 @@ enum Sandwich {
   }
 }
 
-Suit myCard = Suit.CLUBS;
+Suit myCard = Suit.DIAMONDS;
 Sandwich mySandwich = Sandwich.BLT;
 
 void setup() {
@@ -84,7 +84,6 @@ void draw() {
       rect(185, 185, 50, 50);
       break;
     }
-
   case CHEESESTEAK: 
     {
       fill(0, 255, 255);

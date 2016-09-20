@@ -3,8 +3,8 @@
 
 void setup() {
   size(420, 420);
-  background(255);
+  background(32);
   stroke(127);
-  fill(204);
-  ellipse(210, 210, 140, 140);
+  fill(#76E1E5);
+  ellipse(210, 210, 400, 400);
 }

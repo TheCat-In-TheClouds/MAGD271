@@ -9,6 +9,7 @@ void setup() {
   background(64);
   ellipseMode(RADIUS);
   textAlign(LEFT, TOP);
+  textSize(16);
 
   v1 = new PVector(100, 100);
   v2 = new PVector(400, 200);

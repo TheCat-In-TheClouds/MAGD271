@@ -49,6 +49,3 @@ void setup() {
   // c = c ^ d ^ (d = c);
   // println("c = " + c + ", d = " + d);
 }
-
-void draw() {
-}
