@@ -36,17 +36,21 @@ From the software engineering perspective, this demonstrates that the syntax of 
     A. Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
     B. Define a class that extends the Patch class:
     
+        ``` processing
         class HoundsToothPatch extends Patch {
         
         }
+        ```
         
     C. Define the method draw:
     
+        ``` processing
         class HoundsToothPatch extends Patch {
             void draw(float x, float y, float w, float h) {
                 // Your code here.
             }
         }
+        ```
         
     D. Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
 
