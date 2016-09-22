@@ -61,8 +61,8 @@ class HoundsToothPatch extends Patch {
 ### Inspiration
 
 * [Libs Elliott](http://www.libselliott.com/)
-* [Joshua Davis - _Aim High, Keep Moving_ ]
-* Crossman Gallery: FABRICation
+* [Joshua Davis - _Aim High, Keep Moving_ ](https://www.behance.net/gallery/5278345/194-Aim-High-Keep-Moving)
+* [Crossman Gallery: FABRICation](https://blogs.uww.edu/crossman/fall-exhibitions/)
     * September 8 to October 8
     * September 28, 4 p.m. - [Kristy Deetz](http://www.uwgb.edu/deetzk/) gallery talk
 * [zeitguised](http://www.zeitguised.com/geistxyz/#geistxyz01)
