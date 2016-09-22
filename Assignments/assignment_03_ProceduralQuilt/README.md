@@ -1,3 +1,7 @@
+## Due Date
+Thursday, September 29th, 2016
+12:30 p.m.
+
 ## Philosophy
 
 The first step in revising code in Processing is to replace constants with variables. For example,
