@@ -126,6 +126,7 @@ Unit | Date | Description | Points
 ---- | -------- | ----------- | ------
 01 | 09/15/2016 | Starting Point | 50
 02 | 09/22/2016 | Improvement | 75
+03 | 09/28/2016 | Procedural Quilt | 50
 ... | ... | ... | ...
 TBD | TBD | Arduino, Makey Makey, etc. | TBD
 TBD | TBD | Final Project Design Document | TBD
