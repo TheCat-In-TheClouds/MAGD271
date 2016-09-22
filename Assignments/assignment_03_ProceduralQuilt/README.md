@@ -44,15 +44,9 @@ From the software engineering perspective, this demonstrates that the syntax of 
         * Call the quilt object's draw function.
 * In separate tabs:
     * Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
-    * Define a class that extends the Patch class:
-    
-``` java
-class HoundsToothPatch extends Patch {
-
-}
-```
-        
-    C. Define the method draw:
+    * Define a class that extends the Patch class.
+    * Define the draw method.
+    * Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
     
 ``` java
 class HoundsToothPatch extends Patch {
@@ -61,8 +55,6 @@ class HoundsToothPatch extends Patch {
     }
 }
 ```
-        
-    D. Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
 
 ### Inspiration
 
