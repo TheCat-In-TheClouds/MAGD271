@@ -1,19 +1,21 @@
-# Philosophy
+## Philosophy
 
 The first step in revising code in Processing is to replace constants with variables. For example,
 
-    ```processing
-    ellipse(320, 160, 50, 60);```
+``` java
+ellipse(320, 160, 50, 60);
+```
     
 becomes
 
-    ```processing
-    float x = 320; float y = 160; float w = 50; float h = 60;
-    ellipse(x, y, w, h);```
+``` java
+float x = 320; float y = 160; float w = 50; float h = 60;
+ellipse(x, y, w, h);
+```
     
-This step, equivalent to the step out of arithmetic into algebra, is important for more than movement via addition or subtraction of x/y in the draw call. It is the first step to code becoming durable, widely applicable to multiple situations. It is also the first step to code becoming modular, able to be recombined with other code to produce a variety of aesthetic experiences.
+This step, equivalent to the step out of arithmetic and into algebra, is important for more than movement via addition or subtraction of x/y in the draw call. It is the first step to code becoming durable, widely applicable to multiple situations. It is also the first step to code becoming modular, able to be recombined with other code to produce a variety of aesthetic experiences.
 
-The goal of this project is to create a digital quilt out of several patches/patterns. You will create the patches, and the quilt will pull these patterns pseudo-randomly out from the basket and add them to quilt. From the artistic perspective, this cultivates the following ideas:
+The goal of this project is to create a digital quilt out of several patches. You will create the patches, and the quilt will pull these patterns pseudo-randomly out from the basket and incorporate them. From the artistic perspective, this cultivates the following ideas:
     * Working under constraint as a method for artistic growth.
     * __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shapes, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow compositional elements to vary.
     * The value of tiling (horizontal, vertical, both) in visual design.
@@ -22,7 +24,7 @@ From the project management perspective, the imposed constraint prevents oversco
 
 From the software engineering perspective, this demonstrates that the syntax of Processing/Java is guided by the principle of [Extensibility](https://en.wikipedia.org/wiki/Extensibility).
 
-# Directions
+## Directions
 
 1. Download or copy the .pde files from the course GitHub page.
 2. In the main sketch:
@@ -36,7 +38,7 @@ From the software engineering perspective, this demonstrates that the syntax of 
     A. Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
     B. Define a class that extends the Patch class:
     
-        ``` processing
+        ``` java
         class HoundsToothPatch extends Patch {
         
         }
@@ -44,7 +46,7 @@ From the software engineering perspective, this demonstrates that the syntax of 
         
     C. Define the method draw:
     
-        ``` processing
+        ``` java
         class HoundsToothPatch extends Patch {
             void draw(float x, float y, float w, float h) {
                 // Your code here.
@@ -54,7 +56,7 @@ From the software engineering perspective, this demonstrates that the syntax of 
         
     D. Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
 
-# Inspiration
+## Inspiration
 
 * [Libs Elliott](http://www.libselliott.com/)
 * [Joshua Davis - _Aim High, Keep Moving_ ]
@@ -64,7 +66,7 @@ From the software engineering perspective, this demonstrates that the syntax of 
 * [zeitguised](http://www.zeitguised.com/geistxyz/#geistxyz01)
 * [A Pattern A Day (Tumblr)](http://a-pattern-a-day.tumblr.com/)
 
-# Evaluation
+## Evaluation
 
 Points | Description
 ------ | -----------
