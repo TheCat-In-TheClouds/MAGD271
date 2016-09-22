@@ -1,3 +1,5 @@
+![Procedural Quilt](133415.png)
+
 ## Due Date
 Thursday, September 29th, 2016
 12:30 p.m.
@@ -42,21 +44,21 @@ From the software engineering perspective, this demonstrates that the syntax of 
     A. Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
     B. Define a class that extends the Patch class:
     
-        ``` java
-        class HoundsToothPatch extends Patch {
-        
-        }
-        ```
+``` java
+class HoundsToothPatch extends Patch {
+
+}
+```
         
     C. Define the method draw:
     
-        ``` java
-        class HoundsToothPatch extends Patch {
-            void draw(float x, float y, float w, float h) {
-                // Your code here.
-            }
-        }
-        ```
+``` java
+class HoundsToothPatch extends Patch {
+    void draw(float x, float y, float w, float h) {
+        // Your code here.
+    }
+}
+```
         
     D. Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
 
