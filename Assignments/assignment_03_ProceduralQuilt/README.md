@@ -24,9 +24,11 @@ This step, equivalent to the step out of arithmetic and into algebra, is importa
 
 The goal of this project is to create a digital quilt out of several patches. You will create the patches, and the quilt will pull these patterns pseudo-randomly out from the basket and incorporate them. From the artistic perspective, this cultivates the following ideas:
 
-    * Working under constraint as a method for artistic growth.
-    * __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shapes, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow compositional elements to vary.
-    * The value of tiling (horizontal, vertical, both) in visual design.
+* Working under constraint as a method for artistic growth.
+    
+* __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shapes, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow compositional elements to vary.
+    
+* The value of tiling (horizontal, vertical, both) in visual design.
     
 From the project management perspective, the imposed constraint prevents overscoping.
 
