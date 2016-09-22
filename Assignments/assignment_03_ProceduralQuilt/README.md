@@ -20,13 +20,13 @@ float x = 320; float y = 160; float w = 50; float h = 60;
 ellipse(x, y, w, h);
 ```
     
-This step, equivalent to the step out of arithmetic and into algebra, is important for more than movement via addition or subtraction of x/y in the draw call. It is the first step to code becoming durable, widely applicable to multiple situations. It is also the first step to code becoming modular, able to be recombined with other code to produce a variety of aesthetic experiences.
+This step, akin to the step out of arithmetic and into algebra, is important for more than change via addition or subtraction of x/y in the draw call. It is the first step to code becoming durable, widely applicable to multiple situations. It is also the first step to code becoming modular, able to recombine with other code to produce a variety of aesthetic experiences.
 
-The goal of this project is to create a digital quilt out of several patches. You will create the patches, and the quilt will pull these patterns pseudo-randomly out from the basket and incorporate them. From the artistic perspective, this cultivates the following ideas:
+The goal of this project is to create a digital quilt out of several patches. You will create the patches, and the quilt will pull these patches pseudo-randomly out from the basket and incorporate them. From the artistic perspective, this cultivates the following ideas:
 
 * Working under constraint as a method for artistic growth.
     
-* __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shapes, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow compositional elements to vary.
+* __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shape, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow elements to vary.
     
 * The value of tiling (horizontal, vertical, both) in visual design.
     
@@ -41,7 +41,7 @@ From the software engineering perspective, this demonstrates that the syntax of 
     * Declare an object of the data type Quilt.
     * In setup:
         * Initialize the Quilt object with a constructor. The constructor takes one argument: the number of patches that will appear on the short edge of the screen.
-        * Add patterns you have created to the quilt object using the addPattern instance method.
+        * Add patches you have created to the quilt object using the addPatch instance method.
     * In draw:
         * Call the quilt object's draw function.
 * In separate tabs:
@@ -65,7 +65,6 @@ class HoundsToothPatch extends Patch {
 * [Crossman Gallery: FABRICation](https://blogs.uww.edu/crossman/fall-exhibitions/)
     * September 8 to October 8
     * September 28, 4 p.m. - [Kristy Deetz](http://www.uwgb.edu/deetzk/) gallery talk
-* [zeitguised](http://www.zeitguised.com/geistxyz/#geistxyz01)
 * [A Pattern A Day (Tumblr)](http://a-pattern-a-day.tumblr.com/)
 
 ### Evaluation
