@@ -80,5 +80,5 @@ Points | Description
 5 | Runs without throwing Exceptions.
 5 | Main sketch file shares same name as containing folder. Media files used by sketch are included in /data subfolder. Folder is zipped. Follows naming convention f16_magd271_lab3_Yourlastname.zip .
 30 | Sketch adds a minimum of three patches (classes which extend the class Patch) to the quilt.
-10 | Sketch shows sustained artistic intent: variation is balanced with consistency; color choices are considered in relation to each other and to the whole; type of and relative scale of shapes are conidered in relation to each other and to the whole.
+10 | Sketch shows sustained artistic intent: variation is balanced with consistency; color choices are considered in relation to each other and to the whole; type of and relative scale of shapes are considered in relation to each other and to the whole.
 50 | TOTAL
