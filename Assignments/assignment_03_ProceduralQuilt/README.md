@@ -23,6 +23,7 @@ ellipse(x, y, w, h);
 This step, equivalent to the step out of arithmetic and into algebra, is important for more than movement via addition or subtraction of x/y in the draw call. It is the first step to code becoming durable, widely applicable to multiple situations. It is also the first step to code becoming modular, able to be recombined with other code to produce a variety of aesthetic experiences.
 
 The goal of this project is to create a digital quilt out of several patches. You will create the patches, and the quilt will pull these patterns pseudo-randomly out from the basket and incorporate them. From the artistic perspective, this cultivates the following ideas:
+
     * Working under constraint as a method for artistic growth.
     * __Repetition with a difference__: Stylistic consistency shows sustained intention (choices about organic vs. inorganic shapes, relative scale, color, etc. are unified by a goal or idea). Programmatic or procedural thinking can aide in __amplifying__ this intention by repeating simple procedures or shapes until they become complex patterns. Simultaneously, the use of variables allow compositional elements to vary.
     * The value of tiling (horizontal, vertical, both) in visual design.
@@ -33,17 +34,17 @@ From the software engineering perspective, this demonstrates that the syntax of 
 
 ### Directions
 
-1. Download or copy the .pde files from the course GitHub page.
-2. In the main sketch:
-    A. Declare an object of the data type Quilt.
-    B. In setup:
-        1. Initialize the Quilt object with a constructor. The constructor takes one argument: the number of patches that will appear on the short edge of the screen.
-        2. Add patterns you have created to the quilt object using the addPattern instance method.
-    C. In draw:
-        1. Call the quilt object's draw function.
-3. In separate tabs:
-    A. Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
-    B. Define a class that extends the Patch class:
+* Download or copy the .pde files from the course GitHub page.
+* In the main sketch:
+    * Declare an object of the data type Quilt.
+    * In setup:
+        * Initialize the Quilt object with a constructor. The constructor takes one argument: the number of patches that will appear on the short edge of the screen.
+        * Add patterns you have created to the quilt object using the addPattern instance method.
+    * In draw:
+        * Call the quilt object's draw function.
+* In separate tabs:
+    * Name the tab appropriately. It is recommended that you match the name of the tab to the name of the class.
+    * Define a class that extends the Patch class:
     
 ``` java
 class HoundsToothPatch extends Patch {
