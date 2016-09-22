@@ -1,10 +1,11 @@
+## Procedural Quilt
+
 ![Procedural Quilt](133415.png)
 
-## Due Date
-Thursday, September 29th, 2016
-12:30 p.m.
+### Due Date
+12:30 p.m. Thursday, September 29th, 2016
 
-## Philosophy
+### Philosophy
 
 The first step in revising code in Processing is to replace constants with variables. For example,
 
@@ -30,7 +31,7 @@ From the project management perspective, the imposed constraint prevents oversco
 
 From the software engineering perspective, this demonstrates that the syntax of Processing/Java is guided by the principle of [Extensibility](https://en.wikipedia.org/wiki/Extensibility).
 
-## Directions
+### Directions
 
 1. Download or copy the .pde files from the course GitHub page.
 2. In the main sketch:
@@ -62,7 +63,7 @@ class HoundsToothPatch extends Patch {
         
     D. Use the variables x, y, w and h as the foundational references for the shapes which constitute the patch.
 
-## Inspiration
+### Inspiration
 
 * [Libs Elliott](http://www.libselliott.com/)
 * [Joshua Davis - _Aim High, Keep Moving_ ]
@@ -72,7 +73,7 @@ class HoundsToothPatch extends Patch {
 * [zeitguised](http://www.zeitguised.com/geistxyz/#geistxyz01)
 * [A Pattern A Day (Tumblr)](http://a-pattern-a-day.tumblr.com/)
 
-## Evaluation
+### Evaluation
 
 Points | Description
 ------ | -----------
