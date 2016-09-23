@@ -1,10 +1,20 @@
 class ExamplePatchC extends Patch {
-  
+
   void draw(float x, float y, float w, float h) {
+    pushStyle();
     noStroke();
-    fill(54, map(y, 0, height, 255, 54), random(127, 255));
+    fill(map(mouseY - pmouseY, 0, width, 0, 255), map(w * h, 0, width * height, 0, 255), map(y, 0, height, 127, 255));
+    //fill(255);
     rect(x, y, w, h);
-    fill(map(x, 0, height, 0, 255), map(y, 0, height, 0, 255), 54, random(0, 204));
-    triangle(x, y, x + w, y, x + w / 2.0, y + h); 
+    ellipseMode(RADIUS);
+    fill(20, 110, 166);
+    arc(x + w, y, w, h, HALF_PI, PI);
+    fill(223, 221, 26);
+    arc(x + w, y, w * 3 / 4, h * 3 /4, HALF_PI, PI);
+    fill(217, 4, 4);
+    arc(x + w, y, w / 2, h / 2, HALF_PI, PI);
+    fill(10, 90, 140);
+    arc(x + w, y, w / 4, h / 4, HALF_PI, PI);
+    popStyle();
   }
 }

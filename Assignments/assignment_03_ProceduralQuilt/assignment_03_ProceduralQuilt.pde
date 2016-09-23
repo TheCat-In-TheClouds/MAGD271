@@ -3,7 +3,7 @@ int patchCount = 16;
 
 void setup() {
   fullScreen();
-  // size(420, 420);
+  //size(420, 420);
   background(32);
   frameRate(1);
 
@@ -29,10 +29,17 @@ void setup() {
   // 5. After you've created a pattern, you can add it
   //    to the quilt using the quilt's addPattern(Pattern)
   //    function.
+  q.addPatch(new ExamplePatchA());
   q.addPatch(new ExamplePatchB());
   q.addPatch(new ExamplePatchC());
-  q.addPatch(new ExamplePatchN());
-  // q.addPatch(new ExamplePatchN(loadImage("corfu.png")));
+  q.addPatch(new ExamplePatchD());
+  //q.addPatch(new ExamplePatchE());
+  //q.addPatch(new ExamplePatchF());
+  q.addPatch(new ExamplePatchG());
+  q.addPatch(new ExamplePatchH());
+  q.addPatch(new ExamplePatchI());
+  q.addPatch(new ExamplePatchJ());
+  q.addPatch(new ExamplePatchK());
 
   // 6. If you want the quilt to draw just once, you can
   //    comment out the void draw() { q.draw(); } below
