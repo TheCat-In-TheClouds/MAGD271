@@ -7,5 +7,5 @@ abstract class Patch {
     this.h = height / 10;
   }
   
-  public abstract void draw(float x, float y, float w, float h);
+  abstract void draw(float x, float y, float w, float h);
 }

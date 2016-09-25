@@ -8,7 +8,7 @@ Duration timer;
 Feedback fb;
 
 void setup() {
-  size(420, 420);
+  size(680, 420);
   //fullScreen();
 
   sm = new StateMachine(new Title(), 
@@ -17,7 +17,7 @@ void setup() {
     );
 
   game = new FlappyBird();
-  
+
   timer = new Timer("Flappy Timer");
 }
 
@@ -28,6 +28,8 @@ void draw() {
 void mousePressed() {
   if (mouseButton == LEFT) {
     sm.onMousePressed();
+  } else {
+    save(millis() + ".png");
   }
 }
 

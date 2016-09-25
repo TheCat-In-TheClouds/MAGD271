@@ -33,8 +33,8 @@ void setup() {
   q.addPatch(new ExamplePatchB());
   q.addPatch(new ExamplePatchC());
   q.addPatch(new ExamplePatchD());
-  //q.addPatch(new ExamplePatchE());
-  //q.addPatch(new ExamplePatchF());
+  q.addPatch(new ExamplePatchE());
+  q.addPatch(new ExamplePatchF());
   q.addPatch(new ExamplePatchG());
   q.addPatch(new ExamplePatchH());
   q.addPatch(new ExamplePatchI());
