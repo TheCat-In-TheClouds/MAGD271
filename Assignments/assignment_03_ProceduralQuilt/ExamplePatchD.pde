@@ -4,7 +4,6 @@ class ExamplePatchD extends Patch {
     pushStyle();
     noStroke();
     fill(map(x, 0, width, 0, 255), map(w * h, 0, width * height, 0, 255), map(mouseX - pmouseX, 0, height, 127, 255));
-    //fill(255);
     rect(x, y, w, h);
     ellipseMode(RADIUS);
     fill(20, random(100, 120), 166);

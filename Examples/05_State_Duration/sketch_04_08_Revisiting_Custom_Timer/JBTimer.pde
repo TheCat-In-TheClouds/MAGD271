@@ -1,35 +1,13 @@
-class TimerB {
-  String name;
-  int start, stop, scheduledStart, scheduledStop;
-  boolean started, stopped, startScheduled, stopScheduled;
+class JBTimer extends Duration {
 
-  TimerB() {
-    this.name = "Timer";
+  JBTimer() {
+    super();
   }
-
-  TimerB(String name) {
-    this.name = name;
+  
+  JBTimer(String n) {
+    super(n);
   }
-
-  public String toString() {
-    return "NAME: " + this.name
-   + "\nSTART: " + this.start
-   + "\nSTOP: " + this.stop
-   + "\nELAPSED: " + this.elapsed();
-  }
-
-  int toggle() {
-    if (this.started && this.stopped) {
-      this.reset();
-      return this.start();
-    } else if (this.started && !this.stopped) {
-      return this.stop();
-    } else if (!this.started && !this.stopped) {
-      return this.start();
-    }
-    return -1;
-  }
-
+  
   int start() {
     if (!this.started && !this.stopped) {
       this.start = millis();
@@ -41,7 +19,7 @@ class TimerB {
       this.started = true;
       this.startScheduled = false;
     }
-    println("Timer started at " + this.start);
+    println(this.name + " started at " + this.start);
     return this.start;
   }
 
@@ -57,13 +35,8 @@ class TimerB {
       this.stopped = true;
       this.stopScheduled = false;
     }
-    println("Timer stopped at " + this.stop
-      + "\nElapsed: " + this.elapsed());
+    println(this);
     return this.stop;
-  }
-
-  int elapsed() {
-    return this.stop - this.start;
   }
 
   void tick() {
@@ -87,18 +60,8 @@ class TimerB {
     if (!this.stopped) {
       this.scheduledStop = millis() + (seconds * 1000);
       this.stopScheduled = true;
+      println(this.name + " stop scheduled at " + (this.scheduledStop - seconds * 1000) + " for " + this.scheduledStop);
     }
     return this.scheduledStop;
-  }
-
-  void reset() {
-    this.start = 0;
-    this.stop = 0;
-    this.scheduledStart = 0;
-    this.scheduledStop = 0;
-    this.started = false;
-    this.stopped = false;
-    this.startScheduled = false;
-    this.stopScheduled = false;
   }
 }

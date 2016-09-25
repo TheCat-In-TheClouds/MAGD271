@@ -63,12 +63,11 @@ class Deck {
   }
 
   void draw() {
-    fill(255);
     for (int i = 0; i < count; ++i) {
       Card c = this.cards.get(i);
       c.moveTo(places[i], this.shuffleSpeed);
       c.draw();
-      text(c.rank.toString() + "\r\nof\r\n" + c.suit, c.pos.x, c.pos.y);
+      //text(c.rank.toString() + "\r\nof\r\n" + c.suit, c.pos.x, c.pos.y);
     }
   }
 

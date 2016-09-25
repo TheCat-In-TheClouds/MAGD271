@@ -25,12 +25,12 @@ class Timer {
   void timerStart() {
     startTime = millis();
     started = true;
-    println("TimerA started at " + startTime + " for duration " + stopTime);
+    println(this.getClass().getSimpleName() + " started at " + startTime + " for duration " + stopTime);
   }
 
   void stopTimer() {
     started = false;
-    println("TimerA stopped at " + (millis() - startTime));
+    println(this.getClass().getSimpleName() + " stopped at " + (millis() - startTime));
   }
 
   // place this in your draw() loop to ?

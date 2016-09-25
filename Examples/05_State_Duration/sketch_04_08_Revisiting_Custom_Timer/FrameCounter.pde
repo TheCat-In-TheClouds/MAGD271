@@ -1,33 +1,11 @@
-class TimerC {
-  String name;
-  int start, stop, scheduledStart, scheduledStop;
-  boolean started, stopped, startScheduled, stopScheduled;
+class FrameCounter extends Duration {
 
-  TimerC() {
-    this.name = "Timer";
+  FrameCounter() {
+    super();
   }
-
-  TimerC(String name) {
-    this.name = name;
-  }
-
-  public String toString() {
-    return "NAME: " + this.name
-   + "\nSTART: " + this.start
-   + "\nSTOP: " + this.stop
-   + "\nELAPSED: " + this.elapsed();
-  }
-
-  int toggle() {
-    if (this.started && this.stopped) {
-      this.reset();
-      return this.start();
-    } else if (this.started && !this.stopped) {
-      return this.stop();
-    } else if (!this.started && !this.stopped) {
-      return this.start();
-    }
-    return -1;
+  
+  FrameCounter(String n) {
+    super(n);
   }
 
   int start() {
@@ -41,7 +19,7 @@ class TimerC {
       this.started = true;
       this.startScheduled = false;
     }
-    println("Timer started at " + this.start);
+    println(this.name + " started at " + this.start);
     return this.start;
   }
 
@@ -57,13 +35,8 @@ class TimerC {
       this.stopped = true;
       this.stopScheduled = false;
     }
-    println("Timer stopped at " + this.stop
-      + "\nElapsed: " + this.elapsed());
+    println(this);
     return this.stop;
-  }
-
-  int elapsed() {
-    return this.stop - this.start;
   }
 
   void tick() {
@@ -89,16 +62,5 @@ class TimerC {
       this.stopScheduled = true;
     }
     return this.scheduledStop;
-  }
-
-  void reset() {
-    this.start = 0;
-    this.stop = 0;
-    this.scheduledStart = 0;
-    this.scheduledStop = 0;
-    this.started = false;
-    this.stopped = false;
-    this.startScheduled = false;
-    this.stopScheduled = false;
   }
 }

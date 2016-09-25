@@ -1,5 +1,5 @@
 Quilt q;
-int patchCount = 24;
+int patchCount = 32;
 
 void setup() {
   fullScreen();
@@ -33,20 +33,24 @@ void setup() {
   q.addPatch(new ExamplePatchB());
   q.addPatch(new ExamplePatchC());
   q.addPatch(new ExamplePatchD());
+  //q.addPatch(new ExamplePatchE());
+  //q.addPatch(new ExamplePatchF());
   q.addPatch(new ExamplePatchG());
   q.addPatch(new ExamplePatchH());
   q.addPatch(new ExamplePatchI());
   q.addPatch(new ExamplePatchJ());
-  q.addPatch(new ExamplePatchK());
-  q.addPatch(new ExamplePatchL());
-  q.addPatch(new ExamplePatchM());
+  //q.addPatch(new ExamplePatchK());
+  //q.addPatch(new ExamplePatchL());
+  //q.addPatch(new ExamplePatchM());
   q.addPatch(new ExamplePatchN());
   q.addPatch(new ExamplePatchO());
+  q.addPatch(new ExamplePatchQ());
+  q.addPatch(new ExamplePatchR());
 
   // 6. If you want the quilt to draw just once, you can
   //    comment out the void draw() { q.draw(); } below
   //    and use this line below:
-  // q.draw();
+  //q.draw();
 }
 
 // 7. Calling q.draw() here will cause it to update every

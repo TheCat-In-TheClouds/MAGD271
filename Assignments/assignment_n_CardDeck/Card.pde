@@ -126,6 +126,8 @@ class Card implements Comparable<Card> {
       drawBack();
     } else {
       drawFront();
+      fill(255);
+      text(this.rank.toString() + "\r\nof\r\n" + this.suit, 0, 0);
     }
     popStyle();
     popMatrix();
