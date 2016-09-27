@@ -11,7 +11,8 @@ void draw() {
 
   ellipseMode(CENTER);
   fill(0, 255, 0, 127);
-  theta += 0.01; thetaPrime += 0.02;
+  theta += 0.01;
+  thetaPrime += 0.02;
   arc(width * 0.5, height * 0.5, width, height, theta, thetaPrime);
 
   fill(255, 0, 0, 127);

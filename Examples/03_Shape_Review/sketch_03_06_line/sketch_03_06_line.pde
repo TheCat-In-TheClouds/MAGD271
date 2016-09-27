@@ -10,6 +10,7 @@ void draw() {
   ellipse(width * 0.5, height * 0.5, width * 0.75, height * 0.75);
   strokeWeight(1);
   stroke(32);
+  //stroke(255, 0, 0);
   strokeCap(SQUARE);
   
   // Horizontal strokes

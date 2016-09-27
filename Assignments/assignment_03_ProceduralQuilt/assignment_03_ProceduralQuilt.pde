@@ -1,5 +1,5 @@
 Quilt q;
-int patchCount = 32;
+int patchCount = 16;
 
 void setup() {
   fullScreen();

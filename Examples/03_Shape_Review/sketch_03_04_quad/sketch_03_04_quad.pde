@@ -13,6 +13,7 @@ void draw() {
   fill(255, 0, 0, 127);
   quad(width * 0.125, height * 0.3125, width * 0.8125, height * 0.125, width * 0.5, height * 0.6125, width * 0.25, height * 0.75);
 
+  // 1. Notice that concave forms as well as convex are possible with quad.
   fill(0, 0, 255, 127);
   quad(width * 0.85, height * 0.625, width * 0.43, height * 0.4, width * 0.65, height * 0.6125, width * 0.8, height * 0.95);
 
