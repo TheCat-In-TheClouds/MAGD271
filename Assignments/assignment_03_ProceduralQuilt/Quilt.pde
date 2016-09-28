@@ -7,43 +7,51 @@ enum Axis {
 class Quilt {
 
   public int patches, borderThickness;
-  public boolean maintainAspect = true, border = false;
+  public boolean maintainAspect = true, border = false, mouseResponsive = true;
   public color borderFillColor;
   public Axis axis;
-  private float tileW, tileH;
-  private final float minorAxis, majorAxis, minorTileW, minorTileH, majorTileW, majorTileH;
+  private float patchW, patchH, quiltW, quiltH;
+  private final float minorAxis, majorAxis, minorpatchW, minorpatchH, majorpatchW, majorpatchH, minPatches, maxPatches;
   private List<Patch> basket;
 
   public Quilt(int p) {
     this.basket = new ArrayList<Patch>();
     this.patches = p;
+    this.minPatches = 1;
+    this.maxPatches = 48;
     this.axis = Axis.MINOR;
+    this.quiltW = width;
+    this.quiltH = height;
     if (this.patches > 0) {
-      this.tileW = width / this.patches;
-      this.tileH = height / this.patches;
+      this.patchW = quiltW / this.patches;
+      this.patchH = quiltH / this.patches;
     }
     this.minorAxis = this.minorAxis();
     this.majorAxis = this.majorAxis();
-    this.minorTileW = this.minorAxis / this.patches;
-    this.minorTileH = this.minorAxis / this.patches;
-    this.majorTileW = this.majorAxis / this.patches;
-    this.majorTileH = this.majorAxis / this.patches;
+    this.minorpatchW = this.minorAxis / this.patches;
+    this.minorpatchH = this.minorAxis / this.patches;
+    this.majorpatchW = this.majorAxis / this.patches;
+    this.majorpatchH = this.majorAxis / this.patches;
   }
 
   public Quilt(int p, int borderThickness, color borderFillColor) {
     this.basket = new ArrayList<Patch>();
     this.patches = p;
+    this.minPatches = 1;
+    this.maxPatches = 64;
     this.axis = Axis.MINOR;
+    this.quiltW = width;
+    this.quiltH = height;
     if (this.patches > 0) {
-      this.tileW = width / this.patches;
-      this.tileH = height / this.patches;
+      this.patchW = quiltW / this.patches;
+      this.patchH = quiltH / this.patches;
     }
     this.minorAxis = this.minorAxis();
     this.majorAxis = this.majorAxis();
-    this.minorTileW = this.minorAxis / this.patches;
-    this.minorTileH = this.minorAxis / this.patches;
-    this.majorTileW = this.majorAxis / this.patches;
-    this.majorTileH = this.majorAxis / this.patches;
+    this.minorpatchW = this.minorAxis / this.patches;
+    this.minorpatchH = this.minorAxis / this.patches;
+    this.majorpatchW = this.majorAxis / this.patches;
+    this.majorpatchH = this.majorAxis / this.patches;
 
     this.border = true;
     this.borderThickness = int(constrain(borderThickness, 0, this.minorAxis / 2));
@@ -66,6 +74,8 @@ class Quilt {
 
   public void draw() {
     maintainAspect();
+    scaleToMouse();
+
     if (this.patches > 0) {
       if (this.basket.size() > 0) {
         drawPatches();
@@ -91,19 +101,42 @@ class Quilt {
   private void maintainAspect() {
     if (this.maintainAspect) {  
       if (this.axis == Axis.MAJOR) {
-        this.tileW = this.majorTileW;
-        this.tileH = this.majorTileH;
+        this.patchW = this.majorpatchW;
+        this.patchH = this.majorpatchH;
       } else {
-        this.tileW = this.minorTileW;
-        this.tileH = this.minorTileH;
+        this.patchW = this.minorpatchW;
+        this.patchH = this.minorpatchH;
+      }
+    }
+  }
+
+  private void scaleToMouse() {
+    if (this.mouseResponsive) {
+      if (this.maintainAspect) {
+        if (this.axis == Axis.MAJOR) {
+          if (this.majorAxis == width) {
+            this.patchW = this.patchH = this.majorAxis / ceil(map(mouseY, 0, height, minPatches, maxPatches));
+          } else {
+            this.patchW = this.patchH = this.majorAxis / ceil(map(mouseX, 0, width, minPatches, maxPatches));
+          }
+        } else {
+          if (this.minorAxis == width) {
+            this.patchW = this.patchH = this.minorAxis / ceil(map(mouseY, 0, height, minPatches, maxPatches));
+          } else {
+            this.patchW = this.patchH = this.minorAxis / ceil(map(mouseX, 0, width, minPatches, maxPatches));
+          }
+        }
+      } else {
+        this.patchW = width / ceil(map(mouseX, 0, width, minPatches, maxPatches));
+        this.patchH = height / ceil(map(mouseY, 0, height, minPatches, maxPatches));
       }
     }
   }
 
   private void drawPatches() {
-    for (float x = 0; x < width; x+= tileW) {
-      for (float y = 0; y < height; y+= tileH) {
-        this.randomPatch().draw(x, y, tileW, tileH);
+    for (float x = 0; x < quiltW; x+= patchW) {
+      for (float y = 0; y < quiltH; y+= patchH) {
+        this.randomPatch().draw(x, y, patchW, patchH);
       }
     }
   }
