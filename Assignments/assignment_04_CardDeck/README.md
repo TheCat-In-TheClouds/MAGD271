@@ -31,6 +31,8 @@ The previous assignment, the procedural quilt, introduced you to the concept of 
 
     * Shuffling of a [collection](https://docs.oracle.com/javase/tutorial/collections/intro/), specifically a stack.
 
+    * Linear interpolation from one vector to another can be used to simulate motion.
+
     * The implementation of an interface, specifically for the purposes of making a complex object easily comparable to another object of the same type, and thus able to be sorted in a collection.
 
     * User interactibility via 
