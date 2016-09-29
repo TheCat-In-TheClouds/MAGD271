@@ -1,4 +1,0 @@
-enum Face {
-  Front, 
-    Back;
-}

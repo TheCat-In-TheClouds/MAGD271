@@ -1,4 +1,9 @@
+// See https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+
 public enum Rank {
+  // The ternary operator can be used to condense if-else conditions.
+  // The syntax asks in effect is condition true? Do true case : do else case.
+  // See http://alvinalexander.com/java/edu/pj/pj010018 .
   Ace(ACES_HIGH ? 11 : 1, false), 
     Two(2, false), 
     Three(3, false), 

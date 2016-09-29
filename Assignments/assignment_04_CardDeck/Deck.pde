@@ -8,6 +8,8 @@ class Deck {
   PVector[] places;
   float shuffleSpeed = 0.075;
 
+  // CONSTRUCTORS
+
   Deck() {
     this.cards = new Stack<Card>();
 
@@ -31,6 +33,8 @@ class Deck {
         ((i % s) * height / float(s)) + height / float(s) / 2.0);
     }
   }
+
+  // OVERRIDES
 
   public String toString() {
     return this.cards.toString();
@@ -62,16 +66,26 @@ class Deck {
     return null;
   }
 
-  void draw() {
+  public void draw() {
     for (int i = 0; i < count; ++i) {
       Card c = this.cards.get(i);
       c.moveTo(places[i], this.shuffleSpeed);
       c.draw();
-      //text(c.rank.toString() + "\r\nof\r\n" + c.suit, c.pos.x, c.pos.y);
     }
   }
 
-  Card bounds() {
+  public void mousePressed() {
+    if (mouseButton == LEFT) {
+      Card c = this.bounds();
+      if (c != null && c.bounds()) { 
+        c.flip();
+      }
+    } else if (mouseButton == RIGHT) {
+      this.shuffle();
+    }
+  }
+
+  public Card bounds() {
     for (int i = 0; i < count; ++i) {
       if (this.cards.get(i).bounds()) {
         return this.cards.get(i);
