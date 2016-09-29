@@ -7,7 +7,7 @@
 
 ### Philosophy
 
-The previous assignment, the procedural quilt, introduced you to the concept of __scalability__ - through the use of variables rather than constant numbers - and __modularity__ - the extension of a class created by someone else to your own class. Whereas that assignment allowed you to work with elementary forms which were then laid into a grid, this assignment requires a more dedicated attention to the diversity of shapes permitted by Processing (triangles, quads, arcs, curves, contours and custom shapes). This is because a playing card is both an anonymous tile in a grid (when observed face down), and a unique card with an identity and a value (when observed face up). In order to create this aesthetic effect, you will have to dig more directly into the code provided, locating the relevant function call and definition, and carving out the placeholder visuals so as to replace it with your own.
+The previous assignment, the procedural quilt, introduced you to the concept of __scalability__ - through the use of variables rather than constant numbers - and __modularity__ - the extension of a class created by someone else to your own class. Whereas that assignment allowed you to work with elementary forms which were then laid into a grid, this assignment requires a more dedicated attention to the diversity of shapes permitted by Processing (triangles, quads, arcs, curves, contours and custom shapes). This is because a playing card is both an anonymous tile in a collection (when observed face down), and a unique card with an identity and a value (when observed face up). In order to create this aesthetic effect, you will have to dig more directly into the code provided, locating the relevant function call and definition, and carving out the placeholder visuals so as to replace it with your own.
 
 * From the artistic perspective, this assignment encourages:
 
@@ -21,7 +21,7 @@ The previous assignment, the procedural quilt, introduced you to the concept of 
 
     * The importance of balancing general with specific goals.
 
-    * Making a choice and following through with that choice. This is because it would be impractical to design the front of 52 cards, especially the face cards.
+    * Making a choice and following through with that choice. This is because it would be impractical to design the face of 52 cards, especially the Jack, King, Queen and Joker.
 
 * From the scripting perspective this assignment demonstrates:
 
@@ -54,6 +54,13 @@ The previous assignment, the procedural quilt, introduced you to the concept of 
     
 * In the card class, scroll to the bottom to the functions drawFront and drawBack.
     * Replace the code in these functions with your own.
+    * Design a pattern for the back of the card.
+    * Design the front for __one card of your choice__.
+        * The difficulty of the face card you choose to design will contribute toward your grade. For example, I would expect exceptional design if you chose the Two of Diamonds, whereas I would be more lenient if you chose the King of Spades.
+        * If you choose to work with the deck rather than an individual card, you will have to figure the logic for how to make your face design appear only when the appropriate card is flipped over, rather than appearing on all flipped cards.
+        * Feel free to remove the drawLabel function: it is there for diagnostic purposes as you work.
+        
+* __Optional:__ If you would like to add or change user interaction via mousePressed functionality, go for it.
     
 ``` java
 private void drawBack() {
@@ -73,14 +80,6 @@ private void drawBack() {
     }
   }
 ```
-    
-    * Design a pattern for the back of the card.
-    * Design the front for __one card of your choice__.
-        * The difficulty of the face card you choose to design will contribute toward your grade. For example, I would expect exceptional design if you chose the Two of Diamonds, whereas I would be more lenient if you chose the King of Spades.
-        * If you choose to work with the deck rather than an individual card, you will have to figure the logic for how to make your face design appear only when the appropriate card is flipped over, rather than appearing on all flipped cards.
-        * Feel free to remove the drawLabel function: it is there for diagnostic purposes as you work.
-        
-* __Optional:__ If you would like to add or change user interaction via mousePressed functionality, go for it.
 
 ### Inspiration
 
@@ -110,4 +109,4 @@ Points | Description
 20 | The face of one card has a student created design. This design demonstrates understanding of more advanced shape functionality in Processing. The design balances legibility with style, meaning a player can read the value of the card but also appreciate it aesthetically.
 75 | Total
 
-Any media included with Processing sketches are presumed to be the work of the student unless otherwise stated. Media used from outside sources are expected to be altered substantially by the student. When media from outside sources are used, a notice of attribution at the top of the main sketch in a comment should be provided, including a link to the media's source and a notice of usability, for example a Creative Commons license. This is not only for ethical and legal reasons, but so __you can incorporate the work you do here into your portfolio__ if you choose.
+Any media included with Processing sketches are presumed to be the work of the student unless otherwise stated. Media used from outside sources are expected to be altered substantially by the student. When media from outside sources are used, a notice of attribution at the top of the main sketch in a comment should be provided. This is not only for ethical and legal reasons, but so __you can incorporate the work you do here into your portfolio__ if you choose.
