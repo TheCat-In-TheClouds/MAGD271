@@ -65,20 +65,19 @@ The previous assignment, the procedural quilt, introduced you to the concept of 
 ``` java
 private void drawBack() {
     if (bounds(mouseX, mouseY)) {
-      // Your code here (on mouse hover).
+        // Your code here (on mouse hover).
     } else {
-      // Your code here.
+        // Your code here.
     }
-  }
+}
 
-  private void drawFront() {
-    noStroke();
+private void drawFront() {
     if (bounds(mouseX, mouseY)) {
-      // Your code here (on mouse hover).
+        // Your code here (on mouse hover).
     } else {
-      // Your code here.
+        // Your code here.
     }
-  }
+}
 ```
 
 ### Inspiration
