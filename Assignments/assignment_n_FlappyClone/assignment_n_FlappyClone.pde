@@ -2,7 +2,7 @@
  * translated from JavaScript to Java. See https://youtu.be/cXgA1d_E-jY .
  */
 
-StateMachine sm;
+StateMachine<GameState> sm;
 FlappyBird game;
 Duration timer;
 Feedback fb;
@@ -10,8 +10,10 @@ Feedback fb;
 void setup() {
   size(680, 420);
   //fullScreen();
+  //frameRate(30);
 
-  sm = new StateMachine(new Title(), 
+  sm = new StateMachine<GameState>(
+    new Title(), 
     new Loss(), 
     new Playing() 
     );
@@ -26,11 +28,7 @@ void draw() {
 }
 
 void mousePressed() {
-  if (mouseButton == LEFT) {
-    sm.onMousePressed();
-  } else {
-    save(millis() + ".png");
-  }
+  sm.onMousePressed();
 }
 
 void keyReleased() {

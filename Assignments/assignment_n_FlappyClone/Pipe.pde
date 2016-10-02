@@ -5,10 +5,11 @@ class Pipe {
     w, 
     speed, 
     forgiveness, 
-    minDifficulty,
+    minDifficulty, 
     cornerRounding;
   color normalColor;
   boolean struck, addedToScore;
+  PImage img = loadImage("pipe.png");
 
   Pipe() {
     this.x = width;
@@ -24,15 +25,15 @@ class Pipe {
   }
 
   Pipe(float birdRadius) {
-    float d = birdRadius * 2;
+    float birdDiameter = birdRadius * 2;
     this.x = width;
-    this.w = d * 1.5;
+    this.w = birdDiameter * 1.5;
     this.speed = 3;
     this.forgiveness = 5;
     this.minDifficulty = 10;
     this.cornerRounding = 5;
-    this.top = random(d + this.minDifficulty, height / 2.0 - d - this.forgiveness);
-    this.bottom = random(d + this.minDifficulty, height / 2.0 - d - this.forgiveness);
+    this.top = random(birdDiameter + this.minDifficulty, height / 2.0 - birdDiameter - this.forgiveness);
+    this.bottom = random(birdDiameter + this.minDifficulty, height / 2.0 - birdDiameter - this.forgiveness);
 
     this.normalColor = color(0, 225, 120);
   }
@@ -49,8 +50,6 @@ class Pipe {
     this.bottom = random(d + this.minDifficulty, height / 2.0 - d - this.forgiveness);
 
     this.normalColor = color(0, 225, 120);
-    
-    //println(this);
   }
 
   public String toString() {
@@ -67,11 +66,23 @@ class Pipe {
   }
 
   void show() {
+    //TODO Change the pipe to show your image here.
     pushStyle();
-    noStroke();
-    fill(this.normalColor);
-    rect(this.x, 0, this.w, this.top, 0, 0, this.cornerRounding, this.cornerRounding);
-    rect(this.x, height - this.bottom, this.w, this.bottom, this.cornerRounding, this.cornerRounding, 0, 0);
+    if (this.img == null) {
+      noStroke();
+      fill(this.normalColor);
+      rect(this.x, 0, this.w, this.top, 0, 0, this.cornerRounding, this.cornerRounding);
+      rect(this.x, height - this.bottom, this.w, this.bottom, this.cornerRounding, this.cornerRounding, 0, 0);
+    } else {
+      // Alternately, you could provide two different images for the top and bottom and
+      // avoid the calculation of having to translate and rescale.
+      image(this.img, this.x, height - this.bottom, this.w, this.bottom);
+      pushMatrix();
+      translate(this.x, this.top);
+      scale(1, -1);
+      image(this.img, 0, 0, this.w, this.top);
+      popMatrix();
+    }
     popStyle();
   }
 

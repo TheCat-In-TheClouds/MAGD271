@@ -9,14 +9,42 @@ class FlappyBird extends Game {
   Background bkg;
 
   FlappyBird() {
+    this.bkg = new Background();
+
     this.bird = new Bird();
-    this.pipes = new ArrayList<Pipe>();
-    this.pipes.add(new Pipe(this.bird.radius));
+
+    // 1. Create a new animation and add your frames to it.
+    //    The 20 here stands for the interval before the
+    //    animation is set to the next frame. The lower the
+    //    interval, the faster the animation will advance
+    //    through each frame.
+    Animation a = new Animation("animationName", 20, 
+      loadImage("fr1.png"), 
+      loadImage("fr2.png"), 
+      loadImage("fr3.png"), 
+      loadImage("fr4.png")
+      );
+
+    // 2. You may have drawn your animations very large in
+    //    an art program, so you want to scale them appropriately
+    //    to match the collision radius of the bird. 
+    a.w = this.bird.radius * 2.0;
+    a.h = this.bird.radius * 2.0;
+
+    // 3. Add the animation to the bird. Notice that if you
+    //    reset the game, you're animation will no longer be
+    //    on the bird. So what you do here will have to also be
+    //    done in the reset() function below.
+    this.bird.addAnimation(a);
+
+    // 4. Change the default values to suit your gameplay.
     this.newPipeInterval = 100;
     this.pipeForgiveness = 5; 
     this.pipeMinDifficulty = 10; 
     this.pipeSpeed = 3;
-    this.bkg = new Background();
+
+    this.pipes = new ArrayList<Pipe>();
+    this.pipes.add(new Pipe(this.bird.radius));
   }
 
   void draw() {
@@ -74,6 +102,18 @@ class FlappyBird extends Game {
   void reset() {
     this.score = 0;
     this.bird = new Bird();
+    
+    Animation a = new Animation("animationName", 20, 
+      loadImage("fr1.png"), 
+      loadImage("fr2.png"), 
+      loadImage("fr3.png"), 
+      loadImage("fr4.png")
+      ); 
+    a.w = this.bird.radius * 2.0;
+    a.h = this.bird.radius * 2.0;
+    this.bird.addAnimation(a);
+    
+    
     this.pipes.clear();
     this.newPipeInterval = 100;
     this.pipeForgiveness = 5; 

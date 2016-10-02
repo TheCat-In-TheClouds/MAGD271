@@ -36,8 +36,8 @@ The previous assignment, the procedural quilt, introduced you to the concept of 
     * The implementation of an interface, specifically for the purposes of making a complex object easily comparable to another object of the same type, and thus able to be sorted in a collection.
 
     * User interactibility via 
-        * events
-        * mathematical comparisons so as to determine intersection with a bounded region
+        * Events
+        * Mathematical comparisons to determine intersection with a bounded region
 
 ### Directions
 

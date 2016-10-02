@@ -1,4 +1,4 @@
-class Loss extends State {
+class Loss extends GameState {
 
   void onEnter() {
     println("Entering " + this + " state.");

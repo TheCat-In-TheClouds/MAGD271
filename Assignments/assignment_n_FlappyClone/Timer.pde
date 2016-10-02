@@ -19,13 +19,13 @@ class Timer extends Duration {
       this.started = true;
       this.startScheduled = false;
     }
-    println("Timer started at " + this.start);
+    println(this.name + " started at " + this.start);
     return this.start;
   }
 
   int start(int seconds) {
     start();
-    scheduleStop(seconds);
+    this.scheduleStop(seconds);
     return this.start;
   }
 

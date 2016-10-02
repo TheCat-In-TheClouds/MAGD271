@@ -1,42 +1,38 @@
 import java.util.*;
 
-class StateMachine {
+class StateMachine<E extends State> {
   public State current;
   public State previous;
-  private Map<String, State> states;
+  private Map<String, E> states;
 
-  StateMachine(State... n) {
-    states = new HashMap<String, State>();
+  StateMachine(E... n) {
+    states = new HashMap<String, E>();
     int size = n.length;
-    if (size > 0) { 
-      for (int i = 0; i < size; ++i) {
-        this.states.put(n[i].toString(), n[i]);
-      }
+    for (int i = 0; i < size; ++i) {
+      this.states.put(n[i].toString(), n[i]);
+    }
+    if (size > 0) {
       this.set(n[0]);
-    } else {
-      this.states.put("Title", new Title());
-      this.states.put("Playing", new Playing());
-      this.set("Title");
     }
   }
-  
+
   public String toString() {
     return this.states.values().toString();
   }
 
-  Collection<State> get() {
+  public Collection<E> get() {
     return this.states.values();
   }
 
-  State get(String s) {
+  public E get(String s) {
     return this.states.get(s);
   }
 
-  void set(String s) {
+  public void set(String s) {
     this.set(this.states.get(s));
   }
 
-  void set(State s) {
+  void set(E s) {
     this.previous = this.current;
     this.current = s;
     this.onExit();

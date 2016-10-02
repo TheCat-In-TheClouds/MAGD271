@@ -1,4 +1,4 @@
-class Playing extends State {
+class Playing extends GameState {
   
   void onEnter() {
     println("Entering " + this + " state.");
