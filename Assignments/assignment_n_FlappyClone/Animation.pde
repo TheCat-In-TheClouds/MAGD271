@@ -4,7 +4,10 @@ class Animation extends State {
   private int current = 0, 
     oscillation = 1, 
     interval = 20;
-  private float w = 64, h = 64;
+  private float w = 64, 
+    h = 64, 
+    offsetX, 
+    offsetY;
 
   public int pivot = CENTER;
 
@@ -54,33 +57,6 @@ class Animation extends State {
     return this.frames.get(i);
   }
 
-  @Deprecated
-    void draw() {
-    advance();
-    pushStyle();
-    imageMode(this.pivot);
-    image(this.frames.get(current), 0, 0);
-    popStyle();
-  }
-
-  @Deprecated
-    void draw(float w, float h) {
-    advance();
-    pushStyle();
-    imageMode(this.pivot);
-    image(this.frames.get(current), 0, 0, w, h);
-    popStyle();
-  }
-
-  @Deprecated
-    void draw(float x, float y, float w, float h) {
-    advance();
-    pushStyle();
-    imageMode(this.pivot);
-    image(this.frames.get(current), x, y, w, h);
-    popStyle();
-  }
-
   void onEnter() {
   }
 
@@ -88,7 +64,7 @@ class Animation extends State {
     advance();
     pushStyle();
     imageMode(this.pivot);
-    image(this.frames.get(current), 0, 0, this.w, this.h);
+    image(this.frames.get(current), this.offsetX, this.offsetY, this.w, this.h);
     popStyle();
   }
 
