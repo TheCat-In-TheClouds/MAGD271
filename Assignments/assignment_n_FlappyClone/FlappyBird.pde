@@ -8,22 +8,22 @@ class FlappyBird extends Game {
   int score;
   Background bkg;
 
+  // 1. Create a new animation and add your frames to it.
+  //    The 20 here stands for the interval before the
+  //    animation is set to the next frame. The lower the
+  //    interval, the faster the animation will advance
+  //    through each frame.
+  Animation a = new Animation("animationName", 20, 
+    loadImage("fr1.png"), 
+    loadImage("fr2.png"), 
+    loadImage("fr3.png"), 
+    loadImage("fr4.png")
+    );
+
   FlappyBird() {
     this.bkg = new Background();
 
     this.bird = new Bird();
-
-    // 1. Create a new animation and add your frames to it.
-    //    The 20 here stands for the interval before the
-    //    animation is set to the next frame. The lower the
-    //    interval, the faster the animation will advance
-    //    through each frame.
-    Animation a = new Animation("animationName", 20, 
-      loadImage("fr1.png"), 
-      loadImage("fr2.png"), 
-      loadImage("fr3.png"), 
-      loadImage("fr4.png")
-      );
 
     // 2. You may have drawn your animations very large in
     //    an art program, so you want to scale them appropriately
@@ -33,8 +33,7 @@ class FlappyBird extends Game {
 
     // 3. Add the animation to the bird. Notice that if you
     //    reset the game, you're animation will no longer be
-    //    on the bird. So what you do here will have to also be
-    //    done in the reset() function below.
+    //    on the bird.
     this.bird.addAnimation(a);
 
     // 4. Change the default values to suit your gameplay.
@@ -103,17 +102,8 @@ class FlappyBird extends Game {
     this.score = 0;
     this.bird = new Bird();
     
-    Animation a = new Animation("animationName", 20, 
-      loadImage("fr1.png"), 
-      loadImage("fr2.png"), 
-      loadImage("fr3.png"), 
-      loadImage("fr4.png")
-      ); 
-    a.w = this.bird.radius * 2.0;
-    a.h = this.bird.radius * 2.0;
     this.bird.addAnimation(a);
-    
-    
+
     this.pipes.clear();
     this.newPipeInterval = 100;
     this.pipeForgiveness = 5; 

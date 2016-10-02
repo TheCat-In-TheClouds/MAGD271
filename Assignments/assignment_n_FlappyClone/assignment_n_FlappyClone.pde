@@ -24,13 +24,9 @@ void setup() {
 }
 
 void draw() {
-  sm.onSustain();
+  sm.current.onSustain();
 }
 
 void mousePressed() {
-  sm.onMousePressed();
-}
-
-void keyReleased() {
-  sm.onKeyReleased();
+  sm.current.onMousePressed();
 }

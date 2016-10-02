@@ -1,8 +1,8 @@
 import java.util.*;
 
 class StateMachine<E extends State> {
-  public State current;
-  public State previous;
+  public E current;
+  public E previous;
   private Map<String, E> states;
 
   StateMachine(E... n) {
@@ -35,29 +35,9 @@ class StateMachine<E extends State> {
   void set(E s) {
     this.previous = this.current;
     this.current = s;
-    this.onExit();
-    this.onEnter();
-  }
-
-  void onEnter() {
-    this.current.onEnter();
-  }
-
-  void onSustain() {
-    this.current.onSustain();
-  }
-
-  void onExit() {
     if (this.previous != null) {
       this.previous.onExit();
     }
-  }
-
-  void onMousePressed() {
-    this.current.onMousePressed();
-  }
-
-  void onKeyReleased() {
-    this.current.onKeyReleased();
+    this.current.onEnter();
   }
 }

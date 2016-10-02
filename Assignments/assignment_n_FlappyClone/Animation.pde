@@ -95,12 +95,6 @@ class Animation extends State {
   void onExit() {
   }
 
-  void onMousePressed() {
-  }
-
-  void onKeyReleased() {
-  }
-
   private void advance() {
     if (frameCount % this.interval == 0) {
       this.current += 1 * this.oscillation;
