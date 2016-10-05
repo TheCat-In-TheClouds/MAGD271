@@ -3,11 +3,11 @@ class JBTimer extends Duration {
   JBTimer() {
     super();
   }
-  
+
   JBTimer(String n) {
     super(n);
   }
-  
+
   int start() {
     if (!this.started && !this.stopped) {
       this.start = millis();

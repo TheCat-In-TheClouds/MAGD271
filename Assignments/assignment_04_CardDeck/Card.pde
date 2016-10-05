@@ -115,7 +115,7 @@ class Card implements Comparable<Card> {
   }
 
   // The ternary operator can be used to condense if-else conditions.
-  // The syntax asks in effect is condition true? Do true case : do else case.
+  // The syntax asks in effect, Is condition true? Do true case : do else case.
   // See http://alvinalexander.com/java/edu/pj/pj010018 .
   public void flip() {
     this.facing =

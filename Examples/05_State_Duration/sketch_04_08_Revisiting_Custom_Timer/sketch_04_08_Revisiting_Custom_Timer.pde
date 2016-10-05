@@ -1,15 +1,18 @@
 Timer nhTimer;
-Duration jbTimer, frameCounter;
+JBTimer jbTimer;
+FrameCounter frameCounter;
+Clock clock;
 int explosionOnScreen = 0;
 
 void setup() {
-  size(200, 200);
+  size(420, 420);
   background(32);
   textAlign(CENTER, CENTER);
 
   nhTimer = new Timer(5000);
   jbTimer = new JBTimer();
   frameCounter = new FrameCounter();
+  clock = new Clock();
 }
 
 void draw() {
@@ -31,6 +34,8 @@ void draw() {
   }
   
   jbTimer.tick();
+  frameCounter.tick();
+  clock.tick();
 }
 
 void mousePressed() {
@@ -42,14 +47,19 @@ void mousePressed() {
       nhTimer.stopTimer();
     }
   } else if(mouseButton == RIGHT) {
-    jbTimer.toggle();
+    
+    jbTimer.start(5);
   } else if(mouseButton == CENTER) {
     frameCounter.toggle();
   }
 }
 
 void keyPressed() {
-  if(key == ' ') {
-    jbTimer.scheduleStop(5);
+  if(key == 'z') {
+    clock.start();
+  } else if(key == 'x') {
+    clock.stop();
+  } else if(key == 'c') {
+    ((Clock)clock).start(15);
   }
 }
