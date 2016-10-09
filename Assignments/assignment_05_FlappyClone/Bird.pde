@@ -16,7 +16,7 @@ class Bird { //<>//
   Bird() {
     this.x = random(width / 8.0, width / 6.0);
     this.y = height / 2.0;
-    this.radius = 16;
+    this.radius = min(width, height) / 20.0;
     this.normalColor = color(0, 64, 204);
     this.animator = new StateMachine<Animation>();
   }
@@ -24,7 +24,7 @@ class Bird { //<>//
   Bird(Animation... anims) {
     this.x = random(width / 8.0, width / 6.0);
     this.y = height / 2.0;
-    this.radius = 16;
+    this.radius = min(width, height) / 20.0;
     this.normalColor = color(255);
     this.animator = new StateMachine<Animation>();
     int size = anims.length;

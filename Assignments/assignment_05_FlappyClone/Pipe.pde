@@ -66,7 +66,7 @@ class Pipe {
   }
 
   void show() {
-    //TODO Change the pipe to show your image here.
+    //1. Change the pipe to show your image here.
     pushStyle();
     if (this.img == null) {
       noStroke();
@@ -74,8 +74,8 @@ class Pipe {
       rect(this.x, 0, this.w, this.top, 0, 0, this.cornerRounding, this.cornerRounding);
       rect(this.x, height - this.bottom, this.w, this.bottom, this.cornerRounding, this.cornerRounding, 0, 0);
     } else {
-      // Alternately, you could provide two different images for the top and bottom and
-      // avoid the calculation of having to translate and rescale.
+      // 2. Alternately, you could provide two different images for the top and bottom and
+      //    avoid the calculation of having to translate and rescale.
       image(this.img, this.x, height - this.bottom, this.w, this.bottom);
       pushMatrix();
       translate(this.x, this.top);

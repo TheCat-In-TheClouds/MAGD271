@@ -46,9 +46,9 @@ void setup() {
   batFrameCount = batFly.width / sourceScaleX;
   heroFrameCount = heroWalk. width / sourceScaleX;
   flowerFrameCount = flowerBob.width / sourceScaleX;
-  println(batFrameCount);
-  println(heroFrameCount);
-  println(flowerFrameCount);
+  println("bat frame count: " + batFrameCount);
+  println("hero frame count: " + heroFrameCount);
+  println("flower frame count: " + flowerFrameCount);
 
   // 5. If your animations are targeted toward a certain frame rate,
   //    you can change it in Processing with this.
@@ -80,7 +80,7 @@ void draw() {
   // 4. This is where we advance the current frame of the walk cycle. The sign of
   //    the oscillation is changed if we reach the first or last frame.
   heroFrame += 1 * heroOscillation;
-  if (heroFrame == heroFrameCount - 1 || heroFrame == 0) {
+  if (heroFrame >= heroFrameCount - 1 || heroFrame <= 0) {
     heroOscillation *= -1;
   }
 
@@ -88,7 +88,7 @@ void draw() {
     width / 3.0, height / 2.0, sourceScaleX * 2, sourceScaleY * 2);
 
   flowerFrame += 1 * flowerOscillation;
-  if (flowerFrame == flowerFrameCount - 1 || flowerFrame == 0) {
+  if (flowerFrame >= flowerFrameCount - 1 || flowerFrame <= 0) {
     flowerOscillation *= -1;
   }
 
@@ -96,7 +96,7 @@ void draw() {
     width * 2 / 3.0, height / 2.0, sourceScaleX * 1.5, sourceScaleY * 1.5);
 
   batFrame += 1 * batOscillation;
-  if (batFrame == batFrameCount - 1 || batFrame == 0) {
+  if (batFrame >= batFrameCount - 1 || batFrame <= 0) {
     batOscillation *= -1;
   }
 }
