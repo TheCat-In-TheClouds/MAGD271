@@ -53,3 +53,5 @@ Points | Description
 15 | The bird has been given a flapping animation.
 15 | The pipes and background have been styled.
 75 | Total
+
+Any media included with Processing sketches are presumed to be the work of the student unless otherwise stated. Media used from outside sources are expected to be altered substantially by the student. When media from outside sources are used, a notice of attribution at the top of the main sketch in a comment should be provided. This is not only for ethical and legal reasons, but so __you can incorporate the work you do here into your portfolio__ if you choose.

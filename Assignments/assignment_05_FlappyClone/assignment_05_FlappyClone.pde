@@ -10,7 +10,6 @@ Feedback fb;
 void setup() {
   size(680, 420);
   //fullScreen();
-  //frameRate(30);
 
   sm = new StateMachine<GameState>(
     new Title(), 
