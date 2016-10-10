@@ -41,6 +41,12 @@ The previous two assignments reviewed static composition. This assignment emphas
 
 * In the Title tab, style the title screen by changing the code in the `onSustain() { /* ... */ }` function.
 
+### Inspiration
+
+* [Paul Robertson](http://probertson.tumblr.com/)
+    * [Super Dino Boys](https://youtu.be/x3vr6u9yjJY)
+    * [Kings of Power 4 Billion %](https://youtu.be/VZy5S-jUIlw)
+
 ### Evaluation
 
 Points | Description
