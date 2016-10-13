@@ -3,7 +3,7 @@
 ![Flappy Clone](68091.png)
 
 ### Due Date
-12:30 p.m. Thursday, October 27th, 2016
+12:30 p.m. Tuesday, November 1, 2016
 
 ### Philosophy
 
