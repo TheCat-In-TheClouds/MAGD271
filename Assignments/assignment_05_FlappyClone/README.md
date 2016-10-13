@@ -17,19 +17,17 @@ The previous two assignments reviewed static composition. This assignment emphas
 
 * From the project management perspective, this assignment encourages:
 
-    * Assessing the appropriate scope of an idea in relation to the student's skillset.
+    * __Assessing the appropriate scope of an idea in relation to the student's skillset and to the time allotted.__
     
     * Organization of digital files.
 
 * From the scripting perspecitve this assignment demonstrates:
 
-    * A state machine to control game states using a Map and classes.
+    * A [generic state machine class](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/StateMachine.pde#L3) which could control transitions between either game states or animations, depending on the data type.
     
-    * A state machine to act as animator.
+    * Working with collections, [lists of PImages for animations](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/Animation.pde#L74-L82) and [dictionaries (hash maps) of States](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/StateMachine.pde#L9).
     
-    * Iterating through a collection.
-    
-    * A timer which starts upon entering a state and records the elapsed time.
+    * A [timer](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/Timer.pde#L1) which starts upon entering a state and records the elapsed time.
 
 ### Directions
 
@@ -38,12 +36,13 @@ The previous two assignments reviewed static composition. This assignment emphas
 * Download the files from the course GitHub page. Make your own copy of the assignment model. __The leftmost tab in your sketch is your main tab. The global functions `void setup() {}` and `void draw() {}` must be in this tab. This tab must have the same name as the folder which contains the whole sketch.__
 
 * Create the necessary images for your design. In Processing's menu bar, go to Sketch > Add File... to import your images into your sketch folder.
+   * __Import rough images as a test to see how they look in Processing before fully developing your artwork.__
 
-* In the Background tab, place your code to draw the game's background in the Background class's draw function.
+* In the Background tab, place your code to draw the game's background in the Background class's [draw function](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/Background.pde#L4).
 
-* In the FlappyBird tab, use `Animation a = new Animation("myAnimationName", 20, loadImage("myImageFile.png"));` to load the images for the flapping animation into the Processing sketch. The number 20 stands for the interval before the animation progresses to the next image in your sequence.
+* In the FlappyBird tab, use `Animation a = new Animation("myAnimationName", 20, loadImage("myImageFile.png"));` to load the images for the [flapping animation](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/FlappyBird.pde#L16-L21) into the Processing sketch. The number 20 stands for the interval before the animation progresses to the next image in your sequence.
 
-* In the Title tab, style the title screen by changing the code in the `onSustain() { /* ... */ }` function.
+* At the bottom of the FlappyBird tab, `void titleScreen() { /* ... */ }` is where you can re-style the [title screen of the game](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/FlappyBird.pde#L122). Optionally, if you would like to modify the [game over screen](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/FlappyBird.pde#L136), see `void lossScreen() { /* ... */ }`, below that.
 
 ### Inspiration
 
