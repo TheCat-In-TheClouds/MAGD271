@@ -43,7 +43,7 @@ class FlappyBird extends Game {
     this.pipeSpeed = 3;
 
     this.pipes = new ArrayList<Pipe>();
-    this.pipes.add(new Pipe(this.bird.radius));
+    // this.pipes.add(new Pipe(this.bird.radius));
   }
 
   void draw() {
