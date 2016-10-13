@@ -11,19 +11,23 @@ The previous two assignments reviewed static composition. This assignment emphas
 
 * From the artistic perspective, this assignment encourages:
 
-    * Implementing the 12 Principles of Animation.
+    * Implementing the [12 Principles of Animation](https://vimeo.com/93206523).
     
     * Developing a pipeline between external image editing software and Processing.
 
 * From the project management perspective, this assignment encourages:
 
     * Assessing the appropriate scope of an idea in relation to the student's skillset.
+    
+    * Organization of digital files.
 
 * From the scripting perspecitve this assignment demonstrates:
 
     * A state machine to control game states using a Map and classes.
     
     * A state machine to act as animator.
+    
+    * Iterating through a collection.
     
     * A timer which starts upon entering a state and records the elapsed time.
 
@@ -46,6 +50,8 @@ The previous two assignments reviewed static composition. This assignment emphas
 * [Paul Robertson](http://probertson.tumblr.com/)
     * [Super Dino Boys](https://youtu.be/x3vr6u9yjJY)
     * [Kings of Power 4 Billion %](https://youtu.be/VZy5S-jUIlw)
+* [Vertical Jump : Key frame Animation](https://youtu.be/TL1Luzd2od8)
+* [Animating Characters for Games](https://youtu.be/jXhRQsBg-2E)
 
 ### Evaluation
 
