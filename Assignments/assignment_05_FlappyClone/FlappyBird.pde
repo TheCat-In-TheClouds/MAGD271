@@ -101,7 +101,7 @@ class FlappyBird extends Game {
   void reset() {
     this.score = 0;
     this.bird = new Bird();
-    
+
     this.bird.addAnimation(a);
 
     this.pipes.clear();
@@ -116,5 +116,34 @@ class FlappyBird extends Game {
     fb.score = this.score;
     fb.elapsed = timer.elapsed();
     return fb;
+  }
+
+  // 2. Draw your title screen here.
+  void titleScreen() {
+    pushStyle();
+    background(32);
+    rectMode(CENTER);
+    noStroke();
+    fill(255, 0, 0, 64);
+    rect(width / 2.0, height / 2.0, width, height / 4.0);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    fill(255);
+    text("FLAPPY CLONE", width / 2.0, height / 2.0);
+    popStyle();
+  }
+
+  void lossScreen() {
+    pushStyle();
+    background(32);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    fill(255);
+    text("GAME OVER!"
+      + "\r\nYOUR SCORE: " + fb.score
+      + "\r\nYOUR TIME: " + nfs(fb.elapsed / 1000.0, 0, 1) + " seconds", 
+      width / 2.0, 
+      height / 2.0);
+    popStyle();
   }
 }

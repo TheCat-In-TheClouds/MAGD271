@@ -6,17 +6,7 @@ class Loss extends GameState {
   }
 
   void onSustain() {
-    pushStyle();
-    background(32);
-    textAlign(CENTER, CENTER);
-    textSize(24);
-    fill(255);
-    text("GAME OVER!"
-      + "\r\nYOUR SCORE: " + fb.score
-      + "\r\nYOUR TIME: " + nfs(fb.elapsed / 1000.0, 0, 1) + " seconds", 
-      width / 2.0, 
-      height / 2.0);
-    popStyle();
+    game.lossScreen();
   }
 
   void onExit() {
