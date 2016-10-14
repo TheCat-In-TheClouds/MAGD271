@@ -129,7 +129,6 @@ Unit | Date | Description | Points
 03 | 09/29/2016 | Procedural Quilt | 50
 04 | 10/13/2016 | Deck of Cards | 75
 ... | ... | ... | ...
-TBD | TBD | Arduino, Makey Makey, etc. | TBD
 TBD | TBD | Final Project Design Document | TBD
 TBD | TBD | Final Project | TBD
 TBD | TBD | GitHub Portfolio | TBD
