@@ -9,7 +9,8 @@ class Pipe {
     cornerRounding;
   color normalColor;
   boolean struck, addedToScore;
-  PImage img = loadImage("pipe.png");
+  PImage topImg = loadImage("topPipe.png");
+  PImage bottomImg = loadImage("bottomPipe.png");
 
   Pipe() {
     this.x = width;
@@ -68,20 +69,16 @@ class Pipe {
   void show() {
     //1. Change the pipe to show your image here.
     pushStyle();
-    if (this.img == null) {
+    if (this.topImg == null || this.bottomImg == null) {
       noStroke();
       fill(this.normalColor);
       rect(this.x, 0, this.w, this.top, 0, 0, this.cornerRounding, this.cornerRounding);
       rect(this.x, height - this.bottom, this.w, this.bottom, this.cornerRounding, this.cornerRounding, 0, 0);
     } else {
-      // 2. Alternately, you could provide two different images for the top and bottom and
-      //    avoid the calculation of having to translate and rescale.
-      image(this.img, this.x, height - this.bottom, this.w, this.bottom);
-      pushMatrix();
-      translate(this.x, this.top);
-      scale(1, -1);
-      image(this.img, 0, 0, this.w, this.top);
-      popMatrix();
+
+      image(this.bottomImg, this.x, height - this.bottom, this.w, this.bottom);
+      image(this.topImg, this.x, 0, this.w, this.top);
+
     }
     popStyle();
   }
