@@ -128,6 +128,7 @@ Unit | Date | Description | Points
 02 | 09/22/2016 | Improvement | 75
 03 | 09/29/2016 | Procedural Quilt | 50
 04 | 10/13/2016 | Deck of Cards | 75
+05 | 11/01/2016 | Flappy Clone | 75
 ... | ... | ... | ...
 TBD | TBD | Final Project Design Document | TBD
 TBD | TBD | Final Project | TBD
