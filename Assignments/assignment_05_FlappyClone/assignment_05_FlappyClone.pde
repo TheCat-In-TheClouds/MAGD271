@@ -8,8 +8,14 @@ Duration timer;
 Feedback fb;
 
 void setup() {
-  size(680, 420);
+  //size(680, 420);
   //fullScreen();
+  size(512, 128);
+  
+  // 1. Pipe images are now loaded here to see if
+  //    that will improve performance.
+  topImg = loadImage("topPipe.png");
+  bottomImg = loadImage("bottomPipe.png");
 
   sm = new StateMachine<GameState>(
     new Title(), 
@@ -19,7 +25,7 @@ void setup() {
 
   game = new FlappyBird();
 
-  timer = new Timer("Flappy Timer");
+  //timer = new Timer("Flappy Timer");
 }
 
 void draw() {
@@ -28,4 +34,8 @@ void draw() {
 
 void mousePressed() {
   sm.current.onMousePressed();
+}
+
+void keyReleased() {
+  sm.current.onKeyReleased();
 }

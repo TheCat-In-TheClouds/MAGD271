@@ -1,7 +1,7 @@
 class Loss extends GameState {
 
   void onEnter() {
-    println("Entering " + this + " state.");
+    //println("Entering " + this + " state.");
     fb = game.feedback();
   }
 
@@ -10,7 +10,7 @@ class Loss extends GameState {
   }
 
   void onExit() {
-    println("Exiting " + this + " state.");
+    //println("Exiting " + this + " state.");
     game.reset();
   }
 
@@ -19,5 +19,8 @@ class Loss extends GameState {
   }
 
   void onKeyReleased() {
+    if (key == PRIMARY_KEY) {
+      sm.set("Title");
+    }
   }
 }

@@ -10,15 +10,17 @@ class Bird { //<>//
     theta = TAU, 
     flapAngle = radians(330), 
     fallAngle = radians(30);
+  boolean isFlapping;
+  int flapDuration = 7;
 
-  private StateMachine<Animation> animator;
+  private StateMachine<Animation> animator = new StateMachine<Animation>();
 
   Bird() {
     this.x = random(width / 8.0, width / 6.0);
     this.y = height / 2.0;
     this.radius = min(width, height) / 20.0;
     this.normalColor = color(0, 64, 204);
-    this.animator = new StateMachine<Animation>();
+    //this.animator = new StateMachine<Animation>();
   }
 
   Bird(Animation... anims) {
@@ -26,7 +28,7 @@ class Bird { //<>//
     this.y = height / 2.0;
     this.radius = min(width, height) / 20.0;
     this.normalColor = color(255);
-    this.animator = new StateMachine<Animation>();
+    //this.animator = new StateMachine<Animation>();
     int size = anims.length;
     for (int i = 0; i < size; ++i) {
       this.animator.states.put(anims[i].name, anims[i]);
@@ -39,7 +41,7 @@ class Bird { //<>//
     this.y = y;
     this.radius = r;
     this.normalColor = nc;
-    this.animator = new StateMachine<Animation>();
+    //this.animator = new StateMachine<Animation>();
   }
 
   Bird(float x, float y, float r, Animation... anims) {
@@ -47,7 +49,7 @@ class Bird { //<>//
     this.y = y;
     this.radius = r;
     this.normalColor = color(255);
-    this.animator = new StateMachine<Animation>();
+    //this.animator = new StateMachine<Animation>();
     int size = anims.length;
     for (int i = 0; i < size; ++i) {
       this.animator.states.put(anims[i].name, anims[i]);
@@ -56,10 +58,10 @@ class Bird { //<>//
   }
 
   void draw() {
-    gravity();
-    groundCollision();
-    ceilingCollision();
-    show();
+    this.gravity();
+    this.groundCollision();
+    this.ceilingCollision();
+    this.show();
   }
 
   void show() {
@@ -81,20 +83,22 @@ class Bird { //<>//
     }
 
     popMatrix();
+    if (frameCount % this.flapDuration == 1) {
+      this.isFlapping = false;
+    }
   }
 
   void flap() {
     this.velocity -= this.lift;
-    if (mousePressed) {
-      this.theta = this.flapAngle;
-    }
+    this.theta = this.flapAngle;
+    this.isFlapping = true;
   }
 
   void gravity() {
     this.velocity += this.gravity;
     this.velocity *= this.airResistance;
     this.y += velocity;
-    if (!mousePressed) {
+    if (!isFlapping) {
       this.theta = this.fallAngle;
     }
   }

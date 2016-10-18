@@ -1,3 +1,5 @@
+static final char PRIMARY_KEY = ' ';
+
 class FlappyBird extends Game {
   Bird bird;
   private List<Pipe> pipes;
@@ -13,7 +15,7 @@ class FlappyBird extends Game {
   //    animation is set to the next frame. The lower the
   //    interval, the faster the animation will advance
   //    through each frame.
-  Animation a = new Animation("animationName", 20, 
+  Animation birdAnim = new Animation("flapAnim", 20, 
     loadImage("fr1.png"), 
     loadImage("fr2.png"), 
     loadImage("fr3.png"), 
@@ -28,13 +30,13 @@ class FlappyBird extends Game {
     // 2. You may have drawn your animations very large in
     //    an art program, so you want to scale them appropriately
     //    to match the collision radius of the bird. 
-    a.w = this.bird.radius * 2.0;
-    a.h = this.bird.radius * 2.0;
+    birdAnim.w = this.bird.radius * 2.0;
+    birdAnim.h = this.bird.radius * 2.0;
 
     // 3. Add the animation to the bird. Notice that if you
     //    reset the game, you're animation will no longer be
     //    on the bird.
-    this.bird.addAnimation(a);
+    this.bird.addAnimation(birdAnim);
 
     // 4. Change the default values to suit your gameplay.
     this.newPipeInterval = 100;
@@ -96,13 +98,16 @@ class FlappyBird extends Game {
   }
 
   void onKeyReleased() {
+    if (key == PRIMARY_KEY) {
+      bird.flap();
+    }
   }
 
   void reset() {
     this.score = 0;
     this.bird = new Bird();
 
-    this.bird.addAnimation(a);
+    this.bird.addAnimation(birdAnim);
 
     this.pipes.clear();
     this.newPipeInterval = 100;
@@ -114,7 +119,7 @@ class FlappyBird extends Game {
   Feedback feedback() {
     Feedback fb = new Feedback();
     fb.score = this.score;
-    fb.elapsed = timer.elapsed();
+    //fb.elapsed = timer.elapsed();
     return fb;
   }
 
@@ -133,15 +138,20 @@ class FlappyBird extends Game {
     popStyle();
   }
 
+  // Optional: if you want to style the game over screen.
   void lossScreen() {
     pushStyle();
     background(32);
     textAlign(CENTER, CENTER);
     textSize(24);
     fill(255);
+    //text("GAME OVER!"
+    //  + "\r\nYOUR SCORE: " + fb.score
+    //  + "\r\nYOUR TIME: " + nfs(fb.elapsed / 1000.0, 0, 1) + " seconds", 
+    //  width / 2.0, 
+    //  height / 2.0);
     text("GAME OVER!"
-      + "\r\nYOUR SCORE: " + fb.score
-      + "\r\nYOUR TIME: " + nfs(fb.elapsed / 1000.0, 0, 1) + " seconds", 
+      + "\r\nYOUR SCORE: " + fb.score, 
       width / 2.0, 
       height / 2.0);
     popStyle();

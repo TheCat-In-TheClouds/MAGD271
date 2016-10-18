@@ -1,8 +1,8 @@
 class Playing extends GameState {
-  
+
   void onEnter() {
-    println("Entering " + this + " state.");
-    timer.start();
+    //println("Entering " + this + " state.");
+    //timer.start();
   }
 
   void onSustain() {
@@ -10,8 +10,8 @@ class Playing extends GameState {
   }
 
   void onExit() {
-    println("Exiting " + this + " state.");
-    timer.stop();
+    //println("Exiting " + this + " state.");
+    //timer.stop();
   }
 
   void onMousePressed() {
@@ -19,6 +19,6 @@ class Playing extends GameState {
   }
 
   void onKeyReleased() {
-    game.onKeyReleased();
+      game.onKeyReleased();
   }
 }

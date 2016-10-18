@@ -1,42 +1,33 @@
+PImage topImg;
+PImage bottomImg;
+
 class Pipe {
   float top, 
     bottom, 
     x, 
     w, 
-    speed, 
-    forgiveness, 
-    minDifficulty, 
-    cornerRounding;
-  color normalColor;
+    speed = 3, 
+    forgiveness = 5, 
+    minDifficulty = 10, 
+    cornerRounding = 5;
+  color fill;
   boolean struck, addedToScore;
-  PImage topImg = loadImage("topPipe.png");
-  PImage bottomImg = loadImage("bottomPipe.png");
 
   Pipe() {
     this.x = width;
     this.w = 48;
-    this.speed = 3;
-    this.forgiveness = 5;
-    this.minDifficulty = 10;
-    this.cornerRounding = 5;
     this.top = random(this.minDifficulty, height / 2.0 - this.forgiveness);
     this.bottom = random(this.minDifficulty, height / 2.0 - this.forgiveness);
-
-    this.normalColor = color(0, 225, 120);
+    this.fill = color(0, 225, 120);
   }
 
   Pipe(float birdRadius) {
     float birdDiameter = birdRadius * 2;
     this.x = width;
     this.w = birdDiameter * 1.5;
-    this.speed = 3;
-    this.forgiveness = 5;
-    this.minDifficulty = 10;
-    this.cornerRounding = 5;
     this.top = random(birdDiameter + this.minDifficulty, height / 2.0 - birdDiameter - this.forgiveness);
     this.bottom = random(birdDiameter + this.minDifficulty, height / 2.0 - birdDiameter - this.forgiveness);
-
-    this.normalColor = color(0, 225, 120);
+    this.fill = color(0, 225, 120);
   }
 
   Pipe(float birdRadius, float speed, float forgiveness, float minDifficulty) {
@@ -46,11 +37,9 @@ class Pipe {
     this.speed = speed;
     this.forgiveness = forgiveness;
     this.minDifficulty = minDifficulty;
-    this.cornerRounding = 5;
     this.top = random(d + this.minDifficulty, height / 2.0 - d - this.forgiveness);
     this.bottom = random(d + this.minDifficulty, height / 2.0 - d - this.forgiveness);
-
-    this.normalColor = color(0, 225, 120);
+    this.fill = color(0, 225, 120);
   }
 
   public String toString() {
@@ -67,18 +56,15 @@ class Pipe {
   }
 
   void show() {
-    //1. Change the pipe to show your image here.
     pushStyle();
-    if (this.topImg == null || this.bottomImg == null) {
+    if (topImg == null || bottomImg == null) {
       noStroke();
-      fill(this.normalColor);
+      fill(this.fill);
       rect(this.x, 0, this.w, this.top, 0, 0, this.cornerRounding, this.cornerRounding);
       rect(this.x, height - this.bottom, this.w, this.bottom, this.cornerRounding, this.cornerRounding, 0, 0);
     } else {
-
-      image(this.bottomImg, this.x, height - this.bottom, this.w, this.bottom);
-      image(this.topImg, this.x, 0, this.w, this.top);
-
+      image(bottomImg, this.x, height - this.bottom, this.w, this.bottom);
+      image(topImg, this.x, 0, this.w, this.top);
     }
     popStyle();
   }

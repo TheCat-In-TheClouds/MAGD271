@@ -19,7 +19,7 @@ class Timer extends Duration {
       this.started = true;
       this.startScheduled = false;
     }
-    println(this.name + " started at " + this.start);
+    //println(this.name + " started at " + this.start);
     return this.start;
   }
 
@@ -35,15 +35,19 @@ class Timer extends Duration {
       this.stopped = true;
       this.stopScheduled = false;
     }
-    println(this);
+    //println(this);
     return this.stop;
   }
 
   void tick() {
-    if (!this.started && this.startScheduled && millis() >= this.scheduledStart) {
+    if (!this.started
+      && this.startScheduled
+      && millis() >= this.scheduledStart) {
       start();
     }
-    if (!this.stopped && this.stopScheduled && millis() >= this.scheduledStop) {
+    if (!this.stopped
+      && this.stopScheduled
+      && millis() >= this.scheduledStop) {
       stop();
     }
   }
