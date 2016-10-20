@@ -10,7 +10,7 @@ Feedback fb;
 void setup() {
   //size(680, 420);
   //fullScreen();
-  size(512, 128);
+  size(512, 256);
   
   // 1. Pipe images are now loaded here to see if
   //    that will improve performance.

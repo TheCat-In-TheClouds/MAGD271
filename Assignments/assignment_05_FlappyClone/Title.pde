@@ -17,8 +17,6 @@ class Title extends GameState {
   }
 
   void onKeyReleased() {
-    if (key == PRIMARY_KEY) {
-      sm.set("Playing");
-    }
+    sm.set("Playing");
   }
 }

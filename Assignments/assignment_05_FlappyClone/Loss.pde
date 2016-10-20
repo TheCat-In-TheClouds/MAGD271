@@ -19,8 +19,6 @@ class Loss extends GameState {
   }
 
   void onKeyReleased() {
-    if (key == PRIMARY_KEY) {
-      sm.set("Title");
-    }
+    sm.set("Title");
   }
 }
