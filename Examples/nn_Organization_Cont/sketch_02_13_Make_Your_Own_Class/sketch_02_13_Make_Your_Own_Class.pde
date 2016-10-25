@@ -16,19 +16,19 @@ void setup() {
   // 3. We assign the result of constructing a car
   //    object to the variable.
   prolechariot = new Car();
-  
+
   // 4. Multiple constructors give us options when
   //    customizing the default values of the car.
-  mercedes = new Car(new PVector(100, 200),
-  new PVector(240, 60),
-  color(255, 127, 255));
+  mercedes = new Car(new PVector(100, 200), 
+    new PVector(240, 60), 
+    color(255, 127, 255));
 }
 
 void draw() {
   background(32);
-  
+
   // 4. The car has its own draw() function, which
   //    we will call here by using a dot method.
   prolechariot.draw();
-  // mercedes.draw();
+  //mercedes.draw();
 }
