@@ -7,26 +7,26 @@
 
 ### Philosophy
 
-The previous two assignments reviewed static composition. This assignment emphasizes dynamic composition in an interactive environment. 
+The previous two assignments reviewed static composition. This assignment emphasizes dynamic composition in an interactive environment.
 
 * From the artistic perspective, this assignment encourages:
 
     * Implementing the [12 Principles of Animation](https://vimeo.com/93206523).
-    
+
     * Developing a pipeline between external image editing software and Processing.
 
 * From the project management perspective, this assignment encourages:
 
     * __Assessing the appropriate scope of an idea in relation to the student's skillset and to the time allotted.__
-    
+
     * Organization of digital files.
 
-* From the scripting perspecitve this assignment demonstrates:
+* From the scripting perspective this assignment demonstrates:
 
     * A [generic state machine class](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/StateMachine.pde#L3) which could control transitions between either game states or animations, depending on the data type.
-    
+
     * Working with collections, [lists of PImages for animations](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/Animation.pde#L74-L82) and [dictionaries (hash maps) of States](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/StateMachine.pde#L9).
-    
+
     * A [timer](https://github.com/behreajj/MAGD271/blob/5e087331dc45942de4bdc5043edefebe804276d8/Assignments/assignment_05_FlappyClone/Timer.pde#L1) which starts upon entering a state and records the elapsed time.
 
 ### Directions
