@@ -1,3 +1,8 @@
+/* SOURCE:
+Professor Nick Hwang
+https://github.com/rioter00/MAGD150-Assignments/blob/master/Timer_class.pde
+*/
+
 class Timer {
 
   // Two variables to keep track of the time

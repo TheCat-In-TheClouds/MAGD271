@@ -143,14 +143,4 @@ class Slider {
       this.label.draw();
     }
   }
-
-  //void onLeftClick() {
-  //  if (this.track.bounds(mouseX, mouseY)) {
-  //    if (mouseX < this.handle.center.x - this.handle.scale.x / 2.0) {
-  //      this.handle.center.x = constrain(this.handle.center.x - this.trackJump, this.lowerBound, this.upperBound);
-  //    } else if (mouseX > this.handle.center.x + this.handle.scale.x / 2.0) {
-  //      this.handle.center.x = constrain(this.handle.center.x + this.trackJump, this.lowerBound, this.upperBound);
-  //    }
-  //  }
-  //}
 }

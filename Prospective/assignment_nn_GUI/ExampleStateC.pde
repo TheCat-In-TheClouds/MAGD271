@@ -49,9 +49,6 @@ class ExampleStateC extends State {
     if (mouseButton == LEFT) {
       ti.onLeftClick();
       goBack.onLeftClick();
-      //redSlider.onLeftClick();
-      //greenSlider.onLeftClick();
-      //blueSlider.onLeftClick();
     }
   }
 
