@@ -19,7 +19,7 @@
 
 Software development platforms, like any technology, exist in a highly competitive and volatile field. Recent news regarding Flash necessitates a rapid shift in this course's content toward other platforms for creating and sharing new media.
 
-Increasingly, creative coders are required to work not in one specific software package or programming language, but to master a variety of Application Program Interfaces (APIs) and frameworks which link together persistent data, hardware, and model-view-controllers. All this must be done while retaining and applying universal design principles.
+Increasingly, creative coders are required to work not in one specific software package or programming language, but to master a variety of Application Program Interfaces (APIs) and frameworks which link together persistent data, peripherals, and model-view-controllers. All this must be done while retaining and applying universal design principles.
 
 The _management_ of this instability inherent to creative coding practice will be the theme of this course. While in MAGD 150 students may have been encouraged to view Processing as a "beginner's" language, this course will encourage them to reconceive of it as a framework, maintained by a living community, which spans several underlying programming languages (Java, JavaScript) and which evolves in parallel with the hardware framework Arduino.
 
@@ -53,7 +53,7 @@ The primary tools for this course will be:
 * Casey Reas and Ben Fry, [_Processing_](https://mitpress.mit.edu/books/processing-0), 2nd ed. (2014)
     * __Available for rent at the UWW Bookstore.__
     
-Reference resources:
+Resources:
 * Daniel Shiffman, [_The Nature of Code_](http://natureofcode.com/)
 * Daniel Shiffman, [Coding Rainbow](http://codingrainbow.com/)
 * Casey Reas et al., [_Form + Code_](http://formandcode.com/code-examples/) code examples
@@ -69,7 +69,7 @@ Inspiration:
 
 ### Etiquette
 
-I presume that, as a student of a university rather than a vocational institute, your intention is to develop not only as a worker in an industry but also as an individual, as an artist, and as a citizen of the world. As such, you are encouraged and expected to take ownership of this course, serving as an active co-producer of knowledge rather than as a passive receptacle for knowledge.
+I presume that, as a student of a university rather than a vocational-technical school, your intention is to develop not only as a worker in an industry but also as an individual, as an artist, and as a citizen of the world. As such, you are encouraged and expected to take ownership of this course, serving as an active co-producer of knowledge rather than as a passive receptacle for knowledge.
 
 #### Attendance
 
@@ -129,7 +129,6 @@ Unit | Date | Description | Points
 03 | 09/29/2016 | Procedural Quilt | 50
 04 | 10/13/2016 | Deck of Cards | 75
 05 | 11/01/2016 | Flappy Clone | 75
-... | ... | ... | ...
-TBD | TBD | Final Project Design Document | TBD
-TBD | TBD | Final Project | TBD
-TBD | TBD | GitHub Portfolio | TBD
+06 | TBD | OOP Exquisite Corpse | TBD
+07 | TBD | Final Project Design Document | 25
+08 | 12/20/2016 | Final Project | 150
