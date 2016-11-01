@@ -19,7 +19,6 @@ From the project management perspective, this project explores the idea of loose
     * Give the tab the same name as the class you intend to create. Enter `class ClassName { }`
     * Define a constructor for the class in the new tab. `class ClassName { ClassName() { } }`
     * Add functionality to the class. `class ClassName { ClassName() { } void foo() { } void bar() { } }`
-    
     * In the main tab above setup, declare a variable of the class's data type. `ClassName myInstanceVar;`
     * Initialize the variable using the class's constructor. `void setup() { myInstanceVar = new ClassName(); }`
     * The first tab that opens when you create a new Processing sketch is your default, main sketch .pde.
