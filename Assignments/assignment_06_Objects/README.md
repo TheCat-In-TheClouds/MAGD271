@@ -32,7 +32,7 @@ From the project management perspective, this project explores the idea of loose
 
 * Create an account at GitHub if you have not already.
 
-* Create a repository following the Magd150_F16_GettingStartedWithGitHub .pdf on D2L.
+* [Create a repository](https://help.github.com/articles/create-a-repo/) following the Magd150_F16_GettingStartedWithGitHub .pdf on D2L.
 
 * Push the Processing sketch to the repository.
 
