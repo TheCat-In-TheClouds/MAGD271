@@ -1,4 +1,4 @@
-## Object Round-Robin
+## Programming Exquisite Corpse
 
 ### Due Date
 12:30 p.m. Tuesday, November 8, 2016
